@@ -1,0 +1,877 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: FunctionalLink.Next
+  name: FunctionalLink.Next
+  href: api/FunctionalLink.Next.html
+  commentId: N:FunctionalLink.Next
+  fullName: FunctionalLink.Next
+  nameWithType: FunctionalLink.Next
+- uid: FunctionalLink.Next.EnumerableExtensions
+  name: EnumerableExtensions
+  href: api/FunctionalLink.Next.EnumerableExtensions.html
+  commentId: T:FunctionalLink.Next.EnumerableExtensions
+  fullName: FunctionalLink.Next.EnumerableExtensions
+  nameWithType: EnumerableExtensions
+- uid: FunctionalLink.Next.EnumerableExtensions.Evaluate*
+  name: Evaluate
+  href: api/FunctionalLink.Next.EnumerableExtensions.html#FunctionalLink_Next_EnumerableExtensions_Evaluate_
+  commentId: Overload:FunctionalLink.Next.EnumerableExtensions.Evaluate
+  fullName: FunctionalLink.Next.EnumerableExtensions.Evaluate
+  nameWithType: EnumerableExtensions.Evaluate
+- uid: FunctionalLink.Next.EnumerableExtensions.Evaluate``1(System.Collections.Generic.IEnumerable{``0})
+  name: Evaluate<T>(IEnumerable<T>)
+  href: api/FunctionalLink.Next.EnumerableExtensions.html#FunctionalLink_Next_EnumerableExtensions_Evaluate__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:FunctionalLink.Next.EnumerableExtensions.Evaluate``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: Evaluate(Of T)(IEnumerable(Of T))
+  fullName: FunctionalLink.Next.EnumerableExtensions.Evaluate<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: FunctionalLink.Next.EnumerableExtensions.Evaluate(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtensions.Evaluate<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtensions.Evaluate(Of T)(IEnumerable(Of T))
+- uid: FunctionalLink.Next.EnumerableExtensions.EvaluateAndIgnore*
+  name: EvaluateAndIgnore
+  href: api/FunctionalLink.Next.EnumerableExtensions.html#FunctionalLink_Next_EnumerableExtensions_EvaluateAndIgnore_
+  commentId: Overload:FunctionalLink.Next.EnumerableExtensions.EvaluateAndIgnore
+  fullName: FunctionalLink.Next.EnumerableExtensions.EvaluateAndIgnore
+  nameWithType: EnumerableExtensions.EvaluateAndIgnore
+- uid: FunctionalLink.Next.EnumerableExtensions.EvaluateAndIgnore``1(System.Collections.Generic.IEnumerable{``0})
+  name: EvaluateAndIgnore<T>(IEnumerable<T>)
+  href: api/FunctionalLink.Next.EnumerableExtensions.html#FunctionalLink_Next_EnumerableExtensions_EvaluateAndIgnore__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:FunctionalLink.Next.EnumerableExtensions.EvaluateAndIgnore``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: EvaluateAndIgnore(Of T)(IEnumerable(Of T))
+  fullName: FunctionalLink.Next.EnumerableExtensions.EvaluateAndIgnore<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: FunctionalLink.Next.EnumerableExtensions.EvaluateAndIgnore(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableExtensions.EvaluateAndIgnore<T>(IEnumerable<T>)
+  nameWithType.vb: EnumerableExtensions.EvaluateAndIgnore(Of T)(IEnumerable(Of T))
+- uid: FunctionalLink.Next.EnumerableExtensions.Iterate*
+  name: Iterate
+  href: api/FunctionalLink.Next.EnumerableExtensions.html#FunctionalLink_Next_EnumerableExtensions_Iterate_
+  commentId: Overload:FunctionalLink.Next.EnumerableExtensions.Iterate
+  fullName: FunctionalLink.Next.EnumerableExtensions.Iterate
+  nameWithType: EnumerableExtensions.Iterate
+- uid: FunctionalLink.Next.EnumerableExtensions.Iterate``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  name: Iterate<T>(IEnumerable<T>, Action<T>)
+  href: api/FunctionalLink.Next.EnumerableExtensions.html#FunctionalLink_Next_EnumerableExtensions_Iterate__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  commentId: M:FunctionalLink.Next.EnumerableExtensions.Iterate``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  name.vb: Iterate(Of T)(IEnumerable(Of T), Action(Of T))
+  fullName: FunctionalLink.Next.EnumerableExtensions.Iterate<T>(System.Collections.Generic.IEnumerable<T>, System.Action<T>)
+  fullName.vb: FunctionalLink.Next.EnumerableExtensions.Iterate(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T))
+  nameWithType: EnumerableExtensions.Iterate<T>(IEnumerable<T>, Action<T>)
+  nameWithType.vb: EnumerableExtensions.Iterate(Of T)(IEnumerable(Of T), Action(Of T))
+- uid: FunctionalLink.Next.Failure`1
+  name: Failure<T>
+  href: api/FunctionalLink.Next.Failure-1.html
+  commentId: T:FunctionalLink.Next.Failure`1
+  name.vb: Failure(Of T)
+  fullName: FunctionalLink.Next.Failure<T>
+  fullName.vb: FunctionalLink.Next.Failure(Of T)
+  nameWithType: Failure<T>
+  nameWithType.vb: Failure(Of T)
+- uid: FunctionalLink.Next.GlobalLink
+  name: GlobalLink
+  href: api/FunctionalLink.Next.GlobalLink.html
+  commentId: T:FunctionalLink.Next.GlobalLink
+  fullName: FunctionalLink.Next.GlobalLink
+  nameWithType: GlobalLink
+- uid: FunctionalLink.Next.GlobalLink.Failure*
+  name: Failure
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Failure_
+  commentId: Overload:FunctionalLink.Next.GlobalLink.Failure
+  fullName: FunctionalLink.Next.GlobalLink.Failure
+  nameWithType: GlobalLink.Failure
+- uid: FunctionalLink.Next.GlobalLink.Failure``1(``0)
+  name: Failure<T>(T)
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Failure__1___0_
+  commentId: M:FunctionalLink.Next.GlobalLink.Failure``1(``0)
+  name.vb: Failure(Of T)(T)
+  fullName: FunctionalLink.Next.GlobalLink.Failure<T>(T)
+  fullName.vb: FunctionalLink.Next.GlobalLink.Failure(Of T)(T)
+  nameWithType: GlobalLink.Failure<T>(T)
+  nameWithType.vb: GlobalLink.Failure(Of T)(T)
+- uid: FunctionalLink.Next.GlobalLink.Maybe*
+  name: Maybe
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Maybe_
+  commentId: Overload:FunctionalLink.Next.GlobalLink.Maybe
+  fullName: FunctionalLink.Next.GlobalLink.Maybe
+  nameWithType: GlobalLink.Maybe
+- uid: FunctionalLink.Next.GlobalLink.Maybe``1(``0)
+  name: Maybe<T>(T)
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Maybe__1___0_
+  commentId: M:FunctionalLink.Next.GlobalLink.Maybe``1(``0)
+  name.vb: Maybe(Of T)(T)
+  fullName: FunctionalLink.Next.GlobalLink.Maybe<T>(T)
+  fullName.vb: FunctionalLink.Next.GlobalLink.Maybe(Of T)(T)
+  nameWithType: GlobalLink.Maybe<T>(T)
+  nameWithType.vb: GlobalLink.Maybe(Of T)(T)
+- uid: FunctionalLink.Next.GlobalLink.None
+  name: None()
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_None
+  commentId: M:FunctionalLink.Next.GlobalLink.None
+  fullName: FunctionalLink.Next.GlobalLink.None()
+  nameWithType: GlobalLink.None()
+- uid: FunctionalLink.Next.GlobalLink.None*
+  name: None
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_None_
+  commentId: Overload:FunctionalLink.Next.GlobalLink.None
+  fullName: FunctionalLink.Next.GlobalLink.None
+  nameWithType: GlobalLink.None
+- uid: FunctionalLink.Next.GlobalLink.Self*
+  name: Self
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Self_
+  commentId: Overload:FunctionalLink.Next.GlobalLink.Self
+  fullName: FunctionalLink.Next.GlobalLink.Self
+  nameWithType: GlobalLink.Self
+- uid: FunctionalLink.Next.GlobalLink.Self``1(``0)
+  name: Self<T>(T)
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Self__1___0_
+  commentId: M:FunctionalLink.Next.GlobalLink.Self``1(``0)
+  name.vb: Self(Of T)(T)
+  fullName: FunctionalLink.Next.GlobalLink.Self<T>(T)
+  fullName.vb: FunctionalLink.Next.GlobalLink.Self(Of T)(T)
+  nameWithType: GlobalLink.Self<T>(T)
+  nameWithType.vb: GlobalLink.Self(Of T)(T)
+- uid: FunctionalLink.Next.GlobalLink.Some*
+  name: Some
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Some_
+  commentId: Overload:FunctionalLink.Next.GlobalLink.Some
+  fullName: FunctionalLink.Next.GlobalLink.Some
+  nameWithType: GlobalLink.Some
+- uid: FunctionalLink.Next.GlobalLink.Some``1(``0)
+  name: Some<T>(T)
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Some__1___0_
+  commentId: M:FunctionalLink.Next.GlobalLink.Some``1(``0)
+  name.vb: Some(Of T)(T)
+  fullName: FunctionalLink.Next.GlobalLink.Some<T>(T)
+  fullName.vb: FunctionalLink.Next.GlobalLink.Some(Of T)(T)
+  nameWithType: GlobalLink.Some<T>(T)
+  nameWithType.vb: GlobalLink.Some(Of T)(T)
+- uid: FunctionalLink.Next.GlobalLink.Success
+  name: Success()
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Success
+  commentId: M:FunctionalLink.Next.GlobalLink.Success
+  fullName: FunctionalLink.Next.GlobalLink.Success()
+  nameWithType: GlobalLink.Success()
+- uid: FunctionalLink.Next.GlobalLink.Success*
+  name: Success
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Success_
+  commentId: Overload:FunctionalLink.Next.GlobalLink.Success
+  fullName: FunctionalLink.Next.GlobalLink.Success
+  nameWithType: GlobalLink.Success
+- uid: FunctionalLink.Next.GlobalLink.Success``1(``0)
+  name: Success<T>(T)
+  href: api/FunctionalLink.Next.GlobalLink.html#FunctionalLink_Next_GlobalLink_Success__1___0_
+  commentId: M:FunctionalLink.Next.GlobalLink.Success``1(``0)
+  name.vb: Success(Of T)(T)
+  fullName: FunctionalLink.Next.GlobalLink.Success<T>(T)
+  fullName.vb: FunctionalLink.Next.GlobalLink.Success(Of T)(T)
+  nameWithType: GlobalLink.Success<T>(T)
+  nameWithType.vb: GlobalLink.Success(Of T)(T)
+- uid: FunctionalLink.Next.None
+  name: None
+  href: api/FunctionalLink.Next.None.html
+  commentId: T:FunctionalLink.Next.None
+  fullName: FunctionalLink.Next.None
+  nameWithType: None
+- uid: FunctionalLink.Next.ObjectExtensions
+  name: ObjectExtensions
+  href: api/FunctionalLink.Next.ObjectExtensions.html
+  commentId: T:FunctionalLink.Next.ObjectExtensions
+  fullName: FunctionalLink.Next.ObjectExtensions
+  nameWithType: ObjectExtensions
+- uid: FunctionalLink.Next.ObjectExtensions.Enumerate*
+  name: Enumerate
+  href: api/FunctionalLink.Next.ObjectExtensions.html#FunctionalLink_Next_ObjectExtensions_Enumerate_
+  commentId: Overload:FunctionalLink.Next.ObjectExtensions.Enumerate
+  fullName: FunctionalLink.Next.ObjectExtensions.Enumerate
+  nameWithType: ObjectExtensions.Enumerate
+- uid: FunctionalLink.Next.ObjectExtensions.Enumerate``1(``0)
+  name: Enumerate<T>(T)
+  href: api/FunctionalLink.Next.ObjectExtensions.html#FunctionalLink_Next_ObjectExtensions_Enumerate__1___0_
+  commentId: M:FunctionalLink.Next.ObjectExtensions.Enumerate``1(``0)
+  name.vb: Enumerate(Of T)(T)
+  fullName: FunctionalLink.Next.ObjectExtensions.Enumerate<T>(T)
+  fullName.vb: FunctionalLink.Next.ObjectExtensions.Enumerate(Of T)(T)
+  nameWithType: ObjectExtensions.Enumerate<T>(T)
+  nameWithType.vb: ObjectExtensions.Enumerate(Of T)(T)
+- uid: FunctionalLink.Next.ObjectExtensions.Ignore(System.Object)
+  name: Ignore(Object)
+  href: api/FunctionalLink.Next.ObjectExtensions.html#FunctionalLink_Next_ObjectExtensions_Ignore_System_Object_
+  commentId: M:FunctionalLink.Next.ObjectExtensions.Ignore(System.Object)
+  fullName: FunctionalLink.Next.ObjectExtensions.Ignore(System.Object)
+  nameWithType: ObjectExtensions.Ignore(Object)
+- uid: FunctionalLink.Next.ObjectExtensions.Ignore*
+  name: Ignore
+  href: api/FunctionalLink.Next.ObjectExtensions.html#FunctionalLink_Next_ObjectExtensions_Ignore_
+  commentId: Overload:FunctionalLink.Next.ObjectExtensions.Ignore
+  fullName: FunctionalLink.Next.ObjectExtensions.Ignore
+  nameWithType: ObjectExtensions.Ignore
+- uid: FunctionalLink.Next.ObjectExtensions.Maybe*
+  name: Maybe
+  href: api/FunctionalLink.Next.ObjectExtensions.html#FunctionalLink_Next_ObjectExtensions_Maybe_
+  commentId: Overload:FunctionalLink.Next.ObjectExtensions.Maybe
+  fullName: FunctionalLink.Next.ObjectExtensions.Maybe
+  nameWithType: ObjectExtensions.Maybe
+- uid: FunctionalLink.Next.ObjectExtensions.Maybe``1(``0)
+  name: Maybe<T>(T)
+  href: api/FunctionalLink.Next.ObjectExtensions.html#FunctionalLink_Next_ObjectExtensions_Maybe__1___0_
+  commentId: M:FunctionalLink.Next.ObjectExtensions.Maybe``1(``0)
+  name.vb: Maybe(Of T)(T)
+  fullName: FunctionalLink.Next.ObjectExtensions.Maybe<T>(T)
+  fullName.vb: FunctionalLink.Next.ObjectExtensions.Maybe(Of T)(T)
+  nameWithType: ObjectExtensions.Maybe<T>(T)
+  nameWithType.vb: ObjectExtensions.Maybe(Of T)(T)
+- uid: FunctionalLink.Next.Option
+  name: Option
+  href: api/FunctionalLink.Next.Option.html
+  commentId: T:FunctionalLink.Next.Option
+  fullName: FunctionalLink.Next.Option
+  nameWithType: Option
+- uid: FunctionalLink.Next.Option.Maybe*
+  name: Maybe
+  href: api/FunctionalLink.Next.Option.html#FunctionalLink_Next_Option_Maybe_
+  commentId: Overload:FunctionalLink.Next.Option.Maybe
+  fullName: FunctionalLink.Next.Option.Maybe
+  nameWithType: Option.Maybe
+- uid: FunctionalLink.Next.Option.Maybe``1(``0)
+  name: Maybe<T>(T)
+  href: api/FunctionalLink.Next.Option.html#FunctionalLink_Next_Option_Maybe__1___0_
+  commentId: M:FunctionalLink.Next.Option.Maybe``1(``0)
+  name.vb: Maybe(Of T)(T)
+  fullName: FunctionalLink.Next.Option.Maybe<T>(T)
+  fullName.vb: FunctionalLink.Next.Option.Maybe(Of T)(T)
+  nameWithType: Option.Maybe<T>(T)
+  nameWithType.vb: Option.Maybe(Of T)(T)
+- uid: FunctionalLink.Next.Option.None
+  name: None()
+  href: api/FunctionalLink.Next.Option.html#FunctionalLink_Next_Option_None
+  commentId: M:FunctionalLink.Next.Option.None
+  fullName: FunctionalLink.Next.Option.None()
+  nameWithType: Option.None()
+- uid: FunctionalLink.Next.Option.None*
+  name: None
+  href: api/FunctionalLink.Next.Option.html#FunctionalLink_Next_Option_None_
+  commentId: Overload:FunctionalLink.Next.Option.None
+  fullName: FunctionalLink.Next.Option.None
+  nameWithType: Option.None
+- uid: FunctionalLink.Next.Option.Some*
+  name: Some
+  href: api/FunctionalLink.Next.Option.html#FunctionalLink_Next_Option_Some_
+  commentId: Overload:FunctionalLink.Next.Option.Some
+  fullName: FunctionalLink.Next.Option.Some
+  nameWithType: Option.Some
+- uid: FunctionalLink.Next.Option.Some``1(``0)
+  name: Some<T>(T)
+  href: api/FunctionalLink.Next.Option.html#FunctionalLink_Next_Option_Some__1___0_
+  commentId: M:FunctionalLink.Next.Option.Some``1(``0)
+  name.vb: Some(Of T)(T)
+  fullName: FunctionalLink.Next.Option.Some<T>(T)
+  fullName.vb: FunctionalLink.Next.Option.Some(Of T)(T)
+  nameWithType: Option.Some<T>(T)
+  nameWithType.vb: Option.Some(Of T)(T)
+- uid: FunctionalLink.Next.Option`1
+  name: Option<T>
+  href: api/FunctionalLink.Next.Option-1.html
+  commentId: T:FunctionalLink.Next.Option`1
+  name.vb: Option(Of T)
+  fullName: FunctionalLink.Next.Option<T>
+  fullName.vb: FunctionalLink.Next.Option(Of T)
+  nameWithType: Option<T>
+  nameWithType.vb: Option(Of T)
+- uid: FunctionalLink.Next.Option`1.And*
+  name: And
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_And_
+  commentId: Overload:FunctionalLink.Next.Option`1.And
+  fullName: FunctionalLink.Next.Option<T>.And
+  fullName.vb: FunctionalLink.Next.Option(Of T).And
+  nameWithType: Option<T>.And
+  nameWithType.vb: Option(Of T).And
+- uid: FunctionalLink.Next.Option`1.And``2(FunctionalLink.Next.Option{``0},System.Func{`0,``0,``1})
+  name: And<TOther, TResult>(Option<TOther>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_And__2_FunctionalLink_Next_Option___0__System_Func__0___0___1__
+  commentId: M:FunctionalLink.Next.Option`1.And``2(FunctionalLink.Next.Option{``0},System.Func{`0,``0,``1})
+  name.vb: And(Of TOther, TResult)(Option(Of TOther), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.Option<T>.And<TOther, TResult>(FunctionalLink.Next.Option<TOther>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).And(Of TOther, TResult)(FunctionalLink.Next.Option(Of TOther), System.Func(Of T, TOther, TResult))
+  nameWithType: Option<T>.And<TOther, TResult>(Option<TOther>, Func<T, TOther, TResult>)
+  nameWithType.vb: Option(Of T).And(Of TOther, TResult)(Option(Of TOther), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.Option`1.And``2(System.Func{FunctionalLink.Next.Option{``0}},System.Func{`0,``0,``1})
+  name: And<TOther, TResult>(Func<Option<TOther>>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_And__2_System_Func_FunctionalLink_Next_Option___0___System_Func__0___0___1__
+  commentId: M:FunctionalLink.Next.Option`1.And``2(System.Func{FunctionalLink.Next.Option{``0}},System.Func{`0,``0,``1})
+  name.vb: And(Of TOther, TResult)(Func(Of Option(Of TOther)), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.Option<T>.And<TOther, TResult>(System.Func<FunctionalLink.Next.Option<TOther>>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).And(Of TOther, TResult)(System.Func(Of FunctionalLink.Next.Option(Of TOther)), System.Func(Of T, TOther, TResult))
+  nameWithType: Option<T>.And<TOther, TResult>(Func<Option<TOther>>, Func<T, TOther, TResult>)
+  nameWithType.vb: Option(Of T).And(Of TOther, TResult)(Func(Of Option(Of TOther)), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.Option`1.Else(`0)
+  name: Else(T)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Else__0_
+  commentId: M:FunctionalLink.Next.Option`1.Else(`0)
+  fullName: FunctionalLink.Next.Option<T>.Else(T)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Else(T)
+  nameWithType: Option<T>.Else(T)
+  nameWithType.vb: Option(Of T).Else(T)
+- uid: FunctionalLink.Next.Option`1.Else(System.Func{`0})
+  name: Else(Func<T>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Else_System_Func__0__
+  commentId: M:FunctionalLink.Next.Option`1.Else(System.Func{`0})
+  name.vb: Else(Func(Of T))
+  fullName: FunctionalLink.Next.Option<T>.Else(System.Func<T>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Else(System.Func(Of T))
+  nameWithType: Option<T>.Else(Func<T>)
+  nameWithType.vb: Option(Of T).Else(Func(Of T))
+- uid: FunctionalLink.Next.Option`1.Else*
+  name: Else
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Else_
+  commentId: Overload:FunctionalLink.Next.Option`1.Else
+  fullName: FunctionalLink.Next.Option<T>.Else
+  fullName.vb: FunctionalLink.Next.Option(Of T).Else
+  nameWithType: Option<T>.Else
+  nameWithType.vb: Option(Of T).Else
+- uid: FunctionalLink.Next.Option`1.HasValue(`0@)
+  name: HasValue(out T)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_HasValue__0__
+  commentId: M:FunctionalLink.Next.Option`1.HasValue(`0@)
+  name.vb: HasValue(ByRef T)
+  fullName: FunctionalLink.Next.Option<T>.HasValue(out T)
+  fullName.vb: FunctionalLink.Next.Option(Of T).HasValue(ByRef T)
+  nameWithType: Option<T>.HasValue(out T)
+  nameWithType.vb: Option(Of T).HasValue(ByRef T)
+- uid: FunctionalLink.Next.Option`1.HasValue*
+  name: HasValue
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_HasValue_
+  commentId: Overload:FunctionalLink.Next.Option`1.HasValue
+  fullName: FunctionalLink.Next.Option<T>.HasValue
+  fullName.vb: FunctionalLink.Next.Option(Of T).HasValue
+  nameWithType: Option<T>.HasValue
+  nameWithType.vb: Option(Of T).HasValue
+- uid: FunctionalLink.Next.Option`1.Match(System.Action{`0},System.Action{FunctionalLink.Next.None})
+  name: Match(Action<T>, Action<None>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Match_System_Action__0__System_Action_FunctionalLink_Next_None__
+  commentId: M:FunctionalLink.Next.Option`1.Match(System.Action{`0},System.Action{FunctionalLink.Next.None})
+  name.vb: Match(Action(Of T), Action(Of None))
+  fullName: FunctionalLink.Next.Option<T>.Match(System.Action<T>, System.Action<FunctionalLink.Next.None>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Match(System.Action(Of T), System.Action(Of FunctionalLink.Next.None))
+  nameWithType: Option<T>.Match(Action<T>, Action<None>)
+  nameWithType.vb: Option(Of T).Match(Action(Of T), Action(Of None))
+- uid: FunctionalLink.Next.Option`1.Match*
+  name: Match
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Match_
+  commentId: Overload:FunctionalLink.Next.Option`1.Match
+  fullName: FunctionalLink.Next.Option<T>.Match
+  fullName.vb: FunctionalLink.Next.Option(Of T).Match
+  nameWithType: Option<T>.Match
+  nameWithType.vb: Option(Of T).Match
+- uid: FunctionalLink.Next.Option`1.Match``1(System.Func{`0,``0},System.Func{FunctionalLink.Next.None,``0})
+  name: Match<TResult>(Func<T, TResult>, Func<None, TResult>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Match__1_System_Func__0___0__System_Func_FunctionalLink_Next_None___0__
+  commentId: M:FunctionalLink.Next.Option`1.Match``1(System.Func{`0,``0},System.Func{FunctionalLink.Next.None,``0})
+  name.vb: Match(Of TResult)(Func(Of T, TResult), Func(Of None, TResult))
+  fullName: FunctionalLink.Next.Option<T>.Match<TResult>(System.Func<T, TResult>, System.Func<FunctionalLink.Next.None, TResult>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Match(Of TResult)(System.Func(Of T, TResult), System.Func(Of FunctionalLink.Next.None, TResult))
+  nameWithType: Option<T>.Match<TResult>(Func<T, TResult>, Func<None, TResult>)
+  nameWithType.vb: Option(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of None, TResult))
+- uid: FunctionalLink.Next.Option`1.Maybe(`0)
+  name: Maybe(T)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Maybe__0_
+  commentId: M:FunctionalLink.Next.Option`1.Maybe(`0)
+  fullName: FunctionalLink.Next.Option<T>.Maybe(T)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Maybe(T)
+  nameWithType: Option<T>.Maybe(T)
+  nameWithType.vb: Option(Of T).Maybe(T)
+- uid: FunctionalLink.Next.Option`1.Maybe*
+  name: Maybe
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Maybe_
+  commentId: Overload:FunctionalLink.Next.Option`1.Maybe
+  fullName: FunctionalLink.Next.Option<T>.Maybe
+  fullName.vb: FunctionalLink.Next.Option(Of T).Maybe
+  nameWithType: Option<T>.Maybe
+  nameWithType.vb: Option(Of T).Maybe
+- uid: FunctionalLink.Next.Option`1.None
+  name: None()
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_None
+  commentId: M:FunctionalLink.Next.Option`1.None
+  fullName: FunctionalLink.Next.Option<T>.None()
+  fullName.vb: FunctionalLink.Next.Option(Of T).None()
+  nameWithType: Option<T>.None()
+  nameWithType.vb: Option(Of T).None()
+- uid: FunctionalLink.Next.Option`1.None*
+  name: None
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_None_
+  commentId: Overload:FunctionalLink.Next.Option`1.None
+  fullName: FunctionalLink.Next.Option<T>.None
+  fullName.vb: FunctionalLink.Next.Option(Of T).None
+  nameWithType: Option<T>.None
+  nameWithType.vb: Option(Of T).None
+- uid: FunctionalLink.Next.Option`1.op_Implicit(FunctionalLink.Next.None)~FunctionalLink.Next.Option{`0}
+  name: Implicit(None to Option<T>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_op_Implicit_FunctionalLink_Next_None__FunctionalLink_Next_Option__0_
+  commentId: M:FunctionalLink.Next.Option`1.op_Implicit(FunctionalLink.Next.None)~FunctionalLink.Next.Option{`0}
+  name.vb: Widening(None to Option(Of T))
+  fullName: FunctionalLink.Next.Option<T>.Implicit(FunctionalLink.Next.None to FunctionalLink.Next.Option<T>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Widening(FunctionalLink.Next.None to FunctionalLink.Next.Option(Of T))
+  nameWithType: Option<T>.Implicit(None to Option<T>)
+  nameWithType.vb: Option(Of T).Widening(None to Option(Of T))
+- uid: FunctionalLink.Next.Option`1.op_Implicit*
+  name: Implicit
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_op_Implicit_
+  commentId: Overload:FunctionalLink.Next.Option`1.op_Implicit
+  name.vb: Widening
+  fullName: FunctionalLink.Next.Option<T>.Implicit
+  fullName.vb: FunctionalLink.Next.Option(Of T).Widening
+  nameWithType: Option<T>.Implicit
+  nameWithType.vb: Option(Of T).Widening
+- uid: FunctionalLink.Next.Option`1.Or(FunctionalLink.Next.Option{`0})
+  name: Or(Option<T>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Or_FunctionalLink_Next_Option__0__
+  commentId: M:FunctionalLink.Next.Option`1.Or(FunctionalLink.Next.Option{`0})
+  name.vb: Or(Option(Of T))
+  fullName: FunctionalLink.Next.Option<T>.Or(FunctionalLink.Next.Option<T>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Or(FunctionalLink.Next.Option(Of T))
+  nameWithType: Option<T>.Or(Option<T>)
+  nameWithType.vb: Option(Of T).Or(Option(Of T))
+- uid: FunctionalLink.Next.Option`1.Or(System.Func{FunctionalLink.Next.Option{`0}})
+  name: Or(Func<Option<T>>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Or_System_Func_FunctionalLink_Next_Option__0___
+  commentId: M:FunctionalLink.Next.Option`1.Or(System.Func{FunctionalLink.Next.Option{`0}})
+  name.vb: Or(Func(Of Option(Of T)))
+  fullName: FunctionalLink.Next.Option<T>.Or(System.Func<FunctionalLink.Next.Option<T>>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Or(System.Func(Of FunctionalLink.Next.Option(Of T)))
+  nameWithType: Option<T>.Or(Func<Option<T>>)
+  nameWithType.vb: Option(Of T).Or(Func(Of Option(Of T)))
+- uid: FunctionalLink.Next.Option`1.Or*
+  name: Or
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Or_
+  commentId: Overload:FunctionalLink.Next.Option`1.Or
+  fullName: FunctionalLink.Next.Option<T>.Or
+  fullName.vb: FunctionalLink.Next.Option(Of T).Or
+  nameWithType: Option<T>.Or
+  nameWithType.vb: Option(Of T).Or
+- uid: FunctionalLink.Next.Option`1.Some(`0)
+  name: Some(T)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Some__0_
+  commentId: M:FunctionalLink.Next.Option`1.Some(`0)
+  fullName: FunctionalLink.Next.Option<T>.Some(T)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Some(T)
+  nameWithType: Option<T>.Some(T)
+  nameWithType.vb: Option(Of T).Some(T)
+- uid: FunctionalLink.Next.Option`1.Some*
+  name: Some
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Some_
+  commentId: Overload:FunctionalLink.Next.Option`1.Some
+  fullName: FunctionalLink.Next.Option<T>.Some
+  fullName.vb: FunctionalLink.Next.Option(Of T).Some
+  nameWithType: Option<T>.Some
+  nameWithType.vb: Option(Of T).Some
+- uid: FunctionalLink.Next.Option`1.Then(System.Action{`0})
+  name: Then(Action<T>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Then_System_Action__0__
+  commentId: M:FunctionalLink.Next.Option`1.Then(System.Action{`0})
+  name.vb: Then(Action(Of T))
+  fullName: FunctionalLink.Next.Option<T>.Then(System.Action<T>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Then(System.Action(Of T))
+  nameWithType: Option<T>.Then(Action<T>)
+  nameWithType.vb: Option(Of T).Then(Action(Of T))
+- uid: FunctionalLink.Next.Option`1.Then*
+  name: Then
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Then_
+  commentId: Overload:FunctionalLink.Next.Option`1.Then
+  fullName: FunctionalLink.Next.Option<T>.Then
+  fullName.vb: FunctionalLink.Next.Option(Of T).Then
+  nameWithType: Option<T>.Then
+  nameWithType.vb: Option(Of T).Then
+- uid: FunctionalLink.Next.Option`1.Then``1(System.Func{`0,``0})
+  name: Then<TResult>(Func<T, TResult>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Then__1_System_Func__0___0__
+  commentId: M:FunctionalLink.Next.Option`1.Then``1(System.Func{`0,``0})
+  name.vb: Then(Of TResult)(Func(Of T, TResult))
+  fullName: FunctionalLink.Next.Option<T>.Then<TResult>(System.Func<T, TResult>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Then(Of TResult)(System.Func(Of T, TResult))
+  nameWithType: Option<T>.Then<TResult>(Func<T, TResult>)
+  nameWithType.vb: Option(Of T).Then(Of TResult)(Func(Of T, TResult))
+- uid: FunctionalLink.Next.Option`1.Then``1(System.Func{`0,FunctionalLink.Next.Option{``0}})
+  name: Then<TResult>(Func<T, Option<TResult>>)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Then__1_System_Func__0_FunctionalLink_Next_Option___0___
+  commentId: M:FunctionalLink.Next.Option`1.Then``1(System.Func{`0,FunctionalLink.Next.Option{``0}})
+  name.vb: Then(Of TResult)(Func(Of T, Option(Of TResult)))
+  fullName: FunctionalLink.Next.Option<T>.Then<TResult>(System.Func<T, FunctionalLink.Next.Option<TResult>>)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Then(Of TResult)(System.Func(Of T, FunctionalLink.Next.Option(Of TResult)))
+  nameWithType: Option<T>.Then<TResult>(Func<T, Option<TResult>>)
+  nameWithType.vb: Option(Of T).Then(Of TResult)(Func(Of T, Option(Of TResult)))
+- uid: FunctionalLink.Next.Option`1.ValueOr(`0)
+  name: ValueOr(T)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_ValueOr__0_
+  commentId: M:FunctionalLink.Next.Option`1.ValueOr(`0)
+  fullName: FunctionalLink.Next.Option<T>.ValueOr(T)
+  fullName.vb: FunctionalLink.Next.Option(Of T).ValueOr(T)
+  nameWithType: Option<T>.ValueOr(T)
+  nameWithType.vb: Option(Of T).ValueOr(T)
+- uid: FunctionalLink.Next.Option`1.ValueOr*
+  name: ValueOr
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_ValueOr_
+  commentId: Overload:FunctionalLink.Next.Option`1.ValueOr
+  fullName: FunctionalLink.Next.Option<T>.ValueOr
+  fullName.vb: FunctionalLink.Next.Option(Of T).ValueOr
+  nameWithType: Option<T>.ValueOr
+  nameWithType.vb: Option(Of T).ValueOr
+- uid: FunctionalLink.Next.Result
+  name: Result
+  href: api/FunctionalLink.Next.Result.html
+  commentId: T:FunctionalLink.Next.Result
+  fullName: FunctionalLink.Next.Result
+  nameWithType: Result
+- uid: FunctionalLink.Next.Result.Failure*
+  name: Failure
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Failure_
+  commentId: Overload:FunctionalLink.Next.Result.Failure
+  fullName: FunctionalLink.Next.Result.Failure
+  nameWithType: Result.Failure
+- uid: FunctionalLink.Next.Result.Failure``1(``0)
+  name: Failure<T>(T)
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Failure__1___0_
+  commentId: M:FunctionalLink.Next.Result.Failure``1(``0)
+  name.vb: Failure(Of T)(T)
+  fullName: FunctionalLink.Next.Result.Failure<T>(T)
+  fullName.vb: FunctionalLink.Next.Result.Failure(Of T)(T)
+  nameWithType: Result.Failure<T>(T)
+  nameWithType.vb: Result.Failure(Of T)(T)
+- uid: FunctionalLink.Next.Result.Success
+  name: Success()
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Success
+  commentId: M:FunctionalLink.Next.Result.Success
+  fullName: FunctionalLink.Next.Result.Success()
+  nameWithType: Result.Success()
+- uid: FunctionalLink.Next.Result.Success*
+  name: Success
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Success_
+  commentId: Overload:FunctionalLink.Next.Result.Success
+  fullName: FunctionalLink.Next.Result.Success
+  nameWithType: Result.Success
+- uid: FunctionalLink.Next.Result.Success``1(``0)
+  name: Success<T>(T)
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Success__1___0_
+  commentId: M:FunctionalLink.Next.Result.Success``1(``0)
+  name.vb: Success(Of T)(T)
+  fullName: FunctionalLink.Next.Result.Success<T>(T)
+  fullName.vb: FunctionalLink.Next.Result.Success(Of T)(T)
+  nameWithType: Result.Success<T>(T)
+  nameWithType.vb: Result.Success(Of T)(T)
+- uid: FunctionalLink.Next.Result`1
+  name: Result<T>
+  href: api/FunctionalLink.Next.Result-1.html
+  commentId: T:FunctionalLink.Next.Result`1
+  name.vb: Result(Of T)
+  fullName: FunctionalLink.Next.Result<T>
+  fullName.vb: FunctionalLink.Next.Result(Of T)
+  nameWithType: Result<T>
+  nameWithType.vb: Result(Of T)
+- uid: FunctionalLink.Next.Result`1.op_Implicit(FunctionalLink.Next.Failure{System.String})~FunctionalLink.Next.Result{`0}
+  name: Implicit(Failure<String> to Result<T>)
+  href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_op_Implicit_FunctionalLink_Next_Failure_System_String___FunctionalLink_Next_Result__0_
+  commentId: M:FunctionalLink.Next.Result`1.op_Implicit(FunctionalLink.Next.Failure{System.String})~FunctionalLink.Next.Result{`0}
+  name.vb: Widening(Failure(Of String) to Result(Of T))
+  fullName: FunctionalLink.Next.Result<T>.Implicit(FunctionalLink.Next.Failure<System.String> to FunctionalLink.Next.Result<T>)
+  fullName.vb: FunctionalLink.Next.Result(Of T).Widening(FunctionalLink.Next.Failure(Of System.String) to FunctionalLink.Next.Result(Of T))
+  nameWithType: Result<T>.Implicit(Failure<String> to Result<T>)
+  nameWithType.vb: Result(Of T).Widening(Failure(Of String) to Result(Of T))
+- uid: FunctionalLink.Next.Result`1.op_Implicit(FunctionalLink.Next.Success{`0})~FunctionalLink.Next.Result{`0}
+  name: Implicit(Success<T> to Result<T>)
+  href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_op_Implicit_FunctionalLink_Next_Success__0___FunctionalLink_Next_Result__0_
+  commentId: M:FunctionalLink.Next.Result`1.op_Implicit(FunctionalLink.Next.Success{`0})~FunctionalLink.Next.Result{`0}
+  name.vb: Widening(Success(Of T) to Result(Of T))
+  fullName: FunctionalLink.Next.Result<T>.Implicit(FunctionalLink.Next.Success<T> to FunctionalLink.Next.Result<T>)
+  fullName.vb: FunctionalLink.Next.Result(Of T).Widening(FunctionalLink.Next.Success(Of T) to FunctionalLink.Next.Result(Of T))
+  nameWithType: Result<T>.Implicit(Success<T> to Result<T>)
+  nameWithType.vb: Result(Of T).Widening(Success(Of T) to Result(Of T))
+- uid: FunctionalLink.Next.Result`1.op_Implicit*
+  name: Implicit
+  href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_op_Implicit_
+  commentId: Overload:FunctionalLink.Next.Result`1.op_Implicit
+  name.vb: Widening
+  fullName: FunctionalLink.Next.Result<T>.Implicit
+  fullName.vb: FunctionalLink.Next.Result(Of T).Widening
+  nameWithType: Result<T>.Implicit
+  nameWithType.vb: Result(Of T).Widening
+- uid: FunctionalLink.Next.Result`2
+  name: Result<T, TFailure>
+  href: api/FunctionalLink.Next.Result-2.html
+  commentId: T:FunctionalLink.Next.Result`2
+  name.vb: Result(Of T, TFailure)
+  fullName: FunctionalLink.Next.Result<T, TFailure>
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure)
+  nameWithType: Result<T, TFailure>
+  nameWithType.vb: Result(Of T, TFailure)
+- uid: FunctionalLink.Next.Result`2.And*
+  name: And
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_And_
+  commentId: Overload:FunctionalLink.Next.Result`2.And
+  fullName: FunctionalLink.Next.Result<T, TFailure>.And
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).And
+  nameWithType: Result<T, TFailure>.And
+  nameWithType.vb: Result(Of T, TFailure).And
+- uid: FunctionalLink.Next.Result`2.And``2(FunctionalLink.Next.Result{``0,`1},System.Func{`0,``0,``1})
+  name: And<TOther, TResult>(Result<TOther, TFailure>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_And__2_FunctionalLink_Next_Result___0__1__System_Func__0___0___1__
+  commentId: M:FunctionalLink.Next.Result`2.And``2(FunctionalLink.Next.Result{``0,`1},System.Func{`0,``0,``1})
+  name.vb: And(Of TOther, TResult)(Result(Of TOther, TFailure), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.And<TOther, TResult>(FunctionalLink.Next.Result<TOther, TFailure>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).And(Of TOther, TResult)(FunctionalLink.Next.Result(Of TOther, TFailure), System.Func(Of T, TOther, TResult))
+  nameWithType: Result<T, TFailure>.And<TOther, TResult>(Result<TOther, TFailure>, Func<T, TOther, TResult>)
+  nameWithType.vb: Result(Of T, TFailure).And(Of TOther, TResult)(Result(Of TOther, TFailure), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.Result`2.And``2(System.Func{FunctionalLink.Next.Result{``0,`1}},System.Func{`0,``0,``1})
+  name: And<TOther, TResult>(Func<Result<TOther, TFailure>>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_And__2_System_Func_FunctionalLink_Next_Result___0__1___System_Func__0___0___1__
+  commentId: M:FunctionalLink.Next.Result`2.And``2(System.Func{FunctionalLink.Next.Result{``0,`1}},System.Func{`0,``0,``1})
+  name.vb: And(Of TOther, TResult)(Func(Of Result(Of TOther, TFailure)), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.And<TOther, TResult>(System.Func<FunctionalLink.Next.Result<TOther, TFailure>>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).And(Of TOther, TResult)(System.Func(Of FunctionalLink.Next.Result(Of TOther, TFailure)), System.Func(Of T, TOther, TResult))
+  nameWithType: Result<T, TFailure>.And<TOther, TResult>(Func<Result<TOther, TFailure>>, Func<T, TOther, TResult>)
+  nameWithType.vb: Result(Of T, TFailure).And(Of TOther, TResult)(Func(Of Result(Of TOther, TFailure)), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.Result`2.Else(`0)
+  name: Else(T)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Else__0_
+  commentId: M:FunctionalLink.Next.Result`2.Else(`0)
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Else(T)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Else(T)
+  nameWithType: Result<T, TFailure>.Else(T)
+  nameWithType.vb: Result(Of T, TFailure).Else(T)
+- uid: FunctionalLink.Next.Result`2.Else(System.Func{`0})
+  name: Else(Func<T>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Else_System_Func__0__
+  commentId: M:FunctionalLink.Next.Result`2.Else(System.Func{`0})
+  name.vb: Else(Func(Of T))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Else(System.Func<T>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Else(System.Func(Of T))
+  nameWithType: Result<T, TFailure>.Else(Func<T>)
+  nameWithType.vb: Result(Of T, TFailure).Else(Func(Of T))
+- uid: FunctionalLink.Next.Result`2.Else*
+  name: Else
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Else_
+  commentId: Overload:FunctionalLink.Next.Result`2.Else
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Else
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Else
+  nameWithType: Result<T, TFailure>.Else
+  nameWithType.vb: Result(Of T, TFailure).Else
+- uid: FunctionalLink.Next.Result`2.Failure(`1)
+  name: Failure(TFailure)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Failure__1_
+  commentId: M:FunctionalLink.Next.Result`2.Failure(`1)
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Failure(TFailure)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Failure(TFailure)
+  nameWithType: Result<T, TFailure>.Failure(TFailure)
+  nameWithType.vb: Result(Of T, TFailure).Failure(TFailure)
+- uid: FunctionalLink.Next.Result`2.Failure*
+  name: Failure
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Failure_
+  commentId: Overload:FunctionalLink.Next.Result`2.Failure
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Failure
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Failure
+  nameWithType: Result<T, TFailure>.Failure
+  nameWithType.vb: Result(Of T, TFailure).Failure
+- uid: FunctionalLink.Next.Result`2.HasFailure(`1@)
+  name: HasFailure(out TFailure)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_HasFailure__1__
+  commentId: M:FunctionalLink.Next.Result`2.HasFailure(`1@)
+  name.vb: HasFailure(ByRef TFailure)
+  fullName: FunctionalLink.Next.Result<T, TFailure>.HasFailure(out TFailure)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).HasFailure(ByRef TFailure)
+  nameWithType: Result<T, TFailure>.HasFailure(out TFailure)
+  nameWithType.vb: Result(Of T, TFailure).HasFailure(ByRef TFailure)
+- uid: FunctionalLink.Next.Result`2.HasFailure*
+  name: HasFailure
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_HasFailure_
+  commentId: Overload:FunctionalLink.Next.Result`2.HasFailure
+  fullName: FunctionalLink.Next.Result<T, TFailure>.HasFailure
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).HasFailure
+  nameWithType: Result<T, TFailure>.HasFailure
+  nameWithType.vb: Result(Of T, TFailure).HasFailure
+- uid: FunctionalLink.Next.Result`2.HasValue(`0@)
+  name: HasValue(out T)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_HasValue__0__
+  commentId: M:FunctionalLink.Next.Result`2.HasValue(`0@)
+  name.vb: HasValue(ByRef T)
+  fullName: FunctionalLink.Next.Result<T, TFailure>.HasValue(out T)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).HasValue(ByRef T)
+  nameWithType: Result<T, TFailure>.HasValue(out T)
+  nameWithType.vb: Result(Of T, TFailure).HasValue(ByRef T)
+- uid: FunctionalLink.Next.Result`2.HasValue*
+  name: HasValue
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_HasValue_
+  commentId: Overload:FunctionalLink.Next.Result`2.HasValue
+  fullName: FunctionalLink.Next.Result<T, TFailure>.HasValue
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).HasValue
+  nameWithType: Result<T, TFailure>.HasValue
+  nameWithType.vb: Result(Of T, TFailure).HasValue
+- uid: FunctionalLink.Next.Result`2.Match(System.Action{`0},System.Action{`1})
+  name: Match(Action<T>, Action<TFailure>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Match_System_Action__0__System_Action__1__
+  commentId: M:FunctionalLink.Next.Result`2.Match(System.Action{`0},System.Action{`1})
+  name.vb: Match(Action(Of T), Action(Of TFailure))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Match(System.Action<T>, System.Action<TFailure>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Match(System.Action(Of T), System.Action(Of TFailure))
+  nameWithType: Result<T, TFailure>.Match(Action<T>, Action<TFailure>)
+  nameWithType.vb: Result(Of T, TFailure).Match(Action(Of T), Action(Of TFailure))
+- uid: FunctionalLink.Next.Result`2.Match*
+  name: Match
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Match_
+  commentId: Overload:FunctionalLink.Next.Result`2.Match
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Match
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Match
+  nameWithType: Result<T, TFailure>.Match
+  nameWithType.vb: Result(Of T, TFailure).Match
+- uid: FunctionalLink.Next.Result`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
+  name: Match<TResult>(Func<T, TResult>, Func<TFailure, TResult>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Match__1_System_Func__0___0__System_Func__1___0__
+  commentId: M:FunctionalLink.Next.Result`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
+  name.vb: Match(Of TResult)(Func(Of T, TResult), Func(Of TFailure, TResult))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Match<TResult>(System.Func<T, TResult>, System.Func<TFailure, TResult>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Match(Of TResult)(System.Func(Of T, TResult), System.Func(Of TFailure, TResult))
+  nameWithType: Result<T, TFailure>.Match<TResult>(Func<T, TResult>, Func<TFailure, TResult>)
+  nameWithType.vb: Result(Of T, TFailure).Match(Of TResult)(Func(Of T, TResult), Func(Of TFailure, TResult))
+- uid: FunctionalLink.Next.Result`2.op_Implicit(FunctionalLink.Next.Failure{`1})~FunctionalLink.Next.Result{`0,`1}
+  name: Implicit(Failure<TFailure> to Result<T, TFailure>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_op_Implicit_FunctionalLink_Next_Failure__1___FunctionalLink_Next_Result__0__1_
+  commentId: M:FunctionalLink.Next.Result`2.op_Implicit(FunctionalLink.Next.Failure{`1})~FunctionalLink.Next.Result{`0,`1}
+  name.vb: Widening(Failure(Of TFailure) to Result(Of T, TFailure))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Implicit(FunctionalLink.Next.Failure<TFailure> to FunctionalLink.Next.Result<T, TFailure>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Widening(FunctionalLink.Next.Failure(Of TFailure) to FunctionalLink.Next.Result(Of T, TFailure))
+  nameWithType: Result<T, TFailure>.Implicit(Failure<TFailure> to Result<T, TFailure>)
+  nameWithType.vb: Result(Of T, TFailure).Widening(Failure(Of TFailure) to Result(Of T, TFailure))
+- uid: FunctionalLink.Next.Result`2.op_Implicit(FunctionalLink.Next.Result{`0,`1})~FunctionalLink.Next.Result{`0}
+  name: Implicit(Result<T, TFailure> to Result<T>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_op_Implicit_FunctionalLink_Next_Result__0__1___FunctionalLink_Next_Result__0_
+  commentId: M:FunctionalLink.Next.Result`2.op_Implicit(FunctionalLink.Next.Result{`0,`1})~FunctionalLink.Next.Result{`0}
+  name.vb: Widening(Result(Of T, TFailure) to Result(Of T))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Implicit(FunctionalLink.Next.Result<T, TFailure> to FunctionalLink.Next.Result<T>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Widening(FunctionalLink.Next.Result(Of T, TFailure) to FunctionalLink.Next.Result(Of T))
+  nameWithType: Result<T, TFailure>.Implicit(Result<T, TFailure> to Result<T>)
+  nameWithType.vb: Result(Of T, TFailure).Widening(Result(Of T, TFailure) to Result(Of T))
+- uid: FunctionalLink.Next.Result`2.op_Implicit(FunctionalLink.Next.Success{`0})~FunctionalLink.Next.Result{`0,`1}
+  name: Implicit(Success<T> to Result<T, TFailure>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_op_Implicit_FunctionalLink_Next_Success__0___FunctionalLink_Next_Result__0__1_
+  commentId: M:FunctionalLink.Next.Result`2.op_Implicit(FunctionalLink.Next.Success{`0})~FunctionalLink.Next.Result{`0,`1}
+  name.vb: Widening(Success(Of T) to Result(Of T, TFailure))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Implicit(FunctionalLink.Next.Success<T> to FunctionalLink.Next.Result<T, TFailure>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Widening(FunctionalLink.Next.Success(Of T) to FunctionalLink.Next.Result(Of T, TFailure))
+  nameWithType: Result<T, TFailure>.Implicit(Success<T> to Result<T, TFailure>)
+  nameWithType.vb: Result(Of T, TFailure).Widening(Success(Of T) to Result(Of T, TFailure))
+- uid: FunctionalLink.Next.Result`2.op_Implicit*
+  name: Implicit
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_op_Implicit_
+  commentId: Overload:FunctionalLink.Next.Result`2.op_Implicit
+  name.vb: Widening
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Implicit
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Widening
+  nameWithType: Result<T, TFailure>.Implicit
+  nameWithType.vb: Result(Of T, TFailure).Widening
+- uid: FunctionalLink.Next.Result`2.Or(FunctionalLink.Next.Result{`0,`1})
+  name: Or(Result<T, TFailure>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Or_FunctionalLink_Next_Result__0__1__
+  commentId: M:FunctionalLink.Next.Result`2.Or(FunctionalLink.Next.Result{`0,`1})
+  name.vb: Or(Result(Of T, TFailure))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Or(FunctionalLink.Next.Result<T, TFailure>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Or(FunctionalLink.Next.Result(Of T, TFailure))
+  nameWithType: Result<T, TFailure>.Or(Result<T, TFailure>)
+  nameWithType.vb: Result(Of T, TFailure).Or(Result(Of T, TFailure))
+- uid: FunctionalLink.Next.Result`2.Or(System.Func{FunctionalLink.Next.Result{`0,`1}})
+  name: Or(Func<Result<T, TFailure>>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Or_System_Func_FunctionalLink_Next_Result__0__1___
+  commentId: M:FunctionalLink.Next.Result`2.Or(System.Func{FunctionalLink.Next.Result{`0,`1}})
+  name.vb: Or(Func(Of Result(Of T, TFailure)))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Or(System.Func<FunctionalLink.Next.Result<T, TFailure>>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Or(System.Func(Of FunctionalLink.Next.Result(Of T, TFailure)))
+  nameWithType: Result<T, TFailure>.Or(Func<Result<T, TFailure>>)
+  nameWithType.vb: Result(Of T, TFailure).Or(Func(Of Result(Of T, TFailure)))
+- uid: FunctionalLink.Next.Result`2.Or*
+  name: Or
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Or_
+  commentId: Overload:FunctionalLink.Next.Result`2.Or
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Or
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Or
+  nameWithType: Result<T, TFailure>.Or
+  nameWithType.vb: Result(Of T, TFailure).Or
+- uid: FunctionalLink.Next.Result`2.Success(`0)
+  name: Success(T)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Success__0_
+  commentId: M:FunctionalLink.Next.Result`2.Success(`0)
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Success(T)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Success(T)
+  nameWithType: Result<T, TFailure>.Success(T)
+  nameWithType.vb: Result(Of T, TFailure).Success(T)
+- uid: FunctionalLink.Next.Result`2.Success*
+  name: Success
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Success_
+  commentId: Overload:FunctionalLink.Next.Result`2.Success
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Success
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Success
+  nameWithType: Result<T, TFailure>.Success
+  nameWithType.vb: Result(Of T, TFailure).Success
+- uid: FunctionalLink.Next.Result`2.Then(System.Action{`0})
+  name: Then(Action<T>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then_System_Action__0__
+  commentId: M:FunctionalLink.Next.Result`2.Then(System.Action{`0})
+  name.vb: Then(Action(Of T))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Then(System.Action<T>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(System.Action(Of T))
+  nameWithType: Result<T, TFailure>.Then(Action<T>)
+  nameWithType.vb: Result(Of T, TFailure).Then(Action(Of T))
+- uid: FunctionalLink.Next.Result`2.Then*
+  name: Then
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then_
+  commentId: Overload:FunctionalLink.Next.Result`2.Then
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Then
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then
+  nameWithType: Result<T, TFailure>.Then
+  nameWithType.vb: Result(Of T, TFailure).Then
+- uid: FunctionalLink.Next.Result`2.Then``1(System.Func{`0,``0})
+  name: Then<TResult>(Func<T, TResult>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then__1_System_Func__0___0__
+  commentId: M:FunctionalLink.Next.Result`2.Then``1(System.Func{`0,``0})
+  name.vb: Then(Of TResult)(Func(Of T, TResult))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Then<TResult>(System.Func<T, TResult>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(Of TResult)(System.Func(Of T, TResult))
+  nameWithType: Result<T, TFailure>.Then<TResult>(Func<T, TResult>)
+  nameWithType.vb: Result(Of T, TFailure).Then(Of TResult)(Func(Of T, TResult))
+- uid: FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0,`1}})
+  name: Then<TResult>(Func<T, Result<TResult, TFailure>>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then__1_System_Func__0_FunctionalLink_Next_Result___0__1___
+  commentId: M:FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0,`1}})
+  name.vb: Then(Of TResult)(Func(Of T, Result(Of TResult, TFailure)))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Then<TResult>(System.Func<T, FunctionalLink.Next.Result<TResult, TFailure>>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(Of TResult)(System.Func(Of T, FunctionalLink.Next.Result(Of TResult, TFailure)))
+  nameWithType: Result<T, TFailure>.Then<TResult>(Func<T, Result<TResult, TFailure>>)
+  nameWithType.vb: Result(Of T, TFailure).Then(Of TResult)(Func(Of T, Result(Of TResult, TFailure)))
+- uid: FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0}})
+  name: Then<TResult>(Func<T, Result<TResult>>)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then__1_System_Func__0_FunctionalLink_Next_Result___0___
+  commentId: M:FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0}})
+  name.vb: Then(Of TResult)(Func(Of T, Result(Of TResult)))
+  fullName: FunctionalLink.Next.Result<T, TFailure>.Then<TResult>(System.Func<T, FunctionalLink.Next.Result<TResult>>)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(Of TResult)(System.Func(Of T, FunctionalLink.Next.Result(Of TResult)))
+  nameWithType: Result<T, TFailure>.Then<TResult>(Func<T, Result<TResult>>)
+  nameWithType.vb: Result(Of T, TFailure).Then(Of TResult)(Func(Of T, Result(Of TResult)))
+- uid: FunctionalLink.Next.Result`2.ValueOr(`0)
+  name: ValueOr(T)
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_ValueOr__0_
+  commentId: M:FunctionalLink.Next.Result`2.ValueOr(`0)
+  fullName: FunctionalLink.Next.Result<T, TFailure>.ValueOr(T)
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).ValueOr(T)
+  nameWithType: Result<T, TFailure>.ValueOr(T)
+  nameWithType.vb: Result(Of T, TFailure).ValueOr(T)
+- uid: FunctionalLink.Next.Result`2.ValueOr*
+  name: ValueOr
+  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_ValueOr_
+  commentId: Overload:FunctionalLink.Next.Result`2.ValueOr
+  fullName: FunctionalLink.Next.Result<T, TFailure>.ValueOr
+  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).ValueOr
+  nameWithType: Result<T, TFailure>.ValueOr
+  nameWithType.vb: Result(Of T, TFailure).ValueOr
+- uid: FunctionalLink.Next.Success`1
+  name: Success<T>
+  href: api/FunctionalLink.Next.Success-1.html
+  commentId: T:FunctionalLink.Next.Success`1
+  name.vb: Success(Of T)
+  fullName: FunctionalLink.Next.Success<T>
+  fullName.vb: FunctionalLink.Next.Success(Of T)
+  nameWithType: Success<T>
+  nameWithType.vb: Success(Of T)

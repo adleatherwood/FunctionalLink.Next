@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Option </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Option ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/intro.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="active">
+                      <a href="TheOption.html" title="The Option Type" class="active">The Option Type</a>
+                    </li>
+                    <li class="">
+                      <a href="TheResult.html" title="The Result Type" class="">The Result Type</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-option">The Option</h1>
+
+<p>The Option type is intended as a general replacement for null.  It's data structure is the same as Nullable<t>, but it
+can be used with either references or structs. So:<p>
+<pre><code class="lang-cs">{
+    bool HasValue;
+    T Value;
+}
+</code></pre>
+<p>Here's an example of how you could use an Option:</p>
+<pre><code class="lang-cs">public Option&lt;User&gt; FindUser(int userId)
+{
+   var found = ReadDb(userId);
+   return found != null
+        ? Option.Some(found)
+        : Option.None(); 
+}
+</code></pre>
+<p>The database you are using may deal in nulls, but your code can prevent that from proliferating through your code.  The
+function signature above gives us a clear understanding what will be returned.  It also gives us a few other things as well.</p>
+<h2 id="deconstruction">Deconstruction</h2>
+<p>You can inspect the Option for what value it has, if any:</p>
+<pre><code class="lang-cs">var user = FindUser(1); // returns Option&lt;User&gt;
+
+if (user.HasValue(out var found))
+{
+    GreetUser(found)
+}
+</code></pre>
+<p>You could also take a more functional approach:</p>
+<pre><code class="lang-cs">var user = FindUser(1)
+    .Then(found =&gt; GreetUser(found));    
+</code></pre>
+<p>Or, in this case, simply:</p>
+<pre><code class="lang-cs">var user = FindUser(1)
+    .Then(GreetUser);    
+</code></pre>
+<p>All of these arrangements provide the same functionality.  Just expressed differently.  It just depends on your taste as to how
+you prefer to express your logic.  This library is geared towards the last version.  It's hard to get more readable than:
+&quot;Find user. Then greet user&quot;.</p>
+<h2 id="substitution">Substitution</h2>
+<p>You can also, make substitutions for when values are not present:</p>
+<pre><code class="lang-c#">var highScore = FindHighScore(userId: 1) // returns Option&lt;int&gt;
+    .ValueOr(0);
+    
+Console.WriteLine($&quot;Your Personal Best: {highScore}&quot;);  
+</code></pre>
+<p>Or:</p>
+<pre><code class="lang-c#">var highScore = FindHighScore(userId: 1) 
+    .Then(hs =&gt; $&quot;Your Personal Best: {hs}&quot;)
+    .ValueOr(&quot;No scores on record yet&quot;); 
+    
+Console.WriteLine(highScore);
+</code></pre>
+<p>Or:</p>
+<pre><code class="lang-c#">var highScore = FindHighScore(userId: 1) 
+    .Match(
+        some =&gt; $&quot;Your Personal Best: {some}&quot;,
+        none =&gt; &quot;No scores on record yet&quot;);
+        
+Console.WriteLine(highScore); 
+</code></pre>
+<p>Or ideally:</p>
+<pre><code class="lang-c#">var highScore = FindHighScore(userId: 1) 
+    .Then(hs =&gt; $&quot;Your Personal Best: {hs}&quot;)
+    .Else(&quot;No scores on record yet&quot;)
+    .Then(Console.WriteLine); 
+</code></pre>
+<p>Each of the previous methods has it's time and place.  It's just a matter of what seems most appropriate at any given moment.</p>
+<h2 id="logical-composition">Logical Composition</h2>
+<p>In addition to the basics above.  You can also logically chain Options together with Ands and Ors.</p>
+<pre><code class="lang-cs">var user = FindUser(userId: 1);           
+var highScore = FindHighScore(userId: 1); 
+
+var message = user.And(highScore, 
+        (u, hs) =&gt; (u.Username, HighScore: hs)) // map them together
+    .Then(t =&gt; $&quot;{t.Username}'s Personal Best: {t.HighScore}&quot;)
+    .ValueOr(&quot;No scores on record yet&quot;);
+    
+Console.WriteLine(message);        
+</code></pre>
+<p>Or:</p>
+<pre><code class="lang-cs">var user = FindUser(userId: 1)
+    .Or(() =&gt; CreateGuestUser(userId: 1));           
+
+var highScore = FindHighScore(userId: 1); 
+
+var message = user
+    .And(highScore, (u, hs) =&gt; (u.Username, HighScore: hs))
+    .Then(t =&gt; $&quot;{t.Username}'s Personal Best: {t.HighScore}&quot;)
+    .ValueOr(&quot;No scores on record yet&quot;);
+    
+Console.WriteLine(message);        
+</code></pre>
+<p>The underlying goal of adopting these kinds of workflows is to ensure that all logical
+paths are managed and the code isn't written with casual developer optimism.  Where negative
+paths aren't managed by anything but exceptions.</p>
+</t></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

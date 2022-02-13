@@ -1,3 +1,13 @@
+
+https://stackoverflow.com/questions/65059813/docfx-metadata-step-fails-with-error-could-not-load-sdk-resolver
+
+https://stackoverflow.com/questions/53965517/how-to-generate-documentation-with-docfx-using-xml-documentation-file
+
+https://iconarchive.com/show/enkel-icons-by-froyoshark/Telegram-icon.html
+
+
+
+
 ## Introduction
 
 This is a simple pipeline example for a .NET Core application, showing just

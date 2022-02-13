@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GlobalLink
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GlobalLink
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/intro.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="FunctionalLink.Next.html" title="FunctionalLink.Next" class="">FunctionalLink.Next</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="FunctionalLink.Next.EnumerableExtensions.html" title="EnumerableExtensions" class="">EnumerableExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Failure-1.html" title="Failure&lt;T&gt;" class="">Failure&lt;T&gt;</a>
+                          </li>
+                          <li class="active">
+                            <a href="FunctionalLink.Next.GlobalLink.html" title="GlobalLink" class="active">GlobalLink</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.None.html" title="None" class="">None</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.ObjectExtensions.html" title="ObjectExtensions" class="">ObjectExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Option.html" title="Option" class="">Option</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Option-1.html" title="Option&lt;T&gt;" class="">Option&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Result.html" title="Result" class="">Result</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Result-2.html" title="Result&lt;T, TFailure&gt;" class="">Result&lt;T, TFailure&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Result-1.html" title="Result&lt;T&gt;" class="">Result&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Success-1.html" title="Success&lt;T&gt;" class="">Success&lt;T&gt;</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="FunctionalLink.Next.GlobalLink">
+  
+  
+  <h1 id="FunctionalLink_Next_GlobalLink" data-uid="FunctionalLink.Next.GlobalLink" class="text-break">Class GlobalLink
+  </h1>
+  <div class="markdown level0 summary"><p>If enabled, this class provides constructors for all of the types in the library without needing to
+fully qualify the type.  Using this is completely optional, but does create very clean looking code.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GlobalLink</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FunctionalLink.Next.html">FunctionalLink.Next</a></h6>
+  <h6><strong>Assembly</strong>: FunctionalLink.Next.dll</h6>
+  <h5 id="FunctionalLink_Next_GlobalLink_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class GlobalLink : Object</code></pre>
+  </div>
+  <h5 id="FunctionalLink_Next_GlobalLink_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>To enable this feature, make a static using statement like so:</p>
+<pre><code>using static FunctionalLink.Next.GlobalLink;</code></pre>
+<p>Once enabled, you can construct Options and Results with less code.  e.g.:</p>
+<pre><code>return value != null
+    ? Some(value); 
+    : None();
+
+return found
+    ? Success(value); 
+    : Failure(&quot;Value not found&quot;); </code></pre> 
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="FunctionalLink_Next_GlobalLink_Failure_" data-uid="FunctionalLink.Next.GlobalLink.Failure*"></a>
+  <h4 id="FunctionalLink_Next_GlobalLink_Failure__1___0_" data-uid="FunctionalLink.Next.GlobalLink.Failure``1(``0)">Failure&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>This is an alternate constructor for a Result in a failure state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Failure&lt;T&gt; Failure&lt;T&gt;(T failure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">failure</span></td>
+        <td><p>The failure value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Failure-1.html">Failure</a>&lt;T&gt;</td>
+        <td><p>A Failure that implicitly converts to a Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The failure value type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="FunctionalLink_Next_GlobalLink_Failure__1___0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The implicit conversion allows you to declare a successful result with less type information.  e.g.</p>
+<pre><code>public static Result&lt;int> Divide(int a, int b) =>
+    return b != 0
+        ? Success(a / b)
+        : Failure(&quot;Cannot divide by 0&quot;);</code></pre>
+<p>Without the implicit conversion, the code would look like this:</p>
+<pre><code>public static Result&lt;int> Divide(int a, int b) =>
+    return b != 0
+        ? Option&lt;int>.Success(a / b)
+        : Option&lt;int>.Failure(&quot;Cannot divide by 0&quot;);</code></pre>
+<p>This is purely an aesthetic choice.  Both implementations yield the same result.</p>
+</div>
+  
+  
+  <a id="FunctionalLink_Next_GlobalLink_Maybe_" data-uid="FunctionalLink.Next.GlobalLink.Maybe*"></a>
+  <h4 id="FunctionalLink_Next_GlobalLink_Maybe__1___0_" data-uid="FunctionalLink.Next.GlobalLink.Maybe``1(``0)">Maybe&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>This is an alternate constructor for creating an Option from an unknown nullable value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Option&lt;T&gt; Maybe&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The target value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><p>An Option in the Some state if value is not null.  Otherwise in the None state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The target value type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="FunctionalLink_Next_GlobalLink_Maybe__1___0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>These are equivalent constructors:</p>
+<pre><code>value.Maybe();
+Maybe(value);
+Option.Maybe(value);
+Option&lt;int>.Maybe(value);</code></pre>
+</div>
+  
+  
+  <a id="FunctionalLink_Next_GlobalLink_None_" data-uid="FunctionalLink.Next.GlobalLink.None*"></a>
+  <h4 id="FunctionalLink_Next_GlobalLink_None" data-uid="FunctionalLink.Next.GlobalLink.None">None()</h4>
+  <div class="markdown level1 summary"><p>This is an alternate constructor for creating an Option in a None state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static None None()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.None.html">None</a></td>
+        <td><p>An Option in a None state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="FunctionalLink_Next_GlobalLink_None_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>These are equivalent constructors:</p>
+<pre><code>None();
+Option.None();
+Option&lt;int>.None();</code></pre>
+</div>
+  
+  
+  <a id="FunctionalLink_Next_GlobalLink_Self_" data-uid="FunctionalLink.Next.GlobalLink.Self*"></a>
+  <h4 id="FunctionalLink_Next_GlobalLink_Self__1___0_" data-uid="FunctionalLink.Next.GlobalLink.Self``1(``0)">Self&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>A self referencing function.  A function that returns the entity passed to it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Self&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The target value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>The given value unmodified</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the target value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="FunctionalLink_Next_GlobalLink_Self__1___0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is often useful in Linq statements.  You can replace this:</p>
+<pre><code>var result = values.GroupBy(i => i);</code></pre>
+<p>with</p>
+<pre><code>var result = values.GroupBy(Self);</code></pre>
+<p>It's largely an aesthetic choice.  But technically you are not reimplementing (i =&gt; i) over and over.  This
+is also positive.</p>
+</div>
+  
+  
+  <a id="FunctionalLink_Next_GlobalLink_Some_" data-uid="FunctionalLink.Next.GlobalLink.Some*"></a>
+  <h4 id="FunctionalLink_Next_GlobalLink_Some__1___0_" data-uid="FunctionalLink.Next.GlobalLink.Some``1(``0)">Some&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>This is an alternate constructor for creating an Option in a Some state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Option&lt;T&gt; Some&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The target value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><p>An Option in a Some state</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The target value type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="FunctionalLink_Next_GlobalLink_Some__1___0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>These are equivalent constructors:</p>
+<pre><code>Some(123);
+Option.Some(123);
+Option&lt;int>.Some(123);</code></pre>
+</div>
+  
+  
+  <a id="FunctionalLink_Next_GlobalLink_Success_" data-uid="FunctionalLink.Next.GlobalLink.Success*"></a>
+  <h4 id="FunctionalLink_Next_GlobalLink_Success" data-uid="FunctionalLink.Next.GlobalLink.Success">Success()</h4>
+  <div class="markdown level1 summary"><p>An alternate constructor for a Result in a success state, but with no particular value to return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Success&lt;None&gt; Success()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Success-1.html">Success</a>&lt;<a class="xref" href="FunctionalLink.Next.None.html">None</a>&gt;</td>
+        <td><p>A Success of None that implicitly converts to a Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_GlobalLink_Success_" data-uid="FunctionalLink.Next.GlobalLink.Success*"></a>
+  <h4 id="FunctionalLink_Next_GlobalLink_Success__1___0_" data-uid="FunctionalLink.Next.GlobalLink.Success``1(``0)">Success&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"><p>This is an alternate constructor for a Result in a success state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Success&lt;T&gt; Success&lt;T&gt;(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The target value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Success-1.html">Success</a>&lt;T&gt;</td>
+        <td><p>A Success that implicitly converts to a Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The target value type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="FunctionalLink_Next_GlobalLink_Success__1___0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The implicit conversion allows you to declare a successful result with less type information.  e.g.</p>
+<pre><code>public static Result&lt;int> Divide(int a, int b) =>
+    return b != 0
+        ? Success(a / b)
+        : Failure(&quot;Cannot divide by 0&quot;);</code></pre>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
