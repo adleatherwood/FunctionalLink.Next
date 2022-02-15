@@ -102,8 +102,8 @@
 you read through the Option type first because all of the functions are basically the
 same.</p>
 <p>The main different of the Result type is that instead of getting nothing (or None) when
-there is no result, you get a Failure.  So the Options narrative is, there may or may not
-be a value&quot;.  And the Results narrative is, &quot;This may or may not work&quot;.</p>
+there is no result, you get a Failure.  So the Option's narrative is, &quot;there may or may not
+be a value&quot;.  And the Result's narrative is, &quot;This may or may not work&quot;.</p>
 <p>Here's one of the Option examples refactored as a Result to show their similarities:</p>
 <pre><code class="lang-cs">public Result&lt;User&gt; FindUser(int userId)
 {
@@ -144,6 +144,12 @@ be a value&quot;.  And the Results narrative is, &quot;This may or may not work&
     
     return Success(contents);
 }
+</code></pre>
+<p>Or more succinctly:</p>
+<pre><code class="lang-cs">public Result&lt;string&gt; ReadFile(string filename) =&gt; 
+    File.Exists(filename)
+        ? Success(File.ReadAllText(filename))
+        : Failure(&quot;File does not exist&quot;);        
 </code></pre>
 <p>The goal is to encourage writing workflows for negative paths rather than throwing exceptions.</p>
 <p>For convenience, there are two Result Types:</p>
