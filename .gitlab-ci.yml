@@ -7,16 +7,16 @@ stages:
 build:
     stage: build
     script:
-        - "dotnet build"
+        - dotnet build
     
 test:
     stage: test
     script: 
-        - "dotnet test"
+        - dotnet test
           
-pages:    
+pages:        
     script:        
-        - "echo docfx makes me mad"
-    artifacts: 
-        paths: 
-            - "FunctionalLink.DocFx/_site"
+        - cp -r ./FunctionalLink.DocFx/_site ./public
+    artifacts:        
+        paths:            
+            - public
