@@ -15,6 +15,12 @@ test:
         - dotnet test
           
 pages:        
+    only:
+        refs:
+            - master
+    dependencies:
+        - build
+        - test
     script:        
         - cp -r ./FunctionalLink.DocFx/_site ./public
     artifacts:        
