@@ -1,0 +1,1075 @@
+{
+  "FunctionalLink.Next.dll": {
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\EnumerableExtensions.cs": {
+      "FunctionalLink.Next.EnumerableExtensions": {
+        "System.Collections.Generic.IEnumerable`1<T> FunctionalLink.Next.EnumerableExtensions::Iterate(System.Collections.Generic.IEnumerable`1<T>,System.Action`1<T>)": {
+          "Lines": {
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 3
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<T> FunctionalLink.Next.EnumerableExtensions::Evaluate(System.Collections.Generic.IEnumerable`1<T>)": {
+          "Lines": {
+            "35": 3
+          },
+          "Branches": []
+        },
+        "System.Void FunctionalLink.Next.EnumerableExtensions::EvaluateAndIgnore(System.Collections.Generic.IEnumerable`1<T>)": {
+          "Lines": {
+            "43": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\GlobalLink.cs": {
+      "FunctionalLink.Next.GlobalLink": {
+        "T FunctionalLink.Next.GlobalLink::Self(T)": {
+          "Lines": {
+            "46": 3
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.GlobalLink::Some(T)": {
+          "Lines": {
+            "63": 7
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.None FunctionalLink.Next.GlobalLink::None()": {
+          "Lines": {
+            "78": 4
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.GlobalLink::Maybe(T)": {
+          "Lines": {
+            "96": 2
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Success`1<T> FunctionalLink.Next.GlobalLink::Success(T)": {
+          "Lines": {
+            "114": 4
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Success`1<FunctionalLink.Next.None> FunctionalLink.Next.GlobalLink::Success()": {
+          "Lines": {
+            "121": 1
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Failure`1<T> FunctionalLink.Next.GlobalLink::Failure(T)": {
+          "Lines": {
+            "147": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\ObjectExtensions.cs": {
+      "FunctionalLink.Next.ObjectExtensions": {
+        "System.Void FunctionalLink.Next.ObjectExtensions::Ignore(System.Object)": {
+          "Lines": {
+            "24": 7
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.ObjectExtensions::Maybe(T)": {
+          "Lines": {
+            "33": 1
+          },
+          "Branches": []
+        }
+      },
+      "FunctionalLink.Next.ObjectExtensions/<Enumerate>d__0`1": {
+        "System.Boolean FunctionalLink.Next.ObjectExtensions/<Enumerate>d__0`1::MoveNext()": {
+          "Lines": {
+            "15": 4,
+            "16": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\Option.cs": {
+      "FunctionalLink.Next.Option`1": {
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::Some(T)": {
+          "Lines": {
+            "53": 39
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::None()": {
+          "Lines": {
+            "68": 11
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::Maybe(T)": {
+          "Lines": {
+            "85": 3,
+            "86": 3,
+            "87": 3
+          },
+          "Branches": [
+            {
+              "Line": 85,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 85,
+              "Offset": 6,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::op_Implicit(FunctionalLink.Next.None)": {
+          "Lines": {
+            "112": 20
+          },
+          "Branches": []
+        },
+        "System.Boolean FunctionalLink.Next.Option`1::HasValue(T&)": {
+          "Lines": {
+            "131": 55,
+            "132": 55
+          },
+          "Branches": [
+            {
+              "Line": 131,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 22
+            },
+            {
+              "Line": 131,
+              "Offset": 7,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 33
+            }
+          ]
+        },
+        "System.Void FunctionalLink.Next.Option`1::Match(System.Action`1<T>,System.Action`1<FunctionalLink.Next.None>)": {
+          "Lines": {
+            "152": 2,
+            "153": 1,
+            "155": 1,
+            "156": 1
+          },
+          "Branches": [
+            {
+              "Line": 152,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 152,
+              "Offset": 8,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "TResult FunctionalLink.Next.Option`1::Match(System.Func`2<T,TResult>,System.Func`2<FunctionalLink.Next.None,TResult>)": {
+          "Lines": {
+            "178": 2,
+            "179": 2,
+            "180": 2
+          },
+          "Branches": [
+            {
+              "Line": 178,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 178,
+              "Offset": 8,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<TResult> FunctionalLink.Next.Option`1::Then(System.Func`2<T,FunctionalLink.Next.Option`1<TResult>>)": {
+          "Lines": {
+            "191": 5,
+            "192": 5,
+            "193": 5
+          },
+          "Branches": [
+            {
+              "Line": 191,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 191,
+              "Offset": 8,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<TResult> FunctionalLink.Next.Option`1::Then(System.Func`2<T,TResult>)": {
+          "Lines": {
+            "204": 5,
+            "205": 5,
+            "206": 5
+          },
+          "Branches": [
+            {
+              "Line": 204,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 204,
+              "Offset": 8,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::Then(System.Action`1<T>)": {
+          "Lines": {
+            "215": 5,
+            "216": 4,
+            "218": 5
+          },
+          "Branches": [
+            {
+              "Line": 215,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 4
+            },
+            {
+              "Line": 215,
+              "Offset": 8,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::Else(T)": {
+          "Lines": {
+            "227": 2,
+            "228": 2,
+            "229": 2
+          },
+          "Branches": [
+            {
+              "Line": 227,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 227,
+              "Offset": 6,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::Else(System.Func`1<T>)": {
+          "Lines": {
+            "237": 1,
+            "238": 1,
+            "239": 1
+          },
+          "Branches": [
+            {
+              "Line": 237,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 237,
+              "Offset": 6,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "T FunctionalLink.Next.Option`1::ValueOr(T)": {
+          "Lines": {
+            "248": 23,
+            "249": 23,
+            "250": 23
+          },
+          "Branches": [
+            {
+              "Line": 248,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 248,
+              "Offset": 8,
+              "EndOffset": 12,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 13
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::Or(FunctionalLink.Next.Option`1<T>)": {
+          "Lines": {
+            "260": 2,
+            "261": 2,
+            "262": 2
+          },
+          "Branches": [
+            {
+              "Line": 260,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 260,
+              "Offset": 6,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option`1::Or(System.Func`1<FunctionalLink.Next.Option`1<T>>)": {
+          "Lines": {
+            "274": 3,
+            "275": 3,
+            "276": 3
+          },
+          "Branches": [
+            {
+              "Line": 274,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 274,
+              "Offset": 6,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<TResult> FunctionalLink.Next.Option`1::And(FunctionalLink.Next.Option`1<TOther>,System.Func`3<T,TOther,TResult>)": {
+          "Lines": {
+            "289": 5,
+            "290": 1,
+            "292": 4,
+            "293": 4,
+            "294": 4
+          },
+          "Branches": [
+            {
+              "Line": 289,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 289,
+              "Offset": 6,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 292,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 292,
+              "Offset": 22,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        },
+        "FunctionalLink.Next.Option`1<TResult> FunctionalLink.Next.Option`1::And(System.Func`1<FunctionalLink.Next.Option`1<TOther>>,System.Func`3<T,TOther,TResult>)": {
+          "Lines": {
+            "310": 3,
+            "311": 1,
+            "313": 2,
+            "315": 2,
+            "316": 2,
+            "317": 2
+          },
+          "Branches": [
+            {
+              "Line": 310,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 310,
+              "Offset": 6,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 315,
+              "Offset": 27,
+              "EndOffset": 29,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 315,
+              "Offset": 27,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void FunctionalLink.Next.Option`1::.ctor(System.Boolean,T)": {
+          "Lines": {
+            "33": 70,
+            "34": 70
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\Option.None.cs": {
+      "FunctionalLink.Next.None": {
+        "System.Void FunctionalLink.Next.None::.ctor()": {
+          "Lines": {
+            "8": 1,
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.Void FunctionalLink.Next.None::.cctor()": {
+          "Lines": {
+            "12": 1
+          },
+          "Branches": []
+        }
+      },
+      "FunctionalLink.Next.Option": {
+        "FunctionalLink.Next.None FunctionalLink.Next.Option::None()": {
+          "Lines": {
+            "33": 15
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\Option.Some.cs": {
+      "FunctionalLink.Next.Option": {
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option::Some(T)": {
+          "Lines": {
+            "27": 20
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Option`1<T> FunctionalLink.Next.Option::Maybe(T)": {
+          "Lines": {
+            "43": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\Result.cs": {
+      "FunctionalLink.Next.Result`1": {
+        "FunctionalLink.Next.Result`1<T> FunctionalLink.Next.Result`1::op_Implicit(FunctionalLink.Next.Success`1<T>)": {
+          "Lines": {
+            "39": 9
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Result`1<T> FunctionalLink.Next.Result`1::op_Implicit(FunctionalLink.Next.Failure`1<System.String>)": {
+          "Lines": {
+            "64": 3
+          },
+          "Branches": []
+        },
+        "System.Void FunctionalLink.Next.Result`1::.ctor(System.Boolean,T,System.String)": {
+          "Lines": {
+            "12": 14,
+            "14": 14
+          },
+          "Branches": []
+        }
+      },
+      "FunctionalLink.Next.Result`2": {
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::Success(T)": {
+          "Lines": {
+            "89": 26
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::Failure(TFailure)": {
+          "Lines": {
+            "97": 17
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::op_Implicit(FunctionalLink.Next.Success`1<T>)": {
+          "Lines": {
+            "122": 1
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::op_Implicit(FunctionalLink.Next.Failure`1<TFailure>)": {
+          "Lines": {
+            "147": 1
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Result`1<T> FunctionalLink.Next.Result`2::op_Implicit(FunctionalLink.Next.Result`2<T,TFailure>)": {
+          "Lines": {
+            "159": 2
+          },
+          "Branches": [
+            {
+              "Line": 159,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 159,
+              "Offset": 32,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Boolean FunctionalLink.Next.Result`2::HasValue(T&)": {
+          "Lines": {
+            "168": 36,
+            "169": 36
+          },
+          "Branches": [
+            {
+              "Line": 168,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 5
+            },
+            {
+              "Line": 168,
+              "Offset": 7,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 31
+            }
+          ]
+        },
+        "System.Boolean FunctionalLink.Next.Result`2::HasFailure(TFailure&)": {
+          "Lines": {
+            "179": 14,
+            "180": 14
+          },
+          "Branches": []
+        },
+        "System.Void FunctionalLink.Next.Result`2::Match(System.Action`1<T>,System.Action`1<TFailure>)": {
+          "Lines": {
+            "193": 2,
+            "194": 1,
+            "196": 1,
+            "197": 1
+          },
+          "Branches": [
+            {
+              "Line": 193,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 193,
+              "Offset": 8,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "TResult FunctionalLink.Next.Result`2::Match(System.Func`2<T,TResult>,System.Func`2<TFailure,TResult>)": {
+          "Lines": {
+            "209": 7,
+            "210": 7,
+            "211": 7
+          },
+          "Branches": [
+            {
+              "Line": 209,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 209,
+              "Offset": 8,
+              "EndOffset": 23,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<TResult,TFailure> FunctionalLink.Next.Result`2::Then(System.Func`2<T,FunctionalLink.Next.Result`2<TResult,TFailure>>)": {
+          "Lines": {
+            "220": 1,
+            "221": 1,
+            "222": 1
+          },
+          "Branches": [
+            {
+              "Line": 220,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 220,
+              "Offset": 8,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<TResult,System.String> FunctionalLink.Next.Result`2::Then(System.Func`2<T,FunctionalLink.Next.Result`1<TResult>>)": {
+          "Lines": {
+            "235": 3,
+            "236": 3,
+            "237": 3
+          },
+          "Branches": [
+            {
+              "Line": 235,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 235,
+              "Offset": 8,
+              "EndOffset": 27,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<TResult,TFailure> FunctionalLink.Next.Result`2::Then(System.Func`2<T,TResult>)": {
+          "Lines": {
+            "246": 1,
+            "247": 1,
+            "248": 1
+          },
+          "Branches": [
+            {
+              "Line": 246,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 246,
+              "Offset": 8,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::Then(System.Action`1<T>)": {
+          "Lines": {
+            "258": 1,
+            "259": 1,
+            "261": 1
+          },
+          "Branches": [
+            {
+              "Line": 258,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 258,
+              "Offset": 8,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::Else(T)": {
+          "Lines": {
+            "270": 1,
+            "271": 1,
+            "272": 1
+          },
+          "Branches": [
+            {
+              "Line": 270,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 270,
+              "Offset": 6,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::Else(System.Func`1<T>)": {
+          "Lines": {
+            "280": 1,
+            "281": 1,
+            "282": 1
+          },
+          "Branches": [
+            {
+              "Line": 280,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 280,
+              "Offset": 6,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "T FunctionalLink.Next.Result`2::ValueOr(T)": {
+          "Lines": {
+            "290": 17,
+            "291": 17,
+            "292": 17
+          },
+          "Branches": [
+            {
+              "Line": 290,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 290,
+              "Offset": 8,
+              "EndOffset": 12,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 17
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::Or(FunctionalLink.Next.Result`2<T,TFailure>)": {
+          "Lines": {
+            "300": 2,
+            "301": 2,
+            "302": 2
+          },
+          "Branches": [
+            {
+              "Line": 300,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 300,
+              "Offset": 6,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<T,TFailure> FunctionalLink.Next.Result`2::Or(System.Func`1<FunctionalLink.Next.Result`2<T,TFailure>>)": {
+          "Lines": {
+            "310": 2,
+            "311": 2,
+            "312": 2
+          },
+          "Branches": [
+            {
+              "Line": 310,
+              "Offset": 6,
+              "EndOffset": 8,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 310,
+              "Offset": 6,
+              "EndOffset": 15,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<TResult,TFailure> FunctionalLink.Next.Result`2::And(FunctionalLink.Next.Result`2<TOther,TFailure>,System.Func`3<T,TOther,TResult>)": {
+          "Lines": {
+            "324": 3,
+            "325": 1,
+            "327": 2,
+            "328": 2,
+            "329": 2
+          },
+          "Branches": [
+            {
+              "Line": 324,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 324,
+              "Offset": 8,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 327,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 327,
+              "Offset": 25,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "FunctionalLink.Next.Result`2<TResult,TFailure> FunctionalLink.Next.Result`2::And(System.Func`1<FunctionalLink.Next.Result`2<TOther,TFailure>>,System.Func`3<T,TOther,TResult>)": {
+          "Lines": {
+            "342": 3,
+            "343": 1,
+            "345": 2,
+            "347": 2,
+            "348": 2,
+            "349": 2
+          },
+          "Branches": [
+            {
+              "Line": 342,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 342,
+              "Offset": 8,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 347,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 347,
+              "Offset": 32,
+              "EndOffset": 46,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void FunctionalLink.Next.Result`2::.ctor(System.Boolean,T,TFailure)": {
+          "Lines": {
+            "76": 59,
+            "77": 59
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\Result.Failure.cs": {
+      "FunctionalLink.Next.Failure`1": {
+        "System.Void FunctionalLink.Next.Failure`1::.ctor(T)": {
+          "Lines": {
+            "11": 4,
+            "12": 4
+          },
+          "Branches": []
+        }
+      },
+      "FunctionalLink.Next.Result": {
+        "FunctionalLink.Next.Failure`1<T> FunctionalLink.Next.Result::Failure(T)": {
+          "Lines": {
+            "30": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Code\\FunctionalLink.Next\\FunctionalLink.Next\\Result.Success.cs": {
+      "FunctionalLink.Next.Result": {
+        "FunctionalLink.Next.Success`1<T> FunctionalLink.Next.Result::Success(T)": {
+          "Lines": {
+            "25": 2
+          },
+          "Branches": []
+        },
+        "FunctionalLink.Next.Success`1<FunctionalLink.Next.None> FunctionalLink.Next.Result::Success()": {
+          "Lines": {
+            "34": 1
+          },
+          "Branches": []
+        }
+      },
+      "FunctionalLink.Next.Success`1": {
+        "System.Void FunctionalLink.Next.Success`1::.ctor(T)": {
+          "Lines": {
+            "9": 10,
+            "10": 10
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

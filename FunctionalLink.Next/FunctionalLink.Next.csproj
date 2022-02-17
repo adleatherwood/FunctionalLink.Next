@@ -8,6 +8,19 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Configurations>Debug;Release;DocFx</Configurations>
         <Platforms>AnyCPU</Platforms>
+        <PackageId>FunctionalLink.Next</PackageId>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <Authors>Anthony Leatherwood</Authors>
+        <Company>adleatherwood</Company>
+        <Title>FunctionalLink.Next</Title>
+        <Description>The next evolution of the FunctionalLink project. Providing a few basic data structures for better functional composition in C#.</Description>
+        <PackageProjectUrl>https://adleatherwood.gitlab.io/FunctionalLink.Next/</PackageProjectUrl>
+        <PackageLicense>GNU GENERAL PUBLIC LICENSE</PackageLicense>
+<!--        <PackageIcon>images/icon.png</PackageIcon>-->
+        <RepositoryUrl>https://gitlab.com/adleatherwood/FunctionalLink.Next</RepositoryUrl>
+        <PackageTags>c# functional option maybe result</PackageTags>
+        <PackageVersion>1.0.0</PackageVersion>
+
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -17,5 +30,5 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
       <DocumentationFile>bin\Debug\FunctionalLink.Next.xml</DocumentationFile>
     </PropertyGroup>
-    
+
 </Project>

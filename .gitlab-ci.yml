@@ -1,28 +1,53 @@
 image: mcr.microsoft.com/dotnet/sdk:6.0
 
 stages:
-    - build
-    - test
+  - test
+  - publish
 
-build:
-    stage: build
-    script:
-        - dotnet build
-    
 test:
-    stage: test
-    script: 
-        - dotnet test
-          
-pages:        
-    only:
-        refs:
-            - master
-    dependencies:
-        - build
-        - test
-    script:        
-        - cp -r ./FunctionalLink.DocFx/_site ./public
-    artifacts:        
-        paths:            
-            - public
+  stage: test
+  except:
+    - tags
+  script:
+    - dotnet test
+
+publish:
+  stage: publish
+  only:
+    - tags
+  script:
+    - |
+      echo ---------------------------------------------- TESTING
+      
+      cd FunctionalLink.Next.Tests      
+      dotnet test -v minimal -c Release /p:CollectCoverage=true      
+      cd ..
+      
+      echo ---------------------------------------------- VERSIONING
+      
+      cd FunctionalLink.Next      
+      echo VERSION := $CI_COMMIT_TAG      
+      sed -i -- "s/1\.0\.0/${CI_COMMIT_TAG}/g" FunctionalLink.Next.csproj
+      
+      echo ---------------------------------------------- BUILDING
+      
+      dotnet build -c Release
+      
+      echo ---------------------------------------------- PUBLISHING
+      
+      cd bin/Release      
+      NUGET_PKG=$(ls *.nupkg)      
+      echo PACKAGE := $NUGET_PKG    
+      dotnet nuget push $NUGET_PKG -k $NUGET_KEY -s https://api.nuget.org/v3/index.json
+
+pages:
+  only:
+    refs:
+      - master
+  dependencies:
+    - test
+  script:
+    - cp -r ./FunctionalLink.DocFx/_site ./public
+  artifacts:
+    paths:
+      - public
