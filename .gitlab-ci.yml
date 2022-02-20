@@ -9,7 +9,7 @@ test:
   except:
     - tags
   script:
-    - dotnet test
+    - dotnet test -v minimal -c Release /p:CollectCoverage=true
 
 publish:
   stage: publish
