@@ -7,7 +7,7 @@ paradigm that contribute to a more declarative and robust code base.
 [![pipeline status](https://gitlab.com/adleatherwood/FunctionalLink.Next/badges/master/pipeline.svg)](https://gitlab.com/adleatherwood/FunctionalLink.Next/-/commits/master)
 [![coverage report](https://gitlab.com/adleatherwood/FunctionalLink.Next/badges/master/coverage.svg)](https://gitlab.com/adleatherwood/FunctionalLink.Next/-/commits/master)
 [![NuGet](https://img.shields.io/nuget/v/FunctionalLink.Next.svg?style=flat)](https://www.nuget.org/packages/FunctionalLink.Next/)
-[![Icon](https://badgen.net/badge/icon/froyoshark/yellow?icon=)](https://iconarchive.com/show/enkel-icons-by-froyoshark/Telegram-icon.html)
+[![Icon](https://badgen.net/badge/icon/froyoshark/purple?icon=)](https://iconarchive.com/show/enkel-icons-by-froyoshark/Telegram-icon.html)
 
 ## Getting Started
 
