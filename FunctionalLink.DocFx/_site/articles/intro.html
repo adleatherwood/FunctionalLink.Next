@@ -113,7 +113,7 @@ the choices I had made were idiomatic.  But after using it for awhile, I've foun
 what this library is.  A reduction of the first.  Down to it's most important parts.</p>
 <h2 id="language-used">Language Used</h2>
 <p>While the language of the original library is more concise and accurate, the new library aims to use language that is more
-familiar and intuitive.  Originally, there were 3 main compositional functions: Bind, Map, &amp; Void.  Used hypothetically like so:</p>
+familiar and intuitive.  Originally, there were three main compositional functions: Bind, Map, &amp; Void.  Used hypothetically like so:</p>
 <pre><code class="lang-cs">Result.Success(value)
     .Bind(Validate) // i.e. SelectMany or FlatMap in other languages
     .Map(ToString)  // i.e. Select in Linq
@@ -130,20 +130,20 @@ function overloads, C# does.  So I've adopted the languages of Promises and bund
 <h2 id="bare-minimum">Bare Minimum</h2>
 <p>There are actually only two main types in this library:</p>
 <ul>
-<li>Option<t></t></li>
-<li>Result&lt;T,TFailure&gt;</li>
+<li>Option&lt;T&gt;</li>
+<li>Result&lt;T, TFailure&gt;</li>
 </ul>
 <p>Anything else that exists is purely to support those two types and make the use of them more intuitive and seamless.  In general,
 you should not be aware that any other types are being used.</p>
 <h2 id="declaration--workflow-over-inference--exceptions">Declaration &amp; Workflow over Inference &amp; Exceptions</h2>
 <p>Developer optimism is a very common problem.  Take this function signature below:</p>
-<pre><code class="lang-cs">static User FindUser(string userId) { ... }
+<pre><code class="lang-cs">User FindUser(string userId) { ... }
 </code></pre>
 <p>At face value, it would appear that this function will always return a User.  Except, as experienced developers, we know that can't
 be true.  So we <strong>infer</strong> that FindUser must return null when it can't find the requested entity.  Maybe we'll even dig through it's
 implementation to find out if we are correct.  A more declarative (and informative) way to write this
 signature could be like so:</p>
-<pre><code class="lang-cs">static Option&lt;User&gt; FindUser(string userId) { ... }
+<pre><code class="lang-cs">Option&lt;User&gt; FindUser(string userId) { ... }
 </code></pre>
 <p>Now we're being told quite explicitly that a result may not be found.  And we are given a return type that allows us to write &quot;Happy Path&quot;
 code when consuming that type:</p>
@@ -155,7 +155,7 @@ code when consuming that type:</p>
 back from our call.  But the signature doesn't express anything about something going wrong.  And since it has the potential for an
 exception, we now have to decide if we should try/catch this call or let the exception fly.  Let's avoid all of that ambiguity and
 adjust the signature to tell the consumer something can go wrong without an exception being thrown.</p>
-<pre><code class="lang-cs">static Result&lt;User, Exception&gt; FindUser(string userId) { ... }
+<pre><code class="lang-cs">Result&lt;User, Exception&gt; FindUser(string userId) { ... }
 </code></pre>
 <p>Now the caller can choose what to do with the Exception rather than just throwing it up the chain and hoping it's caught and handled
 in some way.  This is really the goal of this library.  To encourage developers to be explicit and code for all possibilities in any

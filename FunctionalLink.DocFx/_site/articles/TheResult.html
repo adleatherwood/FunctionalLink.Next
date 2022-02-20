@@ -99,8 +99,7 @@
 <h1 id="the-result">The Result</h1>
 
 <p>The Result type is structured very similarly to the Option type.  It's recommend that
-you read through the Option type first because all of the functions are basically the
-same.</p>
+you read through the Option type first because all of the functions are the same.</p>
 <p>The main different of the Result type is that instead of getting nothing (or None) when
 there is no result, you get a Failure.  So the Option's narrative is, &quot;there may or may not
 be a value&quot;.  And the Result's narrative is, &quot;This may or may not work&quot;.</p>
@@ -155,7 +154,7 @@ be a value&quot;.  And the Result's narrative is, &quot;This may or may not work
 <p>For convenience, there are two Result Types:</p>
 <ul>
 <li>Result&lt;T&gt;</li>
-<li>Result&lt;T,TFailure&gt;</li>
+<li>Result&lt;T, TFailure&gt;</li>
 </ul>
 <p><code>Result&lt;T&gt;</code> inherits from <code>Result&lt;T,string&gt;</code>.  Because the failure state of a Result is often
 a <code>string</code>, this reduces the number of generic parameters you have to deal with for most
