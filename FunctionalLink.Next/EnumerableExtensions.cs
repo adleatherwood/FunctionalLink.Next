@@ -27,7 +27,7 @@ public static class EnumerableExtensions
         });
 
     /// <summary>
-    /// Forces the evaluation of an IEnumerable to a materialized collection that will no reevaluate.
+    /// Forces the evaluation of an IEnumerable to a materialized collection that will not reevaluate.
     /// </summary>
     /// <param name="enumerable">The target enumerable</param>
     /// <returns>A collection that will not reevaluate</returns>

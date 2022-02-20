@@ -43,7 +43,7 @@ var user = FindUser(1)
 ```
 All of these arrangements provide the same functionality.  Just expressed differently.  It just depends on your taste as to how 
 you prefer to express your logic.  This library is geared towards the last version.  It's hard to get more readable than:
-"Find user. Then greet user".
+"Find user then greet user".
 
 ## Substitution
 You can also, make substitutions for when values are not present:
@@ -85,7 +85,7 @@ In addition to the basics above.  You can also logically chain Options together 
 var user = FindUser(userId: 1);           
 var highScore = FindHighScore(userId: 1); 
 
-var message = user.And(highScore, 
+var message = user.And(highScore,               // if both are successful 
         (u, hs) => (u.Username, HighScore: hs)) // map them together
     .Then(t => $"{t.Username}'s Personal Best: {t.HighScore}")
     .ValueOr("No scores on record yet");
@@ -94,13 +94,13 @@ Console.WriteLine(message);
 ```
 Or:
 ```cs
-var user = FindUser(userId: 1)
-    .Or(() => CreateGuestUser(userId: 1));           
+var user = FindUser(userId: 1)                  
+    .Or(() => CreateGuestUser(userId: 1)); // in order, the first successful value is used           
 
 var highScore = FindHighScore(userId: 1); 
 
-var message = user
-    .And(highScore, (u, hs) => (u.Username, HighScore: hs))
+var message = user.And(highScore, 
+        (u, hs) => (u.Username, HighScore: hs))
     .Then(t => $"{t.Username}'s Personal Best: {t.HighScore}")
     .ValueOr("No scores on record yet");
     

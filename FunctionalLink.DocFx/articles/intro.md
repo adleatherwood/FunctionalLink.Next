@@ -18,7 +18,7 @@ what this library is.  A reduction of the first.  Down to it's most important pa
 ## Language Used
 
 While the language of the original library is more concise and accurate, the new library aims to use language that is more
-familiar and intuitive.  Originally, there were 3 main compositional functions: Bind, Map, & Void.  Used hypothetically like so:
+familiar and intuitive.  Originally, there were three main compositional functions: Bind, Map, & Void.  Used hypothetically like so:
 
 ```cs
 Result.Success(value)
@@ -42,8 +42,8 @@ Result.Success(value)
 
 There are actually only two main types in this library:
 
-* Option<T>
-* Result<T,TFailure>
+* Option&lt;T&gt;
+* Result&lt;T, TFailure&gt;
 
 Anything else that exists is purely to support those two types and make the use of them more intuitive and seamless.  In general, 
 you should not be aware that any other types are being used.
@@ -53,7 +53,7 @@ you should not be aware that any other types are being used.
 Developer optimism is a very common problem.  Take this function signature below:
 
 ```cs
-static User FindUser(string userId) { ... }
+User FindUser(string userId) { ... }
 ```
 
 At face value, it would appear that this function will always return a User.  Except, as experienced developers, we know that can't 
@@ -62,7 +62,7 @@ implementation to find out if we are correct.  A more declarative (and informati
 signature could be like so:
 
 ```cs
-static Option<User> FindUser(string userId) { ... }
+Option<User> FindUser(string userId) { ... }
 ```
 
 Now we're being told quite explicitly that a result may not be found.  And we are given a return type that allows us to write "Happy Path"
@@ -80,7 +80,7 @@ exception, we now have to decide if we should try/catch this call or let the exc
 adjust the signature to tell the consumer something can go wrong without an exception being thrown.
 
 ```cs
-static Result<User, Exception> FindUser(string userId) { ... }
+Result<User, Exception> FindUser(string userId) { ... }
 ```
 
 Now the caller can choose what to do with the Exception rather than just throwing it up the chain and hoping it's caught and handled

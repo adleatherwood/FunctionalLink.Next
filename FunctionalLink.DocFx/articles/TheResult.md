@@ -1,8 +1,7 @@
 ﻿# The Result
 
 The Result type is structured very similarly to the Option type.  It's recommend that
-you read through the Option type first because all of the functions are basically the 
-same.
+you read through the Option type first because all of the functions are the same.
 
 The main different of the Result type is that instead of getting nothing (or None) when
 there is no result, you get a Failure.  So the Option's narrative is, "there may or may not
@@ -66,7 +65,7 @@ The goal is to encourage writing workflows for negative paths rather than throwi
 For convenience, there are two Result Types:
 
 * Result&lt;T&gt;
-* Result&lt;T,TFailure&gt;
+* Result&lt;T, TFailure&gt;
 
 `Result<T>` inherits from `Result<T,string>`.  Because the failure state of a Result is often
 a `string`, this reduces the number of generic parameters you have to deal with for most
