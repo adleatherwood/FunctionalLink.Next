@@ -17,20 +17,22 @@ publish:
     - tags
   script:
     - |
+      echo ---------------------------------------------- VERSIONING
+      
+      cd FunctionalLink.Next      
+      echo VERSION := $CI_COMMIT_TAG      
+      sed -i -- "s/1\.0\.0/${CI_COMMIT_TAG}/g" FunctionalLink.Next.csproj
+      cd ..
+
       echo ---------------------------------------------- TESTING
       
       cd FunctionalLink.Next.Tests      
       dotnet test -v minimal -c Release /p:CollectCoverage=true      
       cd ..
       
-      echo ---------------------------------------------- VERSIONING
-      
-      cd FunctionalLink.Next      
-      echo VERSION := $CI_COMMIT_TAG      
-      sed -i -- "s/1\.0\.0/${CI_COMMIT_TAG}/g" FunctionalLink.Next.csproj
-      
       echo ---------------------------------------------- BUILDING
       
+      cd FunctionalLink.Next      
       dotnet build -c Release
       
       echo ---------------------------------------------- PUBLISHING
