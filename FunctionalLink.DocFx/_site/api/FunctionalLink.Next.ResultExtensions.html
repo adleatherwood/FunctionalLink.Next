@@ -1,0 +1,3197 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ResultExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ResultExtensions
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/intro.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="FunctionalLink.Next.html" title="FunctionalLink.Next" class="">FunctionalLink.Next</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="FunctionalLink.Next.EnumerableExtensions.html" title="EnumerableExtensions" class="">EnumerableExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Failure-1.html" title="Failure&lt;T&gt;" class="">Failure&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.GlobalLink.html" title="GlobalLink" class="">GlobalLink</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.None.html" title="None" class="">None</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.ObjectExtensions.html" title="ObjectExtensions" class="">ObjectExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Option.html" title="Option" class="">Option</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Option-1.html" title="Option&lt;T&gt;" class="">Option&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Result.html" title="Result" class="">Result</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Result-2.html" title="Result&lt;T, TFailure&gt;" class="">Result&lt;T, TFailure&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Result-1.html" title="Result&lt;T&gt;" class="">Result&lt;T&gt;</a>
+                          </li>
+                          <li class="active">
+                            <a href="FunctionalLink.Next.ResultExtensions.html" title="ResultExtensions" class="active">ResultExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Success-1.html" title="Success&lt;T&gt;" class="">Success&lt;T&gt;</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="FunctionalLink.Next.ResultExtensions">
+  
+  
+  <h1 id="FunctionalLink_Next_ResultExtensions" data-uid="FunctionalLink.Next.ResultExtensions" class="text-break">Class ResultExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>All behavior for the Result types are defined here.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ResultExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FunctionalLink.Next.html">FunctionalLink.Next</a></h6>
+  <h6><strong>Assembly</strong>: FunctionalLink.Next.dll</h6>
+  <h5 id="FunctionalLink_Next_ResultExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ResultExtensions : Object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_FunctionalLink_Next_Result___0___1____2_System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},``2,System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Result&lt;T, TFailure&gt;, TOther, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;TResult, TFailure&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Result&lt;T, TFailure&gt; result, TOther other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TOther</span></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_FunctionalLink_Next_Result___0___1__System_Func___2__System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},System.Func{``2},System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;TOther&gt;, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;TResult, TFailure&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;TOther&gt; other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TOther&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_FunctionalLink_Next_Result___0___1__System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}},System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;Task&lt;Result&lt;TOther, TFailure&gt;&gt;&gt;, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;Task&lt;Result&lt;TOther, TFailure&gt;&gt;&gt; other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TOther, TFailure&gt;&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1_____2_System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``2,System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, TOther, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, TOther other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TOther</span></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___FunctionalLink_Next_Result___2___1__System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},FunctionalLink.Next.Result{``2,``1},System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Result&lt;TOther, TFailure&gt;, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Result&lt;TOther, TFailure&gt; other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TOther, TFailure&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___2__System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``2},System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;TOther&gt;, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;TOther&gt; other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TOther&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_FunctionalLink_Next_Result___2___1___System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{FunctionalLink.Next.Result{``2,``1}},System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;Result&lt;TOther, TFailure&gt;&gt;, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;Result&lt;TOther, TFailure&gt;&gt; other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TOther, TFailure&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_And_" data-uid="FunctionalLink.Next.ResultExtensions.And*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____System_Func___0___2___3__" data-uid="FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}},System.Func{``0,``2,``3})">And&lt;T, TFailure, TOther, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;Task&lt;Result&lt;TOther, TFailure&gt;&gt;&gt;, Func&lt;T, TOther, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to combine two Results if they are both successful</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; And&lt;T, TFailure, TOther, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;Task&lt;Result&lt;TOther, TFailure&gt;&gt;&gt; other, Func&lt;T, TOther, TResult&gt; selector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TOther, TFailure&gt;&gt;&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The second result to combine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TOther, TResult&gt;</td>
+        <td><span class="parametername">selector</span></td>
+        <td><p>The function used to combine the values from ResultA and B</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TOther</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Match_" data-uid="FunctionalLink.Next.ResultExtensions.Match*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Match__2_FunctionalLink_Next_Result___0___1__System_Action___0__System_Action___1__" data-uid="FunctionalLink.Next.ResultExtensions.Match``2(FunctionalLink.Next.Result{``0,``1},System.Action{``0},System.Action{``1})">Match&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, Action&lt;T&gt;, Action&lt;TFailure&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes one of the two given actions based on the state of the Result.  If the Result
+was successful, the onSuccess Action will be executed.  If not, the onFailure Action
+will be executed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Match&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Action&lt;T&gt; onSuccess, Action&lt;TFailure&gt; onFailure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="parametername">onSuccess</span></td>
+        <td><p>The action to execute if the Result was successful</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TFailure&gt;</td>
+        <td><span class="parametername">onFailure</span></td>
+        <td><p>The Action to execute if the Result was not successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Match_" data-uid="FunctionalLink.Next.ResultExtensions.Match*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Match__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Action___0__System_Action___1__" data-uid="FunctionalLink.Next.ResultExtensions.Match``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Action{``0},System.Action{``1})">Match&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Action&lt;T&gt;, Action&lt;TFailure&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes one of the two given actions based on the state of the Result.  If the Result
+was successful, the onSuccess Action will be executed.  If not, the onFailure Action
+will be executed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task Match&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Action&lt;T&gt; onSuccess, Action&lt;TFailure&gt; onFailure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="parametername">onSuccess</span></td>
+        <td><p>The action to execute if the Result was successful</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;TFailure&gt;</td>
+        <td><span class="parametername">onFailure</span></td>
+        <td><p>The Action to execute if the Result was not successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Match_" data-uid="FunctionalLink.Next.ResultExtensions.Match*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Match__3_FunctionalLink_Next_Result___0___1__System_Func___0___2__System_Func___1___2__" data-uid="FunctionalLink.Next.ResultExtensions.Match``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,``2},System.Func{``1,``2})">Match&lt;T, TFailure, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, TResult&gt;, Func&lt;TFailure, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes one of the two given functions based on the state of the Result and returns a value.  If
+the Result was successful, the onSuccess function will be executed.  If not, the onFailure function
+will be executed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TResult Match&lt;T, TFailure, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, TResult&gt; onSuccess, Func&lt;TFailure, TResult&gt; onFailure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">onSuccess</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TFailure, TResult&gt;</td>
+        <td><span class="parametername">onFailure</span></td>
+        <td><p>The function to execute if the Result was not successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><p>Returns the result of onSuccess if the Result was successful.  Otherwise, the result of onFailure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Match_" data-uid="FunctionalLink.Next.ResultExtensions.Match*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Match__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0___2__System_Func___1___2__" data-uid="FunctionalLink.Next.ResultExtensions.Match``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,``2},System.Func{``1,``2})">Match&lt;T, TFailure, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, TResult&gt;, Func&lt;TFailure, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes one of the two given functions based on the state of the Result and returns a value.  If
+the Result was successful, the onSuccess function will be executed.  If not, the onFailure function
+will be executed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;TResult&gt; Match&lt;T, TFailure, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, TResult&gt; onSuccess, Func&lt;TFailure, TResult&gt; onFailure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">onSuccess</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TFailure, TResult&gt;</td>
+        <td><span class="parametername">onFailure</span></td>
+        <td><p>The function to execute if the Result was not successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TResult&gt;</td>
+        <td><p>Returns the result of onSuccess if the Result was successful.  Otherwise, the result of onFailure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1____0_" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},``0)">Or&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, T)</h4>
+  <div class="markdown level1 summary"><p>Used to transform a Failure state into a Success alternate value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;T, TFailure&gt; Or&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, T alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to provide an alternate value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><p>If the current Result is a Failure, then the alternate value is applied</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__FunctionalLink_Next_Result___0___1__" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},FunctionalLink.Next.Result{``0,``1})">Or&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, Result&lt;T, TFailure&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to trade alternative Result values if the given Result is a failure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;T, TFailure&gt; Or&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Result&lt;T, TFailure&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to return an alternate Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><p>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__System_Func___0__" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{``0})">Or&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, Func&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to transform a Failure state into a Success alternate value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;T, TFailure&gt; Or&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to provide an alternate value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><p>If the current Result is a Failure, then the alternate value is applied</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__System_Func_FunctionalLink_Next_Result___0___1___" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{FunctionalLink.Next.Result{``0,``1}})">Or&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, Func&lt;Result&lt;T, TFailure&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to trade alternative Result values if the given Result is a failure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;T, TFailure&gt; Or&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;Result&lt;T, TFailure&gt;&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to return an alternate Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><p>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1____" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}}})">Or&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, Func&lt;Task&lt;Result&lt;T, TFailure&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to trade alternative Result values if the given Result is a failure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Or&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;Task&lt;Result&lt;T, TFailure&gt;&gt;&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to return an alternate Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1_____0_" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``0)">Or&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, T)</h4>
+  <div class="markdown level1 summary"><p>Used to transform a Failure state into a Success alternate value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Or&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, T alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to provide an alternate value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>If the current Result is a Failure, then the alternate value is applied</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___FunctionalLink_Next_Result___0___1__" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},FunctionalLink.Next.Result{``0,``1})">Or&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Result&lt;T, TFailure&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to trade alternative Result values if the given Result is a failure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Or&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Result&lt;T, TFailure&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to return an alternate Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0__" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0})">Or&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to transform a Failure state into a Success alternate value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Or&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to provide an alternate value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>If the current Result is a Failure, then the alternate value is applied</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_FunctionalLink_Next_Result___0___1___" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{FunctionalLink.Next.Result{``0,``1}})">Or&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;Result&lt;T, TFailure&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to trade alternative Result values if the given Result is a failure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Or&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;Result&lt;T, TFailure&gt;&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to return an alternate Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Or_" data-uid="FunctionalLink.Next.ResultExtensions.Or*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1____" data-uid="FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}}})">Or&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;Task&lt;Result&lt;T, TFailure&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Used to trade alternative Result values if the given Result is a failure</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Or&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;Task&lt;Result&lt;T, TFailure&gt;&gt;&gt; alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;&gt;</td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The function to return an alternate Result</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__2_FunctionalLink_Next_Result___0___1__System_Action___0__" data-uid="FunctionalLink.Next.ResultExtensions.Then``2(FunctionalLink.Next.Result{``0,``1},System.Action{``0})">Then&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, Action&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given action if the given Result was successful.  This overload is used to accommodate methods that
+have a void return signature</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;T, TFailure&gt; Then&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Action&lt;T&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><p>Returns the given Result after the action is executed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__2_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.ResultExtensions.Then``2(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task})">Then&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, Task&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given action if the given Result was successful.  This overload is used to accommodate methods that
+have a void return signature</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Then&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, Task&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>Returns the given Result after the action is executed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Action___0__" data-uid="FunctionalLink.Next.ResultExtensions.Then``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Action{``0})">Then&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Action&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given action if the given Result was successful.  This overload is used to accommodate methods that
+have a void return signature</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Then&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Action&lt;T&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>Returns the given Result after the action is executed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.ResultExtensions.Then``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task})">Then&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, Task&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given action if the given Result was successful.  This overload is used to accommodate methods that
+have a void return signature</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;T, TFailure&gt;&gt; Then&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, Task&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><p>Returns the given Result after the action is executed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0___2__" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,``2})">Then&lt;T, TFailure, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Map</code> or <code>Select</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;TResult, TFailure&gt; Then&lt;T, TFailure, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, TResult&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_FunctionalLink_Next_Result___2___1___" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,FunctionalLink.Next.Result{``2,``1}})">Then&lt;T, TFailure, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, Result&lt;TResult, TFailure&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;TResult, TFailure&gt; Then&lt;T, TFailure, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, Result&lt;TResult, TFailure&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task___2___" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{``2}})">Then&lt;T, TFailure, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, Task&lt;TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Map</code> or <code>Select</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, Task&lt;TResult&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}})">Then&lt;T, TFailure, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, Task&lt;Result&lt;TResult, TFailure&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, Task&lt;Result&lt;TResult, TFailure&gt;&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2____" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2}}})">Then&lt;T, TFailure, TResult&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, Task&lt;Result&lt;TResult&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts.</p>
+<p>This is a special case for mitigating interop between Result&lt;T&gt; and Result&lt;T, TFailure&gt;.  Without
+this handler, the return type is: Result&lt;Result&lt;T&gt;, TFailure&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, string&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, Task&lt;Result&lt;TResult&gt;&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-1.html">Result</a>&lt;TResult&gt;&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___2__System_Func___0_FunctionalLink_Next_Result___1___" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``2},System.Func{``0,FunctionalLink.Next.Result{``1}})">Then&lt;T, TResult, TFailure&gt;(Result&lt;T, TFailure&gt;, Func&lt;T, Result&lt;TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts.</p>
+<p>This is a special case for mitigating interop between Result&lt;T&gt; and Result&lt;T, TFailure&gt;.  Without
+this handler, the return type is: Result&lt;Result&lt;T&gt;, TFailure&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Result&lt;TResult, string&gt; Then&lt;T, TResult, TFailure&gt;(this Result&lt;T, TFailure&gt; result, Func&lt;T, Result&lt;TResult&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="FunctionalLink.Next.Result-1.html">Result</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, <span class="xref">System.String</span>&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0___2__" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,``2})">Then&lt;T, TFailure, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Map</code> or <code>Select</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, TResult&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_FunctionalLink_Next_Result___2___1___" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,FunctionalLink.Next.Result{``2,``1}})">Then&lt;T, TFailure, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, Result&lt;TResult, TFailure&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, Result&lt;TResult, TFailure&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_FunctionalLink_Next_Result___2___" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,FunctionalLink.Next.Result{``2}})">Then&lt;T, TFailure, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, Result&lt;TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts.</p>
+<p>This is a special case for mitigating interop between Result&lt;T&gt; and Result&lt;T, TFailure&gt;.  Without
+this handler, the return type is: Result&lt;Result&lt;T&gt;, TFailure&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, string&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, Result&lt;TResult&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="FunctionalLink.Next.Result-1.html">Result</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task___2___" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{``2}})">Then&lt;T, TFailure, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, Task&lt;TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Map</code> or <code>Select</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, Task&lt;TResult&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}})">Then&lt;T, TFailure, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, Task&lt;Result&lt;TResult, TFailure&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, TFailure&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, Task&lt;Result&lt;TResult, TFailure&gt;&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, TFailure&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_Then_" data-uid="FunctionalLink.Next.ResultExtensions.Then*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2____" data-uid="FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2}}})">Then&lt;T, TFailure, TResult&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, Func&lt;T, Task&lt;Result&lt;TResult&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+of <code>Bind</code>, <code>FlatMap</code>, or <code>SelectMany</code> style functions available in other contexts.</p>
+<p>This is a special case for mitigating interop between Result&lt;T&gt; and Result&lt;T, TFailure&gt;.  Without
+this handler, the return type is: Result&lt;Result&lt;T&gt;, TFailure&gt;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;Result&lt;TResult, string&gt;&gt; Then&lt;T, TFailure, TResult&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, Func&lt;T, Task&lt;Result&lt;TResult&gt;&gt;&gt; f)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-1.html">Result</a>&lt;TResult&gt;&gt;&gt;</td>
+        <td><span class="parametername">f</span></td>
+        <td><p>The function to execute if the Result was successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;TResult, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>Returns another result with either the return value of the given function or the current failure</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_ValueOr_" data-uid="FunctionalLink.Next.ResultExtensions.ValueOr*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_ValueOr__2_FunctionalLink_Next_Result___0___1____0_" data-uid="FunctionalLink.Next.ResultExtensions.ValueOr``2(FunctionalLink.Next.Result{``0,``1},``0)">ValueOr&lt;T, TFailure&gt;(Result&lt;T, TFailure&gt;, T)</h4>
+  <div class="markdown level1 summary"><p>Used to deconstruct a Result to either it's successful value or a given alternative</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ValueOr&lt;T, TFailure&gt;(this Result&lt;T, TFailure&gt; result, T alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The alternative value to return if the Result was not successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>If the Result is successful, the Result value is returned.  Otherwise, the alternate value is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_ResultExtensions_ValueOr_" data-uid="FunctionalLink.Next.ResultExtensions.ValueOr*"></a>
+  <h4 id="FunctionalLink_Next_ResultExtensions_ValueOr__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1_____0_" data-uid="FunctionalLink.Next.ResultExtensions.ValueOr``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``0)">ValueOr&lt;T, TFailure&gt;(Task&lt;Result&lt;T, TFailure&gt;&gt;, T)</h4>
+  <div class="markdown level1 summary"><p>Used to deconstruct a Result to either it's successful value or a given alternative</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;T&gt; ValueOr&lt;T, TFailure&gt;(this Task&lt;Result&lt;T, TFailure&gt;&gt; result, T alt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Result-2.html">Result</a>&lt;T, TFailure&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The Result to examine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">alt</span></td>
+        <td><p>The alternative value to return if the Result was not successful</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><p>If the Result is successful, the Result value is returned.  Otherwise, the alternate value is returned</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TFailure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

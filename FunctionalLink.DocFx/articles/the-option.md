@@ -2,14 +2,14 @@
 
 The Option type is intended as a general replacement for null.  It's data structure is the same as Nullable<T>, but it 
 can be used with either references or structs. So:
-```cs
+```csharp
 {
     bool HasValue;
     T Value;
 }
 ```
 Here's an example of how you could use an Option:
-```cs
+```csharp
 public Option<User> FindUser(int userId)
 {
    var found = ReadDb(userId);
@@ -23,7 +23,7 @@ function signature above gives us a clear understanding what will be returned.  
 
 ## Deconstruction
 You can inspect the Option for what value it has, if any:
-```cs
+```csharp
 var user = FindUser(1); // returns Option<User>
 
 if (user.HasValue(out var found))
@@ -32,12 +32,12 @@ if (user.HasValue(out var found))
 }
 ```
 You could also take a more functional approach:
-```cs
+```csharp
 var user = FindUser(1)
     .Then(found => GreetUser(found));    
 ```
 Or, in this case, simply:
-```cs
+```csharp
 var user = FindUser(1)
     .Then(GreetUser);    
 ```
@@ -47,14 +47,14 @@ you prefer to express your logic.  This library is geared towards the last versi
 
 ## Substitution
 You can also, make substitutions for when values are not present:
-```c#
+```csharp
 var highScore = FindHighScore(userId: 1) // returns Option<int>
     .ValueOr(0);
     
 Console.WriteLine($"Your Personal Best: {highScore}");  
 ```
 Or:
-```c#
+```csharp
 var highScore = FindHighScore(userId: 1) 
     .Then(hs => $"Your Personal Best: {hs}")
     .ValueOr("No scores on record yet"); 
@@ -62,7 +62,7 @@ var highScore = FindHighScore(userId: 1)
 Console.WriteLine(highScore);
 ```
 Or:
-```c#
+```csharp
 var highScore = FindHighScore(userId: 1) 
     .Match(
         some => $"Your Personal Best: {some}",
@@ -71,7 +71,7 @@ var highScore = FindHighScore(userId: 1)
 Console.WriteLine(highScore); 
 ```
 Or ideally:
-```c#
+```csharp
 var highScore = FindHighScore(userId: 1) 
     .Then(hs => $"Your Personal Best: {hs}")
     .Else("No scores on record yet")
@@ -81,7 +81,7 @@ Each of the previous methods has it's time and place.  It's just a matter of wha
 
 ## Logical Composition
 In addition to the basics above.  You can also logically chain Options together with Ands and Ors.
-```cs
+```csharp
 var user = FindUser(userId: 1);           
 var highScore = FindHighScore(userId: 1); 
 
@@ -93,7 +93,7 @@ var message = user.And(highScore,               // if both are successful
 Console.WriteLine(message);        
 ```
 Or:
-```cs
+```csharp
 var user = FindUser(userId: 1)                  
     .Or(() => CreateGuestUser(userId: 1)); // in order, the first successful value is used           
 

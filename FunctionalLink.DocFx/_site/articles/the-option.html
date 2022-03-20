@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>FunctionalLink.Next </title>
+    <title>The Option </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="FunctionalLink.Next ">
+    <meta name="title" content="The Option ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -79,11 +79,11 @@
                 <div class="toc" id="toc">
                   
                   <ul class="nav level1">
-                    <li class="active">
-                      <a href="intro.html" title="Introduction" class="active">Introduction</a>
-                    </li>
                     <li class="">
-                      <a href="the-option.html" title="The Option" class="">The Option</a>
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="active">
+                      <a href="the-option.html" title="The Option" class="active">The Option</a>
                     </li>
                     <li class="">
                       <a href="the-result.html" title="The Result" class="">The Result</a>
@@ -99,72 +99,104 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="functionallinknext">FunctionalLink.Next</h1>
+<h1 id="the-option">The Option</h1>
 
-<h2 id="coming-from-functionallink">Coming from FunctionalLink</h2>
-<p>This library is a reincarnation of a previous library <a href="https://gitlab.com/adleatherwood/FunctionalLink">FunctionalLink</a>.  I
-have written a significant amount of code with that library but felt that some of the choices I had made were limiting.  There
-were several issues I had with the library:</p>
-<ul>
-<li>There was some overreaching functionality that was never really used.</li>
-<li>Some naming that was hard for people to understand (e.g. Bind).</li>
-<li>Some fancy asynchronous work (that was nice) but misplaced.</li>
-<li>A dozen ad-hoc extension methods that were not focused enough to fit the library.</li>
-</ul>
-<p>The library's purpose was to bring a few functional programming concepts to C# in an idiomatic way.  At the time, I thought
-the choices I had made were idiomatic.  But after using it for awhile, I've found that things can be simplified.  That's
-what this library is.  A reduction of the first.  Down to it's most important parts.</p>
-<h2 id="language-used">Language Used</h2>
-<p>While the language of the original library is more concise and accurate, the new library aims to use language that is more
-familiar and intuitive.  Originally, there were three main compositional functions: Bind, Map, &amp; Void.  Used hypothetically like so:</p>
-<pre><code class="lang-cs">Result.Success(value)
-    .Bind(Validate) // i.e. SelectMany or FlatMap in other languages
-    .Map(ToString)  // i.e. Select in Linq
-    .Void(Console.WriteLine)
+<p>The Option type is intended as a general replacement for null.  It's data structure is the same as Nullable<t>, but it
+can be used with either references or structs. So:<p>
+<pre><code class="lang-csharp">{
+    bool HasValue;
+    T Value;
+}
 </code></pre>
-<p>While the distinctions between those functions are interesting to note, they only served to be distracting to read for most
-people.  All anyone really wants to know is what's happening, and what's next.  While functional languages don't generally have
-function overloads, C# does.  So I've adopted the languages of Promises and bundled those functions under &quot;Then&quot;.</p>
-<pre><code class="lang-cs">Result.Success(value)
-    .Then(Validate)
-    .Then(ToString)
-    .Then(Console.WriteLine)
+<p>Here's an example of how you could use an Option:</p>
+<pre><code class="lang-csharp">public Option&lt;User&gt; FindUser(int userId)
+{
+   var found = ReadDb(userId);
+   return found != null
+        ? Option.Some(found)
+        : Option.None(); 
+}
 </code></pre>
-<h2 id="bare-minimum">Bare Minimum</h2>
-<p>There are actually only two main types in this library:</p>
-<ul>
-<li>Option&lt;T&gt;</li>
-<li>Result&lt;T, TFailure&gt;</li>
-</ul>
-<p>Anything else that exists is purely to support those two types and make the use of them more intuitive and seamless.  In general,
-you should not be aware that any other types are being used.</p>
-<h2 id="declaration--workflow-over-inference--exceptions">Declaration &amp; Workflow over Inference &amp; Exceptions</h2>
-<p>Developer optimism is a very common problem.  Take this function signature below:</p>
-<pre><code class="lang-cs">User FindUser(string userId) { ... }
+<p>The database you are using may deal in nulls, but your code can prevent that from proliferating through your code.  The
+function signature above gives us a clear understanding what will be returned.  It also gives us a few other things as well.</p>
+<h2 id="deconstruction">Deconstruction</h2>
+<p>You can inspect the Option for what value it has, if any:</p>
+<pre><code class="lang-csharp">var user = FindUser(1); // returns Option&lt;User&gt;
+
+if (user.HasValue(out var found))
+{
+    GreetUser(found)
+}
 </code></pre>
-<p>At face value, it would appear that this function will always return a User.  Except, as experienced developers, we know that can't
-be true.  So we <strong>infer</strong> that FindUser must return null when it can't find the requested entity.  Maybe we'll even dig through it's
-implementation to find out if we are correct.  A more declarative (and informative) way to write this
-signature could be like so:</p>
-<pre><code class="lang-cs">Option&lt;User&gt; FindUser(string userId) { ... }
+<p>You could also take a more functional approach:</p>
+<pre><code class="lang-csharp">var user = FindUser(1)
+    .Then(found =&gt; GreetUser(found));    
 </code></pre>
-<p>Now we're being told quite explicitly that a result may not be found.  And we are given a return type that allows us to write &quot;Happy Path&quot;
-code when consuming that type:</p>
-<pre><code class="lang-cs">FindUser(&quot;123&quot;)
-    .Then(user =&gt; $&quot;{user.FirstName} {user.LastName}&quot;)
-    .Then(name =&gt; Console.WriteLine(name))
+<p>Or, in this case, simply:</p>
+<pre><code class="lang-csharp">var user = FindUser(1)
+    .Then(GreetUser);    
 </code></pre>
-<p>But this call also <strong>implies</strong> I/O.  Which is typically an behavior that throws exceptions.  So far, we know we might not get a user
-back from our call.  But the signature doesn't express anything about something going wrong.  And since it has the potential for an
-exception, we now have to decide if we should try/catch this call or let the exception fly.  Let's avoid all of that ambiguity and
-adjust the signature to tell the consumer something can go wrong without an exception being thrown.</p>
-<pre><code class="lang-cs">Result&lt;User, Exception&gt; FindUser(string userId) { ... }
+<p>All of these arrangements provide the same functionality.  Just expressed differently.  It just depends on your taste as to how
+you prefer to express your logic.  This library is geared towards the last version.  It's hard to get more readable than:
+&quot;Find user then greet user&quot;.</p>
+<h2 id="substitution">Substitution</h2>
+<p>You can also, make substitutions for when values are not present:</p>
+<pre><code class="lang-csharp">var highScore = FindHighScore(userId: 1) // returns Option&lt;int&gt;
+    .ValueOr(0);
+    
+Console.WriteLine($&quot;Your Personal Best: {highScore}&quot;);  
 </code></pre>
-<p>Now the caller can choose what to do with the Exception rather than just throwing it up the chain and hoping it's caught and handled
-in some way.  This is really the goal of this library.  To encourage developers to be explicit and code for all possibilities in any
-given context.  The benefits of functional composition run deeper than this, but this kind of thinking is the entry point for what's
-possible.</p>
-</article>
+<p>Or:</p>
+<pre><code class="lang-csharp">var highScore = FindHighScore(userId: 1) 
+    .Then(hs =&gt; $&quot;Your Personal Best: {hs}&quot;)
+    .ValueOr(&quot;No scores on record yet&quot;); 
+    
+Console.WriteLine(highScore);
+</code></pre>
+<p>Or:</p>
+<pre><code class="lang-csharp">var highScore = FindHighScore(userId: 1) 
+    .Match(
+        some =&gt; $&quot;Your Personal Best: {some}&quot;,
+        none =&gt; &quot;No scores on record yet&quot;);
+        
+Console.WriteLine(highScore); 
+</code></pre>
+<p>Or ideally:</p>
+<pre><code class="lang-csharp">var highScore = FindHighScore(userId: 1) 
+    .Then(hs =&gt; $&quot;Your Personal Best: {hs}&quot;)
+    .Else(&quot;No scores on record yet&quot;)
+    .Then(Console.WriteLine); 
+</code></pre>
+<p>Each of the previous methods has it's time and place.  It's just a matter of what seems most appropriate at any given moment.</p>
+<h2 id="logical-composition">Logical Composition</h2>
+<p>In addition to the basics above.  You can also logically chain Options together with Ands and Ors.</p>
+<pre><code class="lang-csharp">var user = FindUser(userId: 1);           
+var highScore = FindHighScore(userId: 1); 
+
+var message = user.And(highScore,               // if both are successful 
+        (u, hs) =&gt; (u.Username, HighScore: hs)) // map them together
+    .Then(t =&gt; $&quot;{t.Username}'s Personal Best: {t.HighScore}&quot;)
+    .ValueOr(&quot;No scores on record yet&quot;);
+    
+Console.WriteLine(message);        
+</code></pre>
+<p>Or:</p>
+<pre><code class="lang-csharp">var user = FindUser(userId: 1)                  
+    .Or(() =&gt; CreateGuestUser(userId: 1)); // in order, the first successful value is used           
+
+var highScore = FindHighScore(userId: 1); 
+
+var message = user.And(highScore, 
+        (u, hs) =&gt; (u.Username, HighScore: hs))
+    .Then(t =&gt; $&quot;{t.Username}'s Personal Best: {t.HighScore}&quot;)
+    .ValueOr(&quot;No scores on record yet&quot;);
+    
+Console.WriteLine(message);        
+</code></pre>
+<p>The underlying goal of adopting these kinds of workflows is to ensure that all logical
+paths are managed and the code isn't written with casual developer optimism.  Where negative
+paths aren't managed by anything but exceptions.</p>
+</t></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Type Reference &amp; Documentation </title>
+    <title>The Result </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Type Reference &amp; Documentation ">
+    <meta name="title" content="The Result ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -80,47 +80,17 @@
                   
                   <ul class="nav level1">
                     <li class="">
-                      <span class="expand-stub"></span>
-                      <a href="FunctionalLink.Next.html" title="FunctionalLink.Next" class="">FunctionalLink.Next</a>
-                        
-                        <ul class="nav level2">
-                          <li class="">
-                            <a href="FunctionalLink.Next.EnumerableExtensions.html" title="EnumerableExtensions" class="">EnumerableExtensions</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Failure-1.html" title="Failure&lt;T&gt;" class="">Failure&lt;T&gt;</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.GlobalLink.html" title="GlobalLink" class="">GlobalLink</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.None.html" title="None" class="">None</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.ObjectExtensions.html" title="ObjectExtensions" class="">ObjectExtensions</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Option.html" title="Option" class="">Option</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Option-1.html" title="Option&lt;T&gt;" class="">Option&lt;T&gt;</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Result.html" title="Result" class="">Result</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Result-2.html" title="Result&lt;T, TFailure&gt;" class="">Result&lt;T, TFailure&gt;</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Result-1.html" title="Result&lt;T&gt;" class="">Result&lt;T&gt;</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.ResultExtensions.html" title="ResultExtensions" class="">ResultExtensions</a>
-                          </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Success-1.html" title="Success&lt;T&gt;" class="">Success&lt;T&gt;</a>
-                          </li>
-                        </ul>  </li>
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="">
+                      <a href="the-option.html" title="The Option" class="">The Option</a>
+                    </li>
+                    <li class="active">
+                      <a href="the-result.html" title="The Result" class="active">The Result</a>
+                    </li>
+                    <li class="">
+                      <a href="show-me.html" title="Just Show Me" class="">Just Show Me</a>
+                    </li>
                   </ul>        </div>
               </div>
             </div>
@@ -129,9 +99,69 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="type-reference--documentation">Type Reference &amp; Documentation</h1>
+<h1 id="the-result">The Result</h1>
 
-<p>Expand the library to the left to view all of the types, methods, &amp; documentation.</p>
+<p>The Result type is structured very similarly to the Option type.  It's recommend that
+you read through the Option type first because all of the functions are the same.</p>
+<p>The main different of the Result type is that instead of getting nothing (or None) when
+there is no result, you get a Failure.  So the Option's narrative is, &quot;there may or may not
+be a value&quot;.  And the Result's narrative is, &quot;This may or may not work&quot;.</p>
+<p>Here's one of the Option examples refactored as a Result to show their similarities:</p>
+<pre><code class="lang-csharp">public Result&lt;User&gt; FindUser(int userId)
+{
+   var found = ReadDb(userId);
+   return found != null
+        ? Success(found)
+        : Failure(&quot;User not found&quot;); 
+}
+</code></pre>
+<p>A better context for a Result is validation:</p>
+<pre><code class="lang-csharp">Result&lt;User&gt; ValidateUsername(User user)
+{
+    if (user.Username == null)
+        return Failure(&quot;Username cannot be null&quot;);
+
+    if (string.IsNullOrWhiteSpace(user.Username))
+        return Failure(&quot;Username cannot be empty&quot;);
+
+    return Success(user);
+}
+</code></pre>
+<p>With a handful of validation functions like above, you can validate an entire entity like so:</p>
+<pre><code class="lang-csharp">public Result&lt;User&gt; ValidateUser(User user)
+{
+    return ValidateUsername(user)
+        .Then(ValidateEmail)
+        .Then(ValidatePhone)
+        .Then(ValidateAddress);
+}
+</code></pre>
+<p>I/O is another easy fit for the Result type:</p>
+<pre><code class="lang-csharp">public Result&lt;string&gt; ReadFile(string filename)
+{
+    if (!File.Exists(filename))
+        return Failure(&quot;File does not exist&quot;);
+        
+    var contents = File.ReadAllText(filename);
+    
+    return Success(contents);
+}
+</code></pre>
+<p>Or more succinctly:</p>
+<pre><code class="lang-csharp">public Result&lt;string&gt; ReadFile(string filename) =&gt; 
+    File.Exists(filename)
+        ? Success(File.ReadAllText(filename))
+        : Failure(&quot;File does not exist&quot;);        
+</code></pre>
+<p>The goal is to encourage writing workflows for negative paths rather than throwing exceptions.</p>
+<p>For convenience, there are two Result Types:</p>
+<ul>
+<li>Result&lt;T&gt;</li>
+<li>Result&lt;T, TFailure&gt;</li>
+</ul>
+<p><code>Result&lt;T&gt;</code> inherits from <code>Result&lt;T,string&gt;</code>.  Because the failure state of a Result is often
+a <code>string</code>, this reduces the number of generic parameters you have to deal with for most
+use cases.</p>
 </article>
           </div>
           

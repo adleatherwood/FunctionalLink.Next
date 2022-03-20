@@ -627,31 +627,6 @@ references:
   fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).And(Of TOther, TResult)(System.Func(Of FunctionalLink.Next.Result(Of TOther, TFailure)), System.Func(Of T, TOther, TResult))
   nameWithType: Result<T, TFailure>.And<TOther, TResult>(Func<Result<TOther, TFailure>>, Func<T, TOther, TResult>)
   nameWithType.vb: Result(Of T, TFailure).And(Of TOther, TResult)(Func(Of Result(Of TOther, TFailure)), Func(Of T, TOther, TResult))
-- uid: FunctionalLink.Next.Result`2.Else(`0)
-  name: Else(T)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Else__0_
-  commentId: M:FunctionalLink.Next.Result`2.Else(`0)
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Else(T)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Else(T)
-  nameWithType: Result<T, TFailure>.Else(T)
-  nameWithType.vb: Result(Of T, TFailure).Else(T)
-- uid: FunctionalLink.Next.Result`2.Else(System.Func{`0})
-  name: Else(Func<T>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Else_System_Func__0__
-  commentId: M:FunctionalLink.Next.Result`2.Else(System.Func{`0})
-  name.vb: Else(Func(Of T))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Else(System.Func<T>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Else(System.Func(Of T))
-  nameWithType: Result<T, TFailure>.Else(Func<T>)
-  nameWithType.vb: Result(Of T, TFailure).Else(Func(Of T))
-- uid: FunctionalLink.Next.Result`2.Else*
-  name: Else
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Else_
-  commentId: Overload:FunctionalLink.Next.Result`2.Else
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Else
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Else
-  nameWithType: Result<T, TFailure>.Else
-  nameWithType.vb: Result(Of T, TFailure).Else
 - uid: FunctionalLink.Next.Result`2.Failure(`1)
   name: Failure(TFailure)
   href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Failure__1_
@@ -702,32 +677,6 @@ references:
   fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).HasValue
   nameWithType: Result<T, TFailure>.HasValue
   nameWithType.vb: Result(Of T, TFailure).HasValue
-- uid: FunctionalLink.Next.Result`2.Match(System.Action{`0},System.Action{`1})
-  name: Match(Action<T>, Action<TFailure>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Match_System_Action__0__System_Action__1__
-  commentId: M:FunctionalLink.Next.Result`2.Match(System.Action{`0},System.Action{`1})
-  name.vb: Match(Action(Of T), Action(Of TFailure))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Match(System.Action<T>, System.Action<TFailure>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Match(System.Action(Of T), System.Action(Of TFailure))
-  nameWithType: Result<T, TFailure>.Match(Action<T>, Action<TFailure>)
-  nameWithType.vb: Result(Of T, TFailure).Match(Action(Of T), Action(Of TFailure))
-- uid: FunctionalLink.Next.Result`2.Match*
-  name: Match
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Match_
-  commentId: Overload:FunctionalLink.Next.Result`2.Match
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Match
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Match
-  nameWithType: Result<T, TFailure>.Match
-  nameWithType.vb: Result(Of T, TFailure).Match
-- uid: FunctionalLink.Next.Result`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
-  name: Match<TResult>(Func<T, TResult>, Func<TFailure, TResult>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Match__1_System_Func__0___0__System_Func__1___0__
-  commentId: M:FunctionalLink.Next.Result`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})
-  name.vb: Match(Of TResult)(Func(Of T, TResult), Func(Of TFailure, TResult))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Match<TResult>(System.Func<T, TResult>, System.Func<TFailure, TResult>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Match(Of TResult)(System.Func(Of T, TResult), System.Func(Of TFailure, TResult))
-  nameWithType: Result<T, TFailure>.Match<TResult>(Func<T, TResult>, Func<TFailure, TResult>)
-  nameWithType.vb: Result(Of T, TFailure).Match(Of TResult)(Func(Of T, TResult), Func(Of TFailure, TResult))
 - uid: FunctionalLink.Next.Result`2.op_Implicit(FunctionalLink.Next.Failure{`1})~FunctionalLink.Next.Result{`0,`1}
   name: Implicit(Failure<TFailure> to Result<T, TFailure>)
   href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_op_Implicit_FunctionalLink_Next_Failure__1___FunctionalLink_Next_Result__0__1_
@@ -764,32 +713,6 @@ references:
   fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Widening
   nameWithType: Result<T, TFailure>.Implicit
   nameWithType.vb: Result(Of T, TFailure).Widening
-- uid: FunctionalLink.Next.Result`2.Or(FunctionalLink.Next.Result{`0,`1})
-  name: Or(Result<T, TFailure>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Or_FunctionalLink_Next_Result__0__1__
-  commentId: M:FunctionalLink.Next.Result`2.Or(FunctionalLink.Next.Result{`0,`1})
-  name.vb: Or(Result(Of T, TFailure))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Or(FunctionalLink.Next.Result<T, TFailure>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Or(FunctionalLink.Next.Result(Of T, TFailure))
-  nameWithType: Result<T, TFailure>.Or(Result<T, TFailure>)
-  nameWithType.vb: Result(Of T, TFailure).Or(Result(Of T, TFailure))
-- uid: FunctionalLink.Next.Result`2.Or(System.Func{FunctionalLink.Next.Result{`0,`1}})
-  name: Or(Func<Result<T, TFailure>>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Or_System_Func_FunctionalLink_Next_Result__0__1___
-  commentId: M:FunctionalLink.Next.Result`2.Or(System.Func{FunctionalLink.Next.Result{`0,`1}})
-  name.vb: Or(Func(Of Result(Of T, TFailure)))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Or(System.Func<FunctionalLink.Next.Result<T, TFailure>>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Or(System.Func(Of FunctionalLink.Next.Result(Of T, TFailure)))
-  nameWithType: Result<T, TFailure>.Or(Func<Result<T, TFailure>>)
-  nameWithType.vb: Result(Of T, TFailure).Or(Func(Of Result(Of T, TFailure)))
-- uid: FunctionalLink.Next.Result`2.Or*
-  name: Or
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Or_
-  commentId: Overload:FunctionalLink.Next.Result`2.Or
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Or
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Or
-  nameWithType: Result<T, TFailure>.Or
-  nameWithType.vb: Result(Of T, TFailure).Or
 - uid: FunctionalLink.Next.Result`2.Success(`0)
   name: Success(T)
   href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Success__0_
@@ -806,66 +729,402 @@ references:
   fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Success
   nameWithType: Result<T, TFailure>.Success
   nameWithType.vb: Result(Of T, TFailure).Success
-- uid: FunctionalLink.Next.Result`2.Then(System.Action{`0})
-  name: Then(Action<T>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then_System_Action__0__
-  commentId: M:FunctionalLink.Next.Result`2.Then(System.Action{`0})
-  name.vb: Then(Action(Of T))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Then(System.Action<T>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(System.Action(Of T))
-  nameWithType: Result<T, TFailure>.Then(Action<T>)
-  nameWithType.vb: Result(Of T, TFailure).Then(Action(Of T))
-- uid: FunctionalLink.Next.Result`2.Then*
+- uid: FunctionalLink.Next.ResultExtensions
+  name: ResultExtensions
+  href: api/FunctionalLink.Next.ResultExtensions.html
+  commentId: T:FunctionalLink.Next.ResultExtensions
+  fullName: FunctionalLink.Next.ResultExtensions
+  nameWithType: ResultExtensions
+- uid: FunctionalLink.Next.ResultExtensions.And*
+  name: And
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And_
+  commentId: Overload:FunctionalLink.Next.ResultExtensions.And
+  fullName: FunctionalLink.Next.ResultExtensions.And
+  nameWithType: ResultExtensions.And
+- uid: FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},``2,System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Result<T, TFailure>, TOther, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_FunctionalLink_Next_Result___0___1____2_System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},``2,System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Result(Of T, TFailure), TOther, Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(FunctionalLink.Next.Result<T, TFailure>, TOther, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(FunctionalLink.Next.Result(Of T, TFailure), TOther, System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Result<T, TFailure>, TOther, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Result(Of T, TFailure), TOther, Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},System.Func{``2},System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Result<T, TFailure>, Func<TOther>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_FunctionalLink_Next_Result___0___1__System_Func___2__System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},System.Func{``2},System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Result(Of T, TFailure), Func(Of TOther), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<TOther>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of TOther), System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Result<T, TFailure>, Func<TOther>, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Result(Of T, TFailure), Func(Of TOther), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}},System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Result<T, TFailure>, Func<Task<Result<TOther, TFailure>>>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_FunctionalLink_Next_Result___0___1__System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(FunctionalLink.Next.Result{``0,``1},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}},System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Result(Of T, TFailure), Func(Of Task(Of Result(Of TOther, TFailure))), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<System.Threading.Tasks.Task<FunctionalLink.Next.Result<TOther, TFailure>>>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of TOther, TFailure))), System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Result<T, TFailure>, Func<Task<Result<TOther, TFailure>>>, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Result(Of T, TFailure), Func(Of Task(Of Result(Of TOther, TFailure))), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``2,System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, TOther, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1_____2_System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``2,System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), TOther, Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, TOther, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), TOther, System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, TOther, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), TOther, Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},FunctionalLink.Next.Result{``2,``1},System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Result<TOther, TFailure>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___FunctionalLink_Next_Result___2___1__System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},FunctionalLink.Next.Result{``2,``1},System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Result(Of TOther, TFailure), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, FunctionalLink.Next.Result<TOther, TFailure>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), FunctionalLink.Next.Result(Of TOther, TFailure), System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Result<TOther, TFailure>, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Result(Of TOther, TFailure), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``2},System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Func<TOther>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___2__System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``2},System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Func(Of TOther), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<TOther>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of TOther), System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Func<TOther>, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Func(Of TOther), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{FunctionalLink.Next.Result{``2,``1}},System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Func<Result<TOther, TFailure>>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_FunctionalLink_Next_Result___2___1___System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{FunctionalLink.Next.Result{``2,``1}},System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Func(Of Result(Of TOther, TFailure)), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<FunctionalLink.Next.Result<TOther, TFailure>>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of FunctionalLink.Next.Result(Of TOther, TFailure)), System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Func<Result<TOther, TFailure>>, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Func(Of Result(Of TOther, TFailure)), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}},System.Func{``0,``2,``3})
+  name: And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Func<Task<Result<TOther, TFailure>>>, Func<T, TOther, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_And__4_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____System_Func___0___2___3__
+  commentId: M:FunctionalLink.Next.ResultExtensions.And``4(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}},System.Func{``0,``2,``3})
+  name.vb: And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Func(Of Task(Of Result(Of TOther, TFailure))), Func(Of T, TOther, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.And<T, TFailure, TOther, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<System.Threading.Tasks.Task<FunctionalLink.Next.Result<TOther, TFailure>>>, System.Func<T, TOther, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.And(Of T, TFailure, TOther, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of TOther, TFailure))), System.Func(Of T, TOther, TResult))
+  nameWithType: ResultExtensions.And<T, TFailure, TOther, TResult>(Task<Result<T, TFailure>>, Func<Task<Result<TOther, TFailure>>>, Func<T, TOther, TResult>)
+  nameWithType.vb: ResultExtensions.And(Of T, TFailure, TOther, TResult)(Task(Of Result(Of T, TFailure)), Func(Of Task(Of Result(Of TOther, TFailure))), Func(Of T, TOther, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.Match*
+  name: Match
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Match_
+  commentId: Overload:FunctionalLink.Next.ResultExtensions.Match
+  fullName: FunctionalLink.Next.ResultExtensions.Match
+  nameWithType: ResultExtensions.Match
+- uid: FunctionalLink.Next.ResultExtensions.Match``2(FunctionalLink.Next.Result{``0,``1},System.Action{``0},System.Action{``1})
+  name: Match<T, TFailure>(Result<T, TFailure>, Action<T>, Action<TFailure>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Match__2_FunctionalLink_Next_Result___0___1__System_Action___0__System_Action___1__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Match``2(FunctionalLink.Next.Result{``0,``1},System.Action{``0},System.Action{``1})
+  name.vb: Match(Of T, TFailure)(Result(Of T, TFailure), Action(Of T), Action(Of TFailure))
+  fullName: FunctionalLink.Next.ResultExtensions.Match<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, System.Action<T>, System.Action<TFailure>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Match(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), System.Action(Of T), System.Action(Of TFailure))
+  nameWithType: ResultExtensions.Match<T, TFailure>(Result<T, TFailure>, Action<T>, Action<TFailure>)
+  nameWithType.vb: ResultExtensions.Match(Of T, TFailure)(Result(Of T, TFailure), Action(Of T), Action(Of TFailure))
+- uid: FunctionalLink.Next.ResultExtensions.Match``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Action{``0},System.Action{``1})
+  name: Match<T, TFailure>(Task<Result<T, TFailure>>, Action<T>, Action<TFailure>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Match__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Action___0__System_Action___1__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Match``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Action{``0},System.Action{``1})
+  name.vb: Match(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Action(Of T), Action(Of TFailure))
+  fullName: FunctionalLink.Next.ResultExtensions.Match<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Action<T>, System.Action<TFailure>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Match(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Action(Of T), System.Action(Of TFailure))
+  nameWithType: ResultExtensions.Match<T, TFailure>(Task<Result<T, TFailure>>, Action<T>, Action<TFailure>)
+  nameWithType.vb: ResultExtensions.Match(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Action(Of T), Action(Of TFailure))
+- uid: FunctionalLink.Next.ResultExtensions.Match``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,``2},System.Func{``1,``2})
+  name: Match<T, TFailure, TResult>(Result<T, TFailure>, Func<T, TResult>, Func<TFailure, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Match__3_FunctionalLink_Next_Result___0___1__System_Func___0___2__System_Func___1___2__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Match``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,``2},System.Func{``1,``2})
+  name.vb: Match(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, TResult), Func(Of TFailure, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.Match<T, TFailure, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, TResult>, System.Func<TFailure, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Match(Of T, TFailure, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, TResult), System.Func(Of TFailure, TResult))
+  nameWithType: ResultExtensions.Match<T, TFailure, TResult>(Result<T, TFailure>, Func<T, TResult>, Func<TFailure, TResult>)
+  nameWithType.vb: ResultExtensions.Match(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, TResult), Func(Of TFailure, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.Match``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,``2},System.Func{``1,``2})
+  name: Match<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, TResult>, Func<TFailure, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Match__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0___2__System_Func___1___2__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Match``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,``2},System.Func{``1,``2})
+  name.vb: Match(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, TResult), Func(Of TFailure, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.Match<T, TFailure, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, TResult>, System.Func<TFailure, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Match(Of T, TFailure, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, TResult), System.Func(Of TFailure, TResult))
+  nameWithType: ResultExtensions.Match<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, TResult>, Func<TFailure, TResult>)
+  nameWithType.vb: ResultExtensions.Match(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, TResult), Func(Of TFailure, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.Or*
+  name: Or
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or_
+  commentId: Overload:FunctionalLink.Next.ResultExtensions.Or
+  fullName: FunctionalLink.Next.ResultExtensions.Or
+  nameWithType: ResultExtensions.Or
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},``0)
+  name: Or<T, TFailure>(Result<T, TFailure>, T)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1____0_
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},``0)
+  name.vb: Or(Of T, TFailure)(Result(Of T, TFailure), T)
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, T)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), T)
+  nameWithType: ResultExtensions.Or<T, TFailure>(Result<T, TFailure>, T)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Result(Of T, TFailure), T)
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},FunctionalLink.Next.Result{``0,``1})
+  name: Or<T, TFailure>(Result<T, TFailure>, Result<T, TFailure>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__FunctionalLink_Next_Result___0___1__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},FunctionalLink.Next.Result{``0,``1})
+  name.vb: Or(Of T, TFailure)(Result(Of T, TFailure), Result(Of T, TFailure))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, FunctionalLink.Next.Result<T, TFailure>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), FunctionalLink.Next.Result(Of T, TFailure))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Result<T, TFailure>, Result<T, TFailure>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Result(Of T, TFailure), Result(Of T, TFailure))
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{``0})
+  name: Or<T, TFailure>(Result<T, TFailure>, Func<T>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__System_Func___0__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{``0})
+  name.vb: Or(Of T, TFailure)(Result(Of T, TFailure), Func(Of T))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Result<T, TFailure>, Func<T>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Result(Of T, TFailure), Func(Of T))
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{FunctionalLink.Next.Result{``0,``1}})
+  name: Or<T, TFailure>(Result<T, TFailure>, Func<Result<T, TFailure>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__System_Func_FunctionalLink_Next_Result___0___1___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{FunctionalLink.Next.Result{``0,``1}})
+  name.vb: Or(Of T, TFailure)(Result(Of T, TFailure), Func(Of Result(Of T, TFailure)))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, System.Func<FunctionalLink.Next.Result<T, TFailure>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of FunctionalLink.Next.Result(Of T, TFailure)))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Result<T, TFailure>, Func<Result<T, TFailure>>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Result(Of T, TFailure), Func(Of Result(Of T, TFailure)))
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}}})
+  name: Or<T, TFailure>(Result<T, TFailure>, Func<Task<Result<T, TFailure>>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_FunctionalLink_Next_Result___0___1__System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1____
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(FunctionalLink.Next.Result{``0,``1},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}}})
+  name.vb: Or(Of T, TFailure)(Result(Of T, TFailure), Func(Of Task(Of Result(Of T, TFailure))))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, System.Func<System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure))))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Result<T, TFailure>, Func<Task<Result<T, TFailure>>>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Result(Of T, TFailure), Func(Of Task(Of Result(Of T, TFailure))))
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``0)
+  name: Or<T, TFailure>(Task<Result<T, TFailure>>, T)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1_____0_
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``0)
+  name.vb: Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), T)
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, T)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), T)
+  nameWithType: ResultExtensions.Or<T, TFailure>(Task<Result<T, TFailure>>, T)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), T)
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},FunctionalLink.Next.Result{``0,``1})
+  name: Or<T, TFailure>(Task<Result<T, TFailure>>, Result<T, TFailure>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___FunctionalLink_Next_Result___0___1__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},FunctionalLink.Next.Result{``0,``1})
+  name.vb: Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Result(Of T, TFailure))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, FunctionalLink.Next.Result<T, TFailure>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), FunctionalLink.Next.Result(Of T, TFailure))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Task<Result<T, TFailure>>, Result<T, TFailure>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Result(Of T, TFailure))
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0})
+  name: Or<T, TFailure>(Task<Result<T, TFailure>>, Func<T>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0})
+  name.vb: Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of T))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Task<Result<T, TFailure>>, Func<T>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of T))
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{FunctionalLink.Next.Result{``0,``1}})
+  name: Or<T, TFailure>(Task<Result<T, TFailure>>, Func<Result<T, TFailure>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_FunctionalLink_Next_Result___0___1___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{FunctionalLink.Next.Result{``0,``1}})
+  name.vb: Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of Result(Of T, TFailure)))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<FunctionalLink.Next.Result<T, TFailure>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of FunctionalLink.Next.Result(Of T, TFailure)))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Task<Result<T, TFailure>>, Func<Result<T, TFailure>>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of Result(Of T, TFailure)))
+- uid: FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}}})
+  name: Or<T, TFailure>(Task<Result<T, TFailure>>, Func<Task<Result<T, TFailure>>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Or__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1____
+  commentId: M:FunctionalLink.Next.ResultExtensions.Or``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}}})
+  name.vb: Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of Task(Of Result(Of T, TFailure))))
+  fullName: FunctionalLink.Next.ResultExtensions.Or<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Or(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure))))
+  nameWithType: ResultExtensions.Or<T, TFailure>(Task<Result<T, TFailure>>, Func<Task<Result<T, TFailure>>>)
+  nameWithType.vb: ResultExtensions.Or(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of Task(Of Result(Of T, TFailure))))
+- uid: FunctionalLink.Next.ResultExtensions.Then*
   name: Then
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then_
-  commentId: Overload:FunctionalLink.Next.Result`2.Then
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Then
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then
-  nameWithType: Result<T, TFailure>.Then
-  nameWithType.vb: Result(Of T, TFailure).Then
-- uid: FunctionalLink.Next.Result`2.Then``1(System.Func{`0,``0})
-  name: Then<TResult>(Func<T, TResult>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then__1_System_Func__0___0__
-  commentId: M:FunctionalLink.Next.Result`2.Then``1(System.Func{`0,``0})
-  name.vb: Then(Of TResult)(Func(Of T, TResult))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Then<TResult>(System.Func<T, TResult>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(Of TResult)(System.Func(Of T, TResult))
-  nameWithType: Result<T, TFailure>.Then<TResult>(Func<T, TResult>)
-  nameWithType.vb: Result(Of T, TFailure).Then(Of TResult)(Func(Of T, TResult))
-- uid: FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0,`1}})
-  name: Then<TResult>(Func<T, Result<TResult, TFailure>>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then__1_System_Func__0_FunctionalLink_Next_Result___0__1___
-  commentId: M:FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0,`1}})
-  name.vb: Then(Of TResult)(Func(Of T, Result(Of TResult, TFailure)))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Then<TResult>(System.Func<T, FunctionalLink.Next.Result<TResult, TFailure>>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(Of TResult)(System.Func(Of T, FunctionalLink.Next.Result(Of TResult, TFailure)))
-  nameWithType: Result<T, TFailure>.Then<TResult>(Func<T, Result<TResult, TFailure>>)
-  nameWithType.vb: Result(Of T, TFailure).Then(Of TResult)(Func(Of T, Result(Of TResult, TFailure)))
-- uid: FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0}})
-  name: Then<TResult>(Func<T, Result<TResult>>)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_Then__1_System_Func__0_FunctionalLink_Next_Result___0___
-  commentId: M:FunctionalLink.Next.Result`2.Then``1(System.Func{`0,FunctionalLink.Next.Result{``0}})
-  name.vb: Then(Of TResult)(Func(Of T, Result(Of TResult)))
-  fullName: FunctionalLink.Next.Result<T, TFailure>.Then<TResult>(System.Func<T, FunctionalLink.Next.Result<TResult>>)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).Then(Of TResult)(System.Func(Of T, FunctionalLink.Next.Result(Of TResult)))
-  nameWithType: Result<T, TFailure>.Then<TResult>(Func<T, Result<TResult>>)
-  nameWithType.vb: Result(Of T, TFailure).Then(Of TResult)(Func(Of T, Result(Of TResult)))
-- uid: FunctionalLink.Next.Result`2.ValueOr(`0)
-  name: ValueOr(T)
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_ValueOr__0_
-  commentId: M:FunctionalLink.Next.Result`2.ValueOr(`0)
-  fullName: FunctionalLink.Next.Result<T, TFailure>.ValueOr(T)
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).ValueOr(T)
-  nameWithType: Result<T, TFailure>.ValueOr(T)
-  nameWithType.vb: Result(Of T, TFailure).ValueOr(T)
-- uid: FunctionalLink.Next.Result`2.ValueOr*
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then_
+  commentId: Overload:FunctionalLink.Next.ResultExtensions.Then
+  fullName: FunctionalLink.Next.ResultExtensions.Then
+  nameWithType: ResultExtensions.Then
+- uid: FunctionalLink.Next.ResultExtensions.Then``2(FunctionalLink.Next.Result{``0,``1},System.Action{``0})
+  name: Then<T, TFailure>(Result<T, TFailure>, Action<T>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__2_FunctionalLink_Next_Result___0___1__System_Action___0__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``2(FunctionalLink.Next.Result{``0,``1},System.Action{``0})
+  name.vb: Then(Of T, TFailure)(Result(Of T, TFailure), Action(Of T))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, System.Action<T>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), System.Action(Of T))
+  nameWithType: ResultExtensions.Then<T, TFailure>(Result<T, TFailure>, Action<T>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure)(Result(Of T, TFailure), Action(Of T))
+- uid: FunctionalLink.Next.ResultExtensions.Then``2(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task})
+  name: Then<T, TFailure>(Result<T, TFailure>, Func<T, Task>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__2_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``2(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task})
+  name.vb: Then(Of T, TFailure)(Result(Of T, TFailure), Func(Of T, Task))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, System.Threading.Tasks.Task>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, System.Threading.Tasks.Task))
+  nameWithType: ResultExtensions.Then<T, TFailure>(Result<T, TFailure>, Func<T, Task>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure)(Result(Of T, TFailure), Func(Of T, Task))
+- uid: FunctionalLink.Next.ResultExtensions.Then``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Action{``0})
+  name: Then<T, TFailure>(Task<Result<T, TFailure>>, Action<T>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Action___0__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Action{``0})
+  name.vb: Then(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Action(Of T))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Action<T>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Action(Of T))
+  nameWithType: ResultExtensions.Then<T, TFailure>(Task<Result<T, TFailure>>, Action<T>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Action(Of T))
+- uid: FunctionalLink.Next.ResultExtensions.Then``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task})
+  name: Then<T, TFailure>(Task<Result<T, TFailure>>, Func<T, Task>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task})
+  name.vb: Then(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of T, Task))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, System.Threading.Tasks.Task>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, System.Threading.Tasks.Task))
+  nameWithType: ResultExtensions.Then<T, TFailure>(Task<Result<T, TFailure>>, Func<T, Task>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure)(Task(Of Result(Of T, TFailure)), Func(Of T, Task))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,``2})
+  name: Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0___2__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,``2})
+  name.vb: Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, TResult))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, TResult>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,FunctionalLink.Next.Result{``2,``1}})
+  name: Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Result<TResult, TFailure>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_FunctionalLink_Next_Result___2___1___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,FunctionalLink.Next.Result{``2,``1}})
+  name.vb: Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Result(Of TResult, TFailure)))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, FunctionalLink.Next.Result<TResult, TFailure>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, FunctionalLink.Next.Result(Of TResult, TFailure)))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Result<TResult, TFailure>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Result(Of TResult, TFailure)))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{``2}})
+  name: Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Task<TResult>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task___2___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{``2}})
+  name.vb: Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Task(Of TResult)))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, System.Threading.Tasks.Task<TResult>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, System.Threading.Tasks.Task(Of TResult)))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Task<TResult>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Task(Of TResult)))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}})
+  name: Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Task<Result<TResult, TFailure>>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}})
+  name.vb: Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Task(Of Result(Of TResult, TFailure))))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, System.Threading.Tasks.Task<FunctionalLink.Next.Result<TResult, TFailure>>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of TResult, TFailure))))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Task<Result<TResult, TFailure>>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Task(Of Result(Of TResult, TFailure))))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2}}})
+  name: Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Task<Result<TResult>>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___1__System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2____
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``1},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2}}})
+  name.vb: Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Task(Of Result(Of TResult))))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, System.Threading.Tasks.Task<FunctionalLink.Next.Result<TResult>>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of TResult))))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Result<T, TFailure>, Func<T, Task<Result<TResult>>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Result(Of T, TFailure), Func(Of T, Task(Of Result(Of TResult))))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``2},System.Func{``0,FunctionalLink.Next.Result{``1}})
+  name: Then<T, TResult, TFailure>(Result<T, TFailure>, Func<T, Result<TResult>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_FunctionalLink_Next_Result___0___2__System_Func___0_FunctionalLink_Next_Result___1___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(FunctionalLink.Next.Result{``0,``2},System.Func{``0,FunctionalLink.Next.Result{``1}})
+  name.vb: Then(Of T, TResult, TFailure)(Result(Of T, TFailure), Func(Of T, Result(Of TResult)))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TResult, TFailure>(FunctionalLink.Next.Result<T, TFailure>, System.Func<T, FunctionalLink.Next.Result<TResult>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TResult, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), System.Func(Of T, FunctionalLink.Next.Result(Of TResult)))
+  nameWithType: ResultExtensions.Then<T, TResult, TFailure>(Result<T, TFailure>, Func<T, Result<TResult>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TResult, TFailure)(Result(Of T, TFailure), Func(Of T, Result(Of TResult)))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,``2})
+  name: Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, TResult>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0___2__
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,``2})
+  name.vb: Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, TResult))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, TResult>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, TResult))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, TResult>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, TResult))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,FunctionalLink.Next.Result{``2,``1}})
+  name: Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Result<TResult, TFailure>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_FunctionalLink_Next_Result___2___1___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,FunctionalLink.Next.Result{``2,``1}})
+  name.vb: Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Result(Of TResult, TFailure)))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, FunctionalLink.Next.Result<TResult, TFailure>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, FunctionalLink.Next.Result(Of TResult, TFailure)))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Result<TResult, TFailure>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Result(Of TResult, TFailure)))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,FunctionalLink.Next.Result{``2}})
+  name: Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Result<TResult>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_FunctionalLink_Next_Result___2___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,FunctionalLink.Next.Result{``2}})
+  name.vb: Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Result(Of TResult)))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, FunctionalLink.Next.Result<TResult>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, FunctionalLink.Next.Result(Of TResult)))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Result<TResult>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Result(Of TResult)))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{``2}})
+  name: Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Task<TResult>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task___2___
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{``2}})
+  name.vb: Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Task(Of TResult)))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, System.Threading.Tasks.Task<TResult>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, System.Threading.Tasks.Task(Of TResult)))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Task<TResult>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Task(Of TResult)))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}})
+  name: Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Task<Result<TResult, TFailure>>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2___1____
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2,``1}}})
+  name.vb: Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Task(Of Result(Of TResult, TFailure))))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, System.Threading.Tasks.Task<FunctionalLink.Next.Result<TResult, TFailure>>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of TResult, TFailure))))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Task<Result<TResult, TFailure>>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Task(Of Result(Of TResult, TFailure))))
+- uid: FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2}}})
+  name: Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Task<Result<TResult>>>)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_Then__3_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1___System_Func___0_System_Threading_Tasks_Task_FunctionalLink_Next_Result___2____
+  commentId: M:FunctionalLink.Next.ResultExtensions.Then``3(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},System.Func{``0,System.Threading.Tasks.Task{FunctionalLink.Next.Result{``2}}})
+  name.vb: Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Task(Of Result(Of TResult))))
+  fullName: FunctionalLink.Next.ResultExtensions.Then<T, TFailure, TResult>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, System.Func<T, System.Threading.Tasks.Task<FunctionalLink.Next.Result<TResult>>>)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.Then(Of T, TFailure, TResult)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), System.Func(Of T, System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of TResult))))
+  nameWithType: ResultExtensions.Then<T, TFailure, TResult>(Task<Result<T, TFailure>>, Func<T, Task<Result<TResult>>>)
+  nameWithType.vb: ResultExtensions.Then(Of T, TFailure, TResult)(Task(Of Result(Of T, TFailure)), Func(Of T, Task(Of Result(Of TResult))))
+- uid: FunctionalLink.Next.ResultExtensions.ValueOr*
   name: ValueOr
-  href: api/FunctionalLink.Next.Result-2.html#FunctionalLink_Next_Result_2_ValueOr_
-  commentId: Overload:FunctionalLink.Next.Result`2.ValueOr
-  fullName: FunctionalLink.Next.Result<T, TFailure>.ValueOr
-  fullName.vb: FunctionalLink.Next.Result(Of T, TFailure).ValueOr
-  nameWithType: Result<T, TFailure>.ValueOr
-  nameWithType.vb: Result(Of T, TFailure).ValueOr
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_ValueOr_
+  commentId: Overload:FunctionalLink.Next.ResultExtensions.ValueOr
+  fullName: FunctionalLink.Next.ResultExtensions.ValueOr
+  nameWithType: ResultExtensions.ValueOr
+- uid: FunctionalLink.Next.ResultExtensions.ValueOr``2(FunctionalLink.Next.Result{``0,``1},``0)
+  name: ValueOr<T, TFailure>(Result<T, TFailure>, T)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_ValueOr__2_FunctionalLink_Next_Result___0___1____0_
+  commentId: M:FunctionalLink.Next.ResultExtensions.ValueOr``2(FunctionalLink.Next.Result{``0,``1},``0)
+  name.vb: ValueOr(Of T, TFailure)(Result(Of T, TFailure), T)
+  fullName: FunctionalLink.Next.ResultExtensions.ValueOr<T, TFailure>(FunctionalLink.Next.Result<T, TFailure>, T)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.ValueOr(Of T, TFailure)(FunctionalLink.Next.Result(Of T, TFailure), T)
+  nameWithType: ResultExtensions.ValueOr<T, TFailure>(Result<T, TFailure>, T)
+  nameWithType.vb: ResultExtensions.ValueOr(Of T, TFailure)(Result(Of T, TFailure), T)
+- uid: FunctionalLink.Next.ResultExtensions.ValueOr``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``0)
+  name: ValueOr<T, TFailure>(Task<Result<T, TFailure>>, T)
+  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_ValueOr__2_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___1_____0_
+  commentId: M:FunctionalLink.Next.ResultExtensions.ValueOr``2(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0,``1}},``0)
+  name.vb: ValueOr(Of T, TFailure)(Task(Of Result(Of T, TFailure)), T)
+  fullName: FunctionalLink.Next.ResultExtensions.ValueOr<T, TFailure>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T, TFailure>>, T)
+  fullName.vb: FunctionalLink.Next.ResultExtensions.ValueOr(Of T, TFailure)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T, TFailure)), T)
+  nameWithType: ResultExtensions.ValueOr<T, TFailure>(Task<Result<T, TFailure>>, T)
+  nameWithType.vb: ResultExtensions.ValueOr(Of T, TFailure)(Task(Of Result(Of T, TFailure)), T)
 - uid: FunctionalLink.Next.Success`1
   name: Success<T>
   href: api/FunctionalLink.Next.Success-1.html

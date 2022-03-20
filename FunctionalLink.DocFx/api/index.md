@@ -1,2 +1,3 @@
-# PLACEHOLDER
-TODO: Add .NET projects to the *src* folder and run `docfx` to generate **REAL** *API Documentation*!
+# Type Reference & Documentation
+
+Expand the library to the left to view all of the types, methods, & documentation.

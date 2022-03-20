@@ -1,7 +1,9 @@
 - name: Introduction
   href: intro.md
-- name: The Option Type
-  href: TheOption.md
-- name: The Result Type
-  href: TheResult.md
+- name: The Option
+  href: the-option.md
+- name: The Result
+  href: the-result.md
+- name: Just Show Me
+  href: show-me.md
   

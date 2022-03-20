@@ -8,7 +8,7 @@ there is no result, you get a Failure.  So the Option's narrative is, "there may
 be a value".  And the Result's narrative is, "This may or may not work".
 
 Here's one of the Option examples refactored as a Result to show their similarities:
-```cs
+```csharp
 public Result<User> FindUser(int userId)
 {
    var found = ReadDb(userId);
@@ -18,7 +18,7 @@ public Result<User> FindUser(int userId)
 }
 ```
 A better context for a Result is validation:
-```cs
+```csharp
 Result<User> ValidateUsername(User user)
 {
     if (user.Username == null)
@@ -31,7 +31,7 @@ Result<User> ValidateUsername(User user)
 }
 ```
 With a handful of validation functions like above, you can validate an entire entity like so:
-```cs
+```csharp
 public Result<User> ValidateUser(User user)
 {
     return ValidateUsername(user)
@@ -41,7 +41,7 @@ public Result<User> ValidateUser(User user)
 }
 ```
 I/O is another easy fit for the Result type:
-```cs
+```csharp
 public Result<string> ReadFile(string filename)
 {
     if (!File.Exists(filename))
@@ -53,7 +53,7 @@ public Result<string> ReadFile(string filename)
 }
 ```
 Or more succinctly:
-```cs
+```csharp
 public Result<string> ReadFile(string filename) => 
     File.Exists(filename)
         ? Success(File.ReadAllText(filename))

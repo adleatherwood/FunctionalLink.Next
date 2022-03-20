@@ -30,3 +30,5 @@ msbuild.log
 msbuild.err
 msbuild.wrn
 public/
+.ionide/symbolCache.db
+FunctionalLink.Next.Tests/coverage.json
