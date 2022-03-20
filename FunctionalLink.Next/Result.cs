@@ -179,173 +179,213 @@ public class Result<T, TFailure>
 		value = _failure;
 		return !_hasValue;
 	}
-	
-	/// <summary>
-	/// Executes one of the two given actions based on the state of the Result.  If the Result
-	/// was successful, the onSuccess Action will be executed.  If not, the onFailure Action
-	/// will be executed
-	/// </summary>
-	/// <param name="onSuccess">The action to execute if the Result was successful</param>
-	/// <param name="onFailure">The Action to execute if the Result was not successful</param>
-	public void Match(Action<T> onSuccess,
-		Action<TFailure> onFailure)
-	{
-		if (HasValue(out var value))
-			onSuccess(value);
-		else
-			onFailure(_failure);
-	}
-	
-	/// <summary>
-	/// Executes one of the two given functions based on the state of the Result and returns a value.  If
-	/// the Result was successful, the onSuccess function will be executed.  If not, the onFailure function
-	/// will be executed
-	/// </summary>
-	/// <param name="onSuccess">The function to execute if the Result was successful</param>
-	/// <param name="onFailure">The function to execute if the Result was not successful</param>
-	/// <returns>Returns the result of onSuccess if the Result was successful.  Otherwise, the result of onFailure</returns>
-	public TResult Match<TResult>(Func<T, TResult> onSuccess,
-		Func<TFailure, TResult> onFailure) =>
-		HasValue(out var value)
-			? onSuccess(value)
-			: onFailure(_failure);
-	
-	/// <summary>
-	/// Executes the given function if the given Result was successful.  This overload is the compositional equivalent
-	/// of `Bind`, `FlatMap`, or `SelectMany` style functions available in other contexts
-	/// </summary>
-	/// <param name="f">The function to execute if the Result was successful</param>
-	/// <returns>Returns another result with either the return value of the given function or the current failure</returns>
-	public Result<TResult, TFailure> Then<TResult>(Func<T, Result<TResult, TFailure>> f) =>
-		HasValue(out var value)
-			? f(value)
-			: Result<TResult, TFailure>.Failure(_failure);
-	
-	
-	/// <summary>
-	/// Executes the given function if the given Result was successful.  This overload is the compositional equivalent
-	/// of `Bind`, `FlatMap`, or `SelectMany` style functions available in other contexts.
-	///
-	/// This is a special case for mitigating interop between Result&lt;T&gt; and Result&lt;T, TFailure&gt;.  Without
-	/// this handler, the return type is: Result&lt;Result&lt;T&gt;, TFailure&gt;
-	/// </summary>
-	/// <param name="f">The function to execute if the Result was successful</param>
-	/// <returns>Returns another result with either the return value of the given function or the current failure</returns>
-	public Result<TResult, string> Then<TResult>(Func<T, Result<TResult>> f) =>
-		HasValue(out var value)
-			? f(value)
-			: Result<TResult, TFailure>.Failure(_failure);
-	
-	/// <summary>
-	/// Executes the given function if the given Result was successful.  This overload is the compositional equivalent
-	/// of `Map` or `Select` style functions available in other contexts
-	/// </summary>
-	/// <param name="f">The function to execute if the Result was successful</param>
-	/// <returns>Returns another result with either the return value of the given function or the current failure</returns>
-	public Result<TResult, TFailure> Then<TResult>(Func<T, TResult> f) =>
-		HasValue(out var value)
-			? Result<TResult, TFailure>.Success(f(value))
-			: Result<TResult, TFailure>.Failure(_failure);
-	
-	/// <summary>
-	/// Executes the given action if the given Result was successful.  This overload is used to accomodate methods that
-	/// have a void return signature
-	/// </summary>
-	/// <param name="f">The function to execute if the Result was successful</param>
-	/// <returns>Returns the given Result after the action is executed</returns>
-	public Result<T, TFailure> Then(Action<T> f)
-	{
-		if (HasValue(out var value))
-			f(value);
 
-		return this;
-	}
 
-	/// <summary>
-	/// Used to transform a Failure state into a Success alternate value.
-	/// </summary>
-	/// <param name="alt">The function to provide an alternate value</param>
-	/// <returns>If the current Result is a Failure, then the alternate value is applied</returns>
-	public Result<T, TFailure> Else(T alt) =>
-		_hasValue
-			? this
-			: Success(alt);
-	
-	/// <summary>
-	/// Used to transform a Failure state into a Success alternate value.
-	/// </summary>
-	/// <param name="alt">The function to provide an alternate value</param>
-	/// <returns>If the current Result is a Failure, then the alternate value is applied</returns>
-	public Result<T, TFailure> Else(Func<T> alt) =>
-		_hasValue
-			? this
-			: Success(alt());
-	
-	/// <summary>
-	/// Used to deconstruct a Result to either it's successful value or a given alternative
-	/// </summary>
-	/// <param name="alt">The alternative value to return if the Result was not successful</param>
-	/// <returns>If the Result is successful, the Result value is returned.  Otherwise, the alternate value is returned</returns>
-	public T ValueOr(T alt) =>
-		HasValue(out var value)
-			? value
-			: alt;
-	
-	/// <summary>
-	/// Used to trade alternative Result values if the given Result is a failure
-	/// </summary>
-	/// <param name="alt">The function to return an alternate Result</param>
-	/// <returns>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</returns>
-	public Result<T, TFailure> Or(Result<T, TFailure> alt) =>
-		_hasValue
-			? this
-			: alt;
-	
-	/// <summary>
-	/// Used to trade alternative Result values if the given Result is a failure
-	/// </summary>
-	/// <param name="alt">The function to return an alternate Result</param>
-	/// <returns>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</returns>
-	public Result<T, TFailure> Or(Func<Result<T, TFailure>> alt) =>
-		_hasValue
-			? this
-			: alt();
-	
+	//---------------------------------------------
+
 	/// <summary>
 	/// Used to combine two Results if they are both successful
 	/// </summary>
 	/// <param name="other">The second result to combine</param>
-	/// <param name="selector">The function used to combine the values from ResultA and B</param>
-	/// <typeparam name="TOther">The type of the other Result</typeparam>
-	/// <typeparam name="TResult">The type of the new Result</typeparam>
+	/// <param name="selector">The function used to combine the values from ResultA and B</param>	
 	/// <returns>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</returns>
-	public Result<TResult, TFailure> And<TOther, TResult>(Result<TOther, TFailure> other, Func<T, TOther, TResult> selector)
-	{
-		if (HasFailure(out var failure))
-			return Result<TResult, TFailure>.Failure(failure);
+	public Result<TResult, TFailure> And<TOther, TResult>(Result<TOther, TFailure> other, Func<T, TOther, TResult> selector) =>
+		// TODO: not extension based
+        this.Match(
+            success1 => 
+                other.Match(
+                    success2 => Result<TResult, TFailure>.Success(selector(success1, success2)),
+                    failure2 => Result<TResult, TFailure>.Failure(failure2)),
+            failure1 => Result<TResult, TFailure>.Failure(failure1));
 
-		return other.HasValue(out var value)
-			? Result<TResult, TFailure>.Success(selector(_value, value))
-			: Result<TResult, TFailure>.Failure(other._failure);
-	}
-	
 	/// <summary>
 	/// Used to combine two Results if they are both successful
 	/// </summary>
-	/// <param name="other">The second result to combine</param>
-	/// <param name="selector">The function used to combine the values from ResultA and B</param>
-	/// <typeparam name="TOther">The type of the other Result</typeparam>
-	/// <typeparam name="TResult">The type of the new Result</typeparam>
+    /// <param name="other">The second result to combine</param>
+	/// <param name="selector">The function used to combine the values from ResultA and B</param>	
 	/// <returns>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</returns>
-	public Result<TResult, TFailure> And<TOther, TResult>(Func<Result<TOther, TFailure>> other, Func<T, TOther, TResult> selector)
-	{
-		if (HasFailure(out var failure))
-			return Result<TResult, TFailure>.Failure(failure);
+	public Result<TResult, TFailure> And<TOther, TResult>(Func<Result<TOther, TFailure>> other, Func<T, TOther, TResult> selector) =>
+		// TODO: not extension based
+        this.Match(
+            success => 
+                other().Match(
+                    success2 => Result<TResult, TFailure>.Success(selector(success, success2)),
+                    failure2 => Result<TResult, TFailure>.Failure(failure2)),
+            failure => Result<TResult, TFailure>.Failure(failure));
 
-		var bb = other();
 
-		return bb.HasValue(out var value)
-			? Result<TResult, TFailure>.Success(selector(_value, value))
-			: Result<TResult, TFailure>.Failure(bb._failure);
-	}
+
+
+	//---------------------------------------------
+
+
+
+
+
+	
+	// /// <summary>
+	// /// Executes one of the two given actions based on the state of the Result.  If the Result
+	// /// was successful, the onSuccess Action will be executed.  If not, the onFailure Action
+	// /// will be executed
+	// /// </summary>
+	// /// <param name="onSuccess">The action to execute if the Result was successful</param>
+	// /// <param name="onFailure">The Action to execute if the Result was not successful</param>
+	// public void Match(Action<T> onSuccess, Action<TFailure> onFailure)
+	// {
+	// 	if (HasValue(out var value))
+	// 		onSuccess(value);
+	// 	else
+	// 		onFailure(_failure);
+	// }
+	
+	// /// <summary>
+	// /// Executes one of the two given functions based on the state of the Result and returns a value.  If
+	// /// the Result was successful, the onSuccess function will be executed.  If not, the onFailure function
+	// /// will be executed
+	// /// </summary>
+	// /// <param name="onSuccess">The function to execute if the Result was successful</param>
+	// /// <param name="onFailure">The function to execute if the Result was not successful</param>
+	// /// <returns>Returns the result of onSuccess if the Result was successful.  Otherwise, the result of onFailure</returns>
+	// public TResult Match<TResult>(Func<T, TResult> onSuccess, Func<TFailure, TResult> onFailure) =>
+	// 	HasValue(out var value)
+	// 		? onSuccess(value)
+	// 		: onFailure(_failure);
+	
+	// /// <summary>
+	// /// Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+	// /// of `Bind`, `FlatMap`, or `SelectMany` style functions available in other contexts
+	// /// </summary>
+	// /// <param name="f">The function to execute if the Result was successful</param>
+	// /// <returns>Returns another result with either the return value of the given function or the current failure</returns>
+	// public Result<TResult, TFailure> Then<TResult>(Func<T, Result<TResult, TFailure>> f) =>
+	// 	HasValue(out var value)
+	// 		? f(value)
+	// 		: Result<TResult, TFailure>.Failure(_failure);
+	
+	// /// <summary>
+	// /// Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+	// /// of `Map` or `Select` style functions available in other contexts
+	// /// </summary>
+	// /// <param name="f">The function to execute if the Result was successful</param>
+	// /// <returns>Returns another result with either the return value of the given function or the current failure</returns>
+	// public Result<TResult, TFailure> Then<TResult>(Func<T, TResult> f) =>
+	// 	HasValue(out var value)
+	// 		? Result<TResult, TFailure>.Success(f(value))
+	// 		: Result<TResult, TFailure>.Failure(_failure);
+	
+	// /// <summary>
+	// /// Executes the given action if the given Result was successful.  This overload is used to accomodate methods that
+	// /// have a void return signature
+	// /// </summary>
+	// /// <param name="f">The function to execute if the Result was successful</param>
+	// /// <returns>Returns the given Result after the action is executed</returns>
+	// public Result<T, TFailure> Then(Action<T> f)
+	// {
+	// 	if (HasValue(out var value))
+	// 		f(value);
+	//
+	// 	return this;
+	// }
+	
+	// /// <summary>
+	// /// Executes the given function if the given Result was successful.  This overload is the compositional equivalent
+	// /// of `Bind`, `FlatMap`, or `SelectMany` style functions available in other contexts.
+	// ///
+	// /// This is a special case for mitigating interop between Result&lt;T&gt; and Result&lt;T, TFailure&gt;.  Without
+	// /// this handler, the return type is: Result&lt;Result&lt;T&gt;, TFailure&gt;
+	// /// </summary>
+	// /// <param name="f">The function to execute if the Result was successful</param>
+	// /// <returns>Returns another result with either the return value of the given function or the current failure</returns>
+	// public Result<TResult, string> Then<TResult>(Func<T, Result<TResult>> f) =>
+	// 	HasValue(out var value)
+	// 		? f(value)
+	// 		: Result<TResult, TFailure>.Failure(_failure);
+
+	// /// <summary>
+	// /// Used to transform a Failure state into a Success alternate value.
+	// /// </summary>
+	// /// <param name="alt">The function to provide an alternate value</param>
+	// /// <returns>If the current Result is a Failure, then the alternate value is applied</returns>
+	// public Result<T, TFailure> Else(T alt) =>
+	// 	_hasValue
+	// 		? this
+	// 		: Success(alt);
+	
+	// /// <summary>
+	// /// Used to transform a Failure state into a Success alternate value.
+	// /// </summary>
+	// /// <param name="alt">The function to provide an alternate value</param>
+	// /// <returns>If the current Result is a Failure, then the alternate value is applied</returns>
+	// public Result<T, TFailure> Else(Func<T> alt) =>
+	// 	_hasValue
+	// 		? this
+	// 		: Success(alt());
+	
+	// /// <summary>
+	// /// Used to deconstruct a Result to either it's successful value or a given alternative
+	// /// </summary>
+	// /// <param name="alt">The alternative value to return if the Result was not successful</param>
+	// /// <returns>If the Result is successful, the Result value is returned.  Otherwise, the alternate value is returned</returns>
+	// public T ValueOr(T alt) =>
+	// 	HasValue(out var value)
+	// 		? value
+	// 		: alt;
+	
+	// /// <summary>
+	// /// Used to trade alternative Result values if the given Result is a failure
+	// /// </summary>
+	// /// <param name="alt">The function to return an alternate Result</param>
+	// /// <returns>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</returns>
+	// public Result<T, TFailure> Or(Result<T, TFailure> alt) =>
+	// 	_hasValue
+	// 		? this
+	// 		: alt;
+	
+	// /// <summary>
+	// /// Used to trade alternative Result values if the given Result is a failure
+	// /// </summary>
+	// /// <param name="alt">The function to return an alternate Result</param>
+	// /// <returns>If the given Result is successful, it will be returned.  Otherwise, the alternate Result is returned</returns>
+	// public Result<T, TFailure> Or(Func<Result<T, TFailure>> alt) =>
+	// 	_hasValue
+	// 		? this
+	// 		: alt();
+	
+	// /// <summary>
+	// /// Used to combine two Results if they are both successful
+	// /// </summary>
+	// /// <param name="other">The second result to combine</param>
+	// /// <param name="selector">The function used to combine the values from ResultA and B</param>
+	// /// <typeparam name="TOther">The type of the other Result</typeparam>
+	// /// <typeparam name="TResult">The type of the new Result</typeparam>
+	// /// <returns>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</returns>
+	// public Result<TResult, TFailure> And<TOther, TResult>(Result<TOther, TFailure> other, Func<T, TOther, TResult> selector)
+	// {
+	// 	if (HasFailure(out var failure))
+	// 		return Result<TResult, TFailure>.Failure(failure);
+
+	// 	return other.HasValue(out var value)
+	// 		? Result<TResult, TFailure>.Success(selector(_value, value))
+	// 		: Result<TResult, TFailure>.Failure(other._failure);
+	// }
+	
+	// /// <summary>
+	// /// Used to combine two Results if they are both successful
+	// /// </summary>
+	// /// <param name="other">The second result to combine</param>
+	// /// <param name="selector">The function used to combine the values from ResultA and B</param>
+	// /// <typeparam name="TOther">The type of the other Result</typeparam>
+	// /// <typeparam name="TResult">The type of the new Result</typeparam>
+	// /// <returns>If the Result was successful, the combined value of ResultA and B is returned.  Otherwise, the failure from either ResultA or B will be returned</returns>
+	// public Result<TResult, TFailure> And<TOther, TResult>(Func<Result<TOther, TFailure>> other, Func<T, TOther, TResult> selector)
+	// {
+	// 	if (HasFailure(out var failure))
+	// 		return Result<TResult, TFailure>.Failure(failure);
+
+	// 	var bb = other();
+
+	// 	return bb.HasValue(out var value)
+	// 		? Result<TResult, TFailure>.Success(selector(_value, value))
+	// 		: Result<TResult, TFailure>.Failure(bb._failure);
+	// }
 }

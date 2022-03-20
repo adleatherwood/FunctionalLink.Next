@@ -181,6 +181,16 @@ public class ResultTests
     }
     
     [Fact]
+    public void ThenBindDoesNotExecuteOnFailure()
+    {
+        var actual = Result<int>.Failure("fail")
+            .Then(i => Result<int>.Success(i + 1))
+            .ValueOr(0);
+        
+        Assert.Equal(0, actual);
+    }
+    
+    [Fact]
     public void ThenBindWorksWithResult1()
     {
         /* NOTE: this override is what prevents a Result<Result<int>,string> type from being returned instead
@@ -195,6 +205,17 @@ public class ResultTests
     }
     
     [Fact]
+    public void ThenBindWorksWithResult1Failure()
+    {
+        Result<int> Add(int a, int b) => Result<int>.Failure("fail"); 
+        var actual = Result<int>.Success(1)
+            .Then(i => Add(i, 1))
+            .ValueOr(0);
+        
+        Assert.Equal(0, actual);
+    }
+    
+    [Fact]
     public void ThenMapExecutesOnSuccess()
     {
         var actual = Result<int>.Success(1)
@@ -202,6 +223,16 @@ public class ResultTests
             .ValueOr(0);
         
         Assert.Equal(2, actual);
+    }
+    
+    [Fact]
+    public void ThenMapDoesNotExecuteOnFailure()
+    {
+        var actual = Result<int>.Failure("fail")
+            .Then(i => i + 1)
+            .ValueOr(0);
+        
+        Assert.Equal(0, actual);
     }
     
     [Fact]
@@ -219,7 +250,7 @@ public class ResultTests
     public void ElseStaticExecutesOnFailure()
     {
         var actual = Result<int>.Failure("fail")
-            .Else(1)
+            .Or(1)
             .ValueOr(0);
         
         Assert.Equal(1, actual);
@@ -229,7 +260,7 @@ public class ResultTests
     public void ElseDynamicExecutesOnFailure()
     {
         var actual = Result<int>.Failure("fail")
-            .Else(() => 1)
+            .Or(() => 1)
             .ValueOr(0);
         
         Assert.Equal(1, actual);
@@ -284,7 +315,48 @@ public class ResultTests
     }
     
     [Fact]
-    public void AndStaticReturnsValueForSuccessOfAAndB()
+    public void AndMapStaticValueForSuccessOfAAndB()
+    {
+        var a = Result<int>.Success(1);
+        var actual = a.And(2, (a,b) => a + b)
+            .ValueOr(0);
+
+        Assert.Equal(3, actual);
+    }
+    
+    [Fact]
+    public void AndMapStaticValueForFailureOfA()
+    {
+        var a = Result<int>.Failure("fail");
+        var actual = a.And(2, (a,b) => a + b)
+            .ValueOr(0);
+
+        Assert.Equal(0, actual);
+    }
+
+    [Fact]
+    public void AndMapLazyValueForSuccessOfAAndB()
+    {
+        var a = Result<int>.Success(1);
+        var actual = a.And(() => 2, (a,b) => a + b)
+            .ValueOr(0);
+
+        Assert.Equal(3, actual);
+    }
+    
+    [Fact]
+    public void AndMapLazyValueForFailureOfA()
+    {
+        var a = Result<int>.Failure("fail");
+        var actual = a.And(() => 2, (a,b) => a + b)
+            .ValueOr(0);
+
+        Assert.Equal(0, actual);
+    }
+    
+
+    [Fact]
+    public void AndBindStaticReturnsValueForSuccessOfAAndB()
     {
         var a = Result<int>.Success(1);
         var b = Result<string>.Success("test");
@@ -296,7 +368,7 @@ public class ResultTests
     }
     
     [Fact]
-    public void AndStaticReturnsFailureFormFailureOfA()
+    public void AndBindStaticReturnsFailureForFailureOfA()
     {
         var a = Result<int>.Failure("fail");
         var b = Result<string>.Success("test");
@@ -309,7 +381,7 @@ public class ResultTests
     }
     
     [Fact]
-    public void AndStaticReturnsFailureFormFailureOfB()
+    public void AndBindStaticReturnsFailureForFailureOfB()
     {
         var a = Result<int>.Success(1);
         var b = Result<string>.Failure("fail");
@@ -321,10 +393,8 @@ public class ResultTests
         Assert.Equal("fail", actual);
     }
     
-    //
-    
     [Fact]
-    public void AndDynamicReturnsValueForSuccessOfAAndB()
+    public void AndBindLazyReturnsValueForSuccessOfAAndB()
     {
         var a = Result<int>.Success(1);
         var b = Result<string>.Success("test");
@@ -336,7 +406,7 @@ public class ResultTests
     }
     
     [Fact]
-    public void AndDynamicReturnsFailureFormFailureOfA()
+    public void AndBindLazyReturnsFailureFormFailureOfA()
     {
         var a = Result<int>.Failure("fail");
         var b = Result<string>.Success("test");
@@ -350,7 +420,7 @@ public class ResultTests
     }
     
     [Fact]
-    public void AndDynamicReturnsFailureFormFailureOfB()
+    public void AndBindLazyReturnsFailureFormFailureOfB()
     {
         var a = Result<int>.Success(1);
         var b = Result<string>.Failure("fail");
