@@ -35,7 +35,7 @@ public class GlobalLinkTests
     public void MaybeConstructOptionInSomeStateWhenValueIsNotNull()
     {
         var actual = Maybe("test")
-            .ValueOr(null);
+            .ValueOr("");
         
         Assert.Equal("test", actual);
     }
@@ -57,18 +57,7 @@ public class GlobalLinkTests
         
         Assert.Equal(1, actual);
     }
-    
-    [Fact]
-    public void SuccessConstructsResultWithNoValue()
-    {
-        var actual = ((Result<None>) Success())
-            .Match(
-                _ => 1,
-                _ => 0);
         
-        Assert.Equal(1, actual);
-    }
-    
     [Fact]
     public void FailureConstructsResultWithGivenValue()
     {
@@ -76,6 +65,16 @@ public class GlobalLinkTests
             .HasFailure(out var found);
         
         Assert.True(actual);
-        Assert.Equal("test", found);
+        Assert.Equal("test", found.Message);
+    }
+
+    [Fact]
+    public void FailureConstructsResultWithGivenException()
+    {
+        var actual = ((Result<int>) Failure(new Exception("test")))
+            .HasFailure(out var found);
+        
+        Assert.True(actual);
+        Assert.Equal("test", found.Message);
     }
 }

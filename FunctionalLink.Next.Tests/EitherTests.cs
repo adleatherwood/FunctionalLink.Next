@@ -3,47 +3,47 @@ using static FunctionalLink.Next.GlobalLink;
 
 namespace FunctionalLink.Next.Tests;
 
-public class OptionTests
+public class EitherTests
 {
     [Fact]
     public async Task LeftConstructorMatchesProperly()
     {
-        var actual = await AsyncOption<int>.Some(1)
+        var actual = await AsyncEither<int,int>.Value(1)
             .Match(
                 value => value,
-                () => -1);
+                other => -1);
         Assert.Equal(1, actual);
     }
 
     [Fact]
     public async Task RightConstructorMatchesProperly()
     {
-        var actual = await AsyncOption<int>.None()
+        var actual = await AsyncEither<int,int>.Other(1)
             .Match(
                 value => -1,
-                () => 1);
+                other => other);
         Assert.Equal(1, actual);
     }
 
     [Fact]
     public void ImplicitConversionFromLeftMatchesProperly()
     {
-        var value = 1;
-        var actual = ((Option<int>) value)
+        var value = new Value<int>(1);
+        var actual = ((Either<int,int>) value)
             .Match(
                 value => value,
-                () => -1);
+                other => -1);
         Assert.Equal(1, actual);
     }
 
     [Fact]
     public void ImplicitConversionFromRightMatchesProperly()
     {
-        var value = None();
-        var actual = ((Option<int>) value)
+        var value = new Other<int>(1);
+        var actual = ((Either<int,int>) value)
             .Match(
                 value => -1,
-                () => 1);
+                other => other);
         Assert.Equal(1, actual);
     }
 
@@ -52,8 +52,8 @@ public class OptionTests
     [Fact]
     public async Task HasValueIsTrueOnValue()
     {        
-        var actual = await AsyncOption<int>.Some(1)
-            .HasSome();
+        var actual = await AsyncEither<int,int>.Value(1)
+            .HasValue();
 
         Assert.True(actual);
     }
@@ -61,8 +61,8 @@ public class OptionTests
     [Fact]
     public async Task HasValueIsFalseOnOther()
     {        
-        var actual = await AsyncOption<int>.None()
-            .HasSome();
+        var actual = await AsyncEither<int,int>.Other(1)
+            .HasValue();
 
         Assert.False(actual);
     }
@@ -70,8 +70,8 @@ public class OptionTests
     [Fact]
     public async Task HasOtherIsTrueOnOther()
     {        
-        var actual = await AsyncOption<int>.None()
-            .HasNone();
+        var actual = await AsyncEither<int,int>.Other(1)
+            .HasOther();
 
         Assert.True(actual);
     }
@@ -79,8 +79,8 @@ public class OptionTests
     [Fact]
     public async Task HasValueIsFalseOnValue()
     {        
-        var actual = await AsyncOption<int>.Some(1)
-            .HasNone();
+        var actual = await AsyncEither<int,int>.Value(1)
+            .HasOther();
 
         Assert.False(actual);
     }
@@ -92,8 +92,18 @@ public class OptionTests
     [Fact]
     public void HasValueOutReturnsOnValue()
     {        
-        Option<int>.Some(1)
-            .HasSome(out var actual)
+        Either<int,int>.Value(1)
+            .HasValue(out var actual)
+            .Ignore();
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public void HasOtherOutReturnsOnOther()
+    {        
+        Either<int,int>.Other(1)
+            .HasOther(out var actual)
             .Ignore();
 
         Assert.Equal(1, actual);
@@ -105,10 +115,10 @@ public class OptionTests
     public async Task MatchActionEvaluatesOnValue()
     {        
         var actual = 0;
-        await AsyncOption<int>.Some(1)
+        await AsyncEither<int,int>.Value(1)
             .Match(
                 value => { actual = value; },
-                () => { actual = -1; });
+                other => { actual = -1; });
 
         Assert.Equal(1, actual);
     }
@@ -117,10 +127,10 @@ public class OptionTests
     public async Task MatchActionEvaluatesOnOther()
     {        
         var actual = 0;
-        await AsyncOption<int>.None()
+        await AsyncEither<int,int>.Other(1)
             .Match(
                 value => { actual = -1; },
-                () => { actual = 1; });
+                other => { actual = other; });
 
         Assert.Equal(1, actual);
     }
@@ -129,10 +139,10 @@ public class OptionTests
     public async Task MatchActionAsyncEvaluatesOnValue()
     {        
         var actual = 0;
-        await AsyncOption<int>.Some(1)
+        await AsyncEither<int,int>.Value(1)
             .Match(
                 value => { actual = value; ; return Task.CompletedTask; },
-                () => { actual = -1; ; return Task.CompletedTask; });
+                other => { actual = -1; ; return Task.CompletedTask; });
 
         Assert.Equal(1, actual);
     }
@@ -141,10 +151,10 @@ public class OptionTests
     public async Task MatchActionAsyncEvaluatesOnOther()
     {        
         var actual = 0;
-        await AsyncOption<int>.None()
+        await AsyncEither<int,int>.Other(1)
             .Match(
                 value => { actual = -1; return Task.CompletedTask; },
-                () => { actual = 1; ; return Task.CompletedTask; });
+                other => { actual = other; ; return Task.CompletedTask; });
 
         Assert.Equal(1, actual);
     }
@@ -152,10 +162,10 @@ public class OptionTests
     [Fact]
     public async Task MatchFuncEvaluatesOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(1)
+        var actual = await AsyncEither<int,int>.Value(1)
             .Match(
                 value => value,
-                () => -1);
+                other => -1);
 
         Assert.Equal(1, actual);
     }
@@ -163,10 +173,10 @@ public class OptionTests
     [Fact]
     public async Task MatchFuncEvaluatesOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
+        var actual = await AsyncEither<int,int>.Other(1)
             .Match(
                 value => -1,
-                () => 1);
+                other => 1);
 
         Assert.Equal(1, actual);
     }
@@ -174,10 +184,10 @@ public class OptionTests
     [Fact]
     public async Task MatchFuncEvaluationsCanBeAsync()
     {                
-        var actual = await AsyncOption<int>.Some(1)
+        var actual = await AsyncEither<int,int>.Value(1)
             .Match(
                 value => value,
-                () => -1);
+                other => -1);
                 // value => Task.FromResult(value),
                 // other => Task.FromResult(-1));
 
@@ -189,7 +199,7 @@ public class OptionTests
     [Fact]
     public async Task ValueOrIsValueOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(1)
+        var actual = await AsyncEither<int,int>.Value(1)
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -198,7 +208,7 @@ public class OptionTests
     [Fact]
     public async Task ValueOrIsOtherOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
+        var actual = await AsyncEither<int,int>.Other(-1)
             .ValueOr(1);
 
         Assert.Equal(1, actual);
@@ -207,7 +217,7 @@ public class OptionTests
     [Fact]
     public async Task ValueOrFuncIsValueOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(1)
+        var actual = await AsyncEither<int,int>.Value(1)
             .ValueOr(() => -1);
 
         Assert.Equal(1, actual);
@@ -216,7 +226,7 @@ public class OptionTests
     [Fact]
     public async Task ValueOrFuncIsOtherOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
+        var actual = await AsyncEither<int,int>.Other(-1)
             .ValueOr(() => 1);
 
         Assert.Equal(1, actual);
@@ -225,7 +235,7 @@ public class OptionTests
     [Fact]
     public async Task ValueOrFuncAsyncIsValueOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(1)
+        var actual = await AsyncEither<int,int>.Value(1)
             .ValueOr(() => Task.FromResult(-1));
 
         Assert.Equal(1, actual);
@@ -234,7 +244,7 @@ public class OptionTests
     [Fact]
     public async Task ValueOrFuncAsyncIsOtherOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
+        var actual = await AsyncEither<int,int>.Other(-1)
             .ValueOr(() => Task.FromResult(1));
 
         Assert.Equal(1, actual);
@@ -247,7 +257,7 @@ public class OptionTests
     [Fact]
     public async Task ThenMapEvaluatesOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(0)
+        var actual = await AsyncEither<int,int>.Value(0)
             .Then(value => value + 1)
             .ValueOr(-1);
 
@@ -258,7 +268,7 @@ public class OptionTests
     public async Task ThenMapDoesNotEvaluateOnOther()
     {                    
         var fired = false;
-        var actual = await AsyncOption<int>.None()
+        var actual = await AsyncEither<int,int>.Other(-1)
             .Then(value => { fired = true; return value + 1; })            
             .ValueOr(1);
 
@@ -269,7 +279,7 @@ public class OptionTests
     [Fact]
     public async Task ThenMapAsyncEvaluatesOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(0)
+        var actual = await AsyncEither<int,int>.Value(0)
             .Then(value => Task.FromResult(value + 1))
             .ValueOr(-1);
 
@@ -280,7 +290,7 @@ public class OptionTests
     public async Task ThenMapAsyncDoesNotEvaluateOnOther()
     {                    
         var fired = false;
-        var actual = await AsyncOption<int>.None()
+        var actual = await AsyncEither<int,int>.Other(-1)
             .Then(value => { fired = true; return Task.FromResult(value + 1); })  
             .ValueOr(1);
 
@@ -293,8 +303,8 @@ public class OptionTests
     [Fact]
     public async Task ThenBindEvaluatesOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(0)
-            .Then(value => Option<int>.Some(value + 1))
+        var actual = await AsyncEither<int,int>.Value(0)
+            .Then(value => Either<int,int>.Value(value + 1))
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -304,8 +314,8 @@ public class OptionTests
     public async Task ThenBindDoesNotEvaluateOnOther()
     {                    
         var fired = false;
-        var actual = await AsyncOption<int>.None()
-            .Then(value => { fired = true; return Option<int>.Some(value + 1); })            
+        var actual = await AsyncEither<int,int>.Other(-1)
+            .Then(value => { fired = true; return Either<int,int>.Value(value + 1); })            
             .ValueOr(1);
 
         Assert.False(fired);
@@ -315,8 +325,8 @@ public class OptionTests
     [Fact]
     public async Task ThenBindAsyncEvaluatesOnValue()
     {                
-        var actual = await AsyncOption<int>.Some(0)
-            .Then(value => AsyncOption<int>.Some(value + 1))
+        var actual = await AsyncEither<int,int>.Value(0)
+            .Then(value => AsyncEither<int,int>.Value(value + 1))
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -326,8 +336,8 @@ public class OptionTests
     public async Task ThenBindAsyncDoesNotEvaluateOnOther()
     {                    
         var fired = false;
-        var actual = await AsyncOption<int>.None()
-            .Then(value => { fired = true; return AsyncOption<int>.Some(value + 1); })  
+        var actual = await AsyncEither<int,int>.Other(-1)
+            .Then(value => { fired = true; return AsyncEither<int,int>.Value(value + 1); })  
             .ValueOr(1);
 
         Assert.False(fired);
@@ -340,7 +350,7 @@ public class OptionTests
     public async Task ThenVoidEvaluatesOnValue()
     {                
         var fired = false;
-        await AsyncOption<int>.Some(0)
+        await AsyncEither<int,int>.Value(0)
             .Then(value => { fired = true; })
             .Ignore();
 
@@ -351,7 +361,7 @@ public class OptionTests
     public async Task ThenVoidDoesNotEvaluateOnOther()
     {                    
         var fired = false;
-        await AsyncOption<int>.None()
+        await AsyncEither<int,int>.Other(-1)
             .Then(value => { fired = true; })
             .Ignore();
 
@@ -362,7 +372,7 @@ public class OptionTests
     public async Task ThenVoidAsyncEvaluatesOnValue()
     {   
         var fired = false;             
-        await AsyncOption<int>.Some(0)
+        await AsyncEither<int,int>.Value(0)
             .Then(value => { fired = true; return Task.CompletedTask; })
             .Ignore();
 
@@ -373,7 +383,7 @@ public class OptionTests
     public async Task ThenVoidAsyncDoesNotEvaluateOnOther()
     {                    
         var fired = false;
-        await AsyncOption<int>.None()
+        await AsyncEither<int,int>.Other(-1)
             .Then(value => { fired = true; return Task.CompletedTask; })
             .Ignore();
 
@@ -387,8 +397,8 @@ public class OptionTests
     [Fact]
     public async Task ElseMapEvaluatesOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
-            .Else(() => 1)
+        var actual = await AsyncEither<int,int>.Other(0)
+            .Else(value => value + 1)
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -398,8 +408,8 @@ public class OptionTests
     public async Task ElseMapDoesNotEvaluateOnValue()
     {                    
         var fired = false;
-        await AsyncOption<int>.Some(-1)
-            .Else(() => { fired = true; return 1; })            
+        await AsyncEither<int,int>.Value(-1)
+            .Else(value => { fired = true; return value + 1; })            
             .Ignore();
 
         Assert.False(fired);        
@@ -408,8 +418,8 @@ public class OptionTests
     [Fact]
     public async Task ElseMapAsyncEvaluatesOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
-            .Else(() => Task.FromResult(1))
+        var actual = await AsyncEither<int,int>.Other(0)
+            .Else(value => Task.FromResult(value + 1))
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -419,8 +429,8 @@ public class OptionTests
     public async Task ElseMapAsyncDoesNotEvaluateOnValue()
     {                    
         var fired = false;
-        var actual = await AsyncOption<int>.Some(1)
-            .Else(() => { fired = true; return Task.FromResult(2); })  
+        var actual = await AsyncEither<int,int>.Value(1)
+            .Else(value => { fired = true; return Task.FromResult(value + 1); })  
             .ValueOr(-1);
 
         Assert.False(fired);
@@ -432,8 +442,8 @@ public class OptionTests
     [Fact]
     public async Task ElseBindEvaluatesOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
-            .Else(() => Option<int>.Some(1))
+        var actual = await AsyncEither<int,int>.Other(0)
+            .Else(value => Either<int,int>.Value(value + 1))
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -443,8 +453,8 @@ public class OptionTests
     public async Task ElseBindDoesNotEvaluateOnValue()
     {                    
         var fired = false;
-        await AsyncOption<int>.Some(-1)
-            .Else(() => { fired = true; return Option<int>.Some(1); })            
+        await AsyncEither<int,int>.Value(-1)
+            .Else(value => { fired = true; return Either<int,int>.Value(value + 1); })            
             .Ignore();
 
         Assert.False(fired);        
@@ -453,8 +463,8 @@ public class OptionTests
     [Fact]
     public async Task ElseBindAsyncEvaluatesOnOther()
     {                
-        var actual = await AsyncOption<int>.None()
-            .Else(() => AsyncOption<int>.Some(1))
+        var actual = await AsyncEither<int,int>.Other(0)
+            .Else(value => AsyncEither<int,int>.Value(value + 1))
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -464,8 +474,8 @@ public class OptionTests
     public async Task ElseBindAsyncDoesNotEvaluateOnValue()
     {                    
         var fired = false;
-        var actual = await AsyncOption<int>.Some(1)
-            .Else(() => { fired = true; return AsyncOption<int>.Some(2); })  
+        var actual = await AsyncEither<int,int>.Value(1)
+            .Else(value => { fired = true; return AsyncEither<int,int>.Value(value + 1); })  
             .ValueOr(-1);
 
         Assert.False(fired);
@@ -478,8 +488,9 @@ public class OptionTests
     public async Task ElseVoidEvaluatesOnOther()
     {                
         var fired = false;
-        await AsyncOption<int>.None()
-            .Else(() => { fired = true; });
+        await AsyncEither<int,int>.Other(0)
+            .Else(value => { fired = true; })
+            .Ignore();
 
         Assert.True(fired);
     }
@@ -488,8 +499,9 @@ public class OptionTests
     public async Task ElseVoidDoesNotEvaluateOnValue()
     {                    
         var fired = false;
-        await AsyncOption<int>.Some(-1)
-            .Else(() => { fired = true; });
+        await AsyncEither<int,int>.Value(-1)
+            .Else(value => { fired = true; })
+            .Ignore();
 
         Assert.False(fired);        
     }
@@ -498,8 +510,9 @@ public class OptionTests
     public async Task ElseVoidAsyncEvaluatesOnOther()
     {   
         var fired = false;             
-        await AsyncOption<int>.None()
-            .Else(() => { fired = true; return Task.CompletedTask; });
+        await AsyncEither<int,int>.Other(0)
+            .Else(value => { fired = true; return Task.CompletedTask; })
+            .Ignore();
 
         Assert.True(fired);
     }
@@ -508,8 +521,9 @@ public class OptionTests
     public async Task ElseVoidAsyncDoesNotEvaluateOnValue()
     {                    
         var fired = false;
-        await AsyncOption<int>.Some(-1)
-            .Else(() => { fired = true; return Task.CompletedTask; });
+        await AsyncEither<int,int>.Value(-1)
+            .Else(value => { fired = true; return Task.CompletedTask; })
+            .Ignore();
 
         Assert.False(fired);        
     }
@@ -521,9 +535,19 @@ public class OptionTests
     [Fact]
     public async Task FilterReturnsStaticOtherOnFalse()
     {
-        var actual = await AsyncOption<int>.Some(3)
-            .Filter(value => value % 2 == 0)
-            .Match(Self, () => 1);
+        var actual = await AsyncEither<int,int>.Value(3)
+            .Filter(value => value % 2 == 0, 1)
+            .Match(Self, Self);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task FilterReturnsFuncOtherOnFalse()
+    {
+        var actual = await AsyncEither<int,int>.Value(3)
+            .Filter(value => value % 2 == 0, value => 1)
+            .Match(Self, Self);
 
         Assert.Equal(1, actual);
     }
@@ -535,8 +559,8 @@ public class OptionTests
     [Fact]
     public async Task OrStaticReturnsOriginalOnValue()
     {
-        var original = AsyncOption<int>.Some(1);
-        var alternate = Option<int>.Some(2);
+        var original = AsyncEither<int,int>.Value(1);
+        var alternate = Either<int,int>.Value(2);
 
         var actual = await original.Or(alternate)
             .ValueOr(-1);
@@ -547,8 +571,8 @@ public class OptionTests
     [Fact]
     public async Task OrStaticReturnsAlternateOnOther()
     {
-        var original = AsyncOption<int>.None();
-        var alternate = Option<int>.Some(2);
+        var original = AsyncEither<int,int>.Other(1);
+        var alternate = Either<int,int>.Value(2);
 
         var actual = await original.Or(alternate)
             .ValueOr(-1);
@@ -559,8 +583,8 @@ public class OptionTests
     [Fact]
     public async Task OrFuncReturnsOriginalOnValue()
     {
-        var original = AsyncOption<int>.Some(1);
-        var alternate = Option<int>.Some(2);
+        var original = AsyncEither<int,int>.Value(1);
+        var alternate = Either<int,int>.Value(2);
 
         var actual = await original.Or(() => alternate)
             .ValueOr(-1);
@@ -571,8 +595,8 @@ public class OptionTests
     [Fact]
     public async Task OrFuncReturnsAlternateOnOther()
     {
-        var original = AsyncOption<int>.None();
-        var alternate = Option<int>.Some(2);
+        var original = AsyncEither<int,int>.Other(1);
+        var alternate = Either<int,int>.Value(2);
 
         var actual = await original.Or(() => alternate)
             .ValueOr(-1);
@@ -583,8 +607,8 @@ public class OptionTests
     [Fact]
     public async Task OrFuncTaskReturnsOriginalOnValue()
     {
-        var original = AsyncOption<int>.Some(1);
-        var alternate = Option<int>.Some(2);
+        var original = AsyncEither<int,int>.Value(1);
+        var alternate = Either<int,int>.Value(2);
 
         var actual = await original.Or(() => Task.FromResult(alternate))
             .ValueOr(-1);
@@ -595,8 +619,8 @@ public class OptionTests
     [Fact]
     public async Task OrFuncTaskReturnsAlternateOnOther()
     {
-        var original = AsyncOption<int>.None();
-        var alternate = Option<int>.Some(2);
+        var original = AsyncEither<int,int>.Other(1);
+        var alternate = Either<int,int>.Value(2);
 
         var actual = await original.Or(() => Task.FromResult(alternate))
             .ValueOr(-1);
@@ -609,8 +633,8 @@ public class OptionTests
     [Fact]
     public async Task AndStaticReturnsSelectedOnSuccess()
     {
-        var a = AsyncOption<int>.Some(1);
-        var b = Option<int>.Some(2);
+        var a = AsyncEither<int,int>.Value(1);
+        var b = Either<int,int>.Value(2);
 
         var actual = await a.And(b, (a,b) => a + b)
             .ValueOr(-1);
@@ -621,11 +645,11 @@ public class OptionTests
     [Fact]
     public async Task AndStaticReturnsOtherOnAOther()
     {
-        var a = AsyncOption<int>.None();
-        var b = Option<int>.Some(2);
+        var a = AsyncEither<int,int>.Other(1);
+        var b = Either<int,int>.Value(2);
 
         var actual = await a.And(b, (a,b) => a + b)
-            .Match(Self, () => 1);
+            .Match(Self, Self);
 
         Assert.Equal(1, actual);
     }
@@ -633,11 +657,11 @@ public class OptionTests
     [Fact]
     public async Task AndStaticReturnsOtherOnBOther()
     {
-        var a = AsyncOption<int>.Some(1);
-        var b = Option<int>.None();
+        var a = AsyncEither<int,int>.Value(1);
+        var b = Either<int,int>.Other(2);
 
         var actual = await a.And(b, (a,b) => a + b)
-            .Match(Self, () => 2);
+            .Match(Self, Self);
 
         Assert.Equal(2, actual);
     }
@@ -645,8 +669,8 @@ public class OptionTests
     [Fact]
     public async Task AndFuncReturnsSelectedOnSuccess()
     {
-        var a = AsyncOption<int>.Some(1);
-        var b = Option<int>.Some(2);
+        var a = AsyncEither<int,int>.Value(1);
+        var b = Either<int,int>.Value(2);
 
         var actual = await a.And(() => b, (a,b) => a + b)
             .ValueOr(-1);
@@ -657,11 +681,11 @@ public class OptionTests
     [Fact]
     public async Task AndFuncStaticReturnsOtherOnAOther()
     {
-        var a = AsyncOption<int>.None();
-        var b = Option<int>.Some(2);
+        var a = AsyncEither<int,int>.Other(1);
+        var b = Either<int,int>.Value(2);
 
         var actual = await a.And(() => b, (a,b) => a + b)
-            .Match(Self, () => 1);
+            .Match(Self, Self);
 
         Assert.Equal(1, actual);
     }
@@ -669,11 +693,11 @@ public class OptionTests
     [Fact]
     public async Task AndFuncStaticReturnsOtherOnBOther()
     {
-        var a = AsyncOption<int>.Some(1);
-        var b = Option<int>.None();
+        var a = AsyncEither<int,int>.Value(1);
+        var b = Either<int,int>.Other(2);
 
         var actual = await a.And(() => b, (a,b) => a + b)
-            .Match(Self, () => 2);
+            .Match(Self, Self);
 
         Assert.Equal(2, actual);
     }
@@ -681,8 +705,8 @@ public class OptionTests
     [Fact]
     public async Task AndFuncAsyncReturnsSelectedOnSuccess()
     {
-        var a = AsyncOption<int>.Some(1);
-        var b = AsyncOption<int>.Some(2);
+        var a = AsyncEither<int,int>.Value(1);
+        var b = AsyncEither<int,int>.Value(2);
 
         var actual = await a.And(() => b, (a,b) => a + b)
             .ValueOr(-1);
@@ -693,11 +717,11 @@ public class OptionTests
     [Fact]
     public async Task AndFuncAsyncStaticReturnsOtherOnAOther()
     {
-        var a = AsyncOption<int>.None();
-        var b = AsyncOption<int>.Some(2);
+        var a = AsyncEither<int,int>.Other(1);
+        var b = AsyncEither<int,int>.Value(2);
 
         var actual = await a.And(() => b, (a,b) => a + b)
-            .Match(Self, () => 1);
+            .Match(Self, Self);
 
         Assert.Equal(1, actual);
     }
@@ -705,11 +729,11 @@ public class OptionTests
     [Fact]
     public async Task AndFuncAsyncStaticReturnsOtherOnBOther()
     {
-        var a = AsyncOption<int>.Some(1);
-        var b = AsyncOption<int>.None();
+        var a = AsyncEither<int,int>.Value(1);
+        var b = AsyncEither<int,int>.Other(2);
 
         var actual = await a.And(() => b, (a,b) => a + b)
-            .Match(Self, () => 2);
+            .Match(Self, Self);
 
         Assert.Equal(2, actual);
     }
@@ -719,7 +743,7 @@ public class OptionTests
     [Fact]
     public void LeftFactoryInitializesLeftValue()
     {
-        var actual = Option.Some(1)
+        var actual = ((Either<int,string>) Either.Value(1))
             .ValueOr(-1);
 
         Assert.Equal(1, actual);
@@ -728,38 +752,20 @@ public class OptionTests
     [Fact]
     public void RightFactoryInitializesRightValue()
     {
-        var actual = ((Option<int>) Option.None())
-            .HasNone();
+        ((Either<int,string>) Either.Other("test"))
+            .HasOther(out var actual);
 
-        Assert.True(actual);
-    }
-
-    [Fact]
-    public void MaybeFactoryInitializesLeftValue()
-    {
-        var actual = Option.Maybe(new object())
-            .HasSome();
-
-        Assert.True(actual);
-    }
-
-    [Fact]
-    public void MaybeFactoryInitializesRightValueOnNull()
-    {
-        var actual = Option.Maybe<object>(null)
-            .HasSome();
-
-        Assert.False(actual);
+        Assert.Equal("test", actual);
     }
 
     //========================================================================== Test Fixture
 
-    private class AsyncOption<A>
+    private class AsyncEither<A,B>
     {
-        public static Task<Option<A>> Some(A value) =>
-            Task.FromResult(Option<A>.Some(value));
+        public static Task<Either<A,B>> Value(A value) =>
+            Task.FromResult(Either<A,B>.Value(value));
 
-        public static Task<Option<A>> None() =>
-            Task.FromResult(Option<A>.None());
+        public static Task<Either<A,B>> Other(B value) =>
+            Task.FromResult(Either<A,B>.Other(value));
     }
 }

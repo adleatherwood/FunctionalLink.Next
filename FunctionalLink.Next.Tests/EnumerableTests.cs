@@ -2,17 +2,8 @@
 
 namespace FunctionalLink.Next.Tests;
 
-public class CollectionsTests
-{
-    [Fact]
-    public void ToEnumerableCreatesSingletonCollection()
-    {
-        var actual = "test".Enumerate()
-            .Single();
-        
-        Assert.Equal("test", actual);
-    }
-
+public class EnumerableTests
+{    
     [Fact]
     public void IterateExecutesAction()
     {

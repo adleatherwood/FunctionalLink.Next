@@ -24,11 +24,11 @@ public static class ObjectExtensions
     }
     
     /// <summary>
-    /// Creates an Option from an unknown source where a null value could be expected.  A null value
-    /// will be interpreted as None.  Otherwise, the Option will be in a Some state with the given value.
+    /// Used to explicitly declare a value as unused.
     /// </summary>
-    /// <param name="value">The unknown target</param>
-    /// <returns>An Option in a Some state if the value is not null.  Otherwise, in a None state</returns>
-    public static Option<T> Maybe<T>(this T value) =>
-        Option.Maybe(value);
+    /// <param name="obj">The value to ignore</param>
+    public static async Task Ignore<T>(this Task<T> obj)
+    {
+        await obj;
+    }
 }

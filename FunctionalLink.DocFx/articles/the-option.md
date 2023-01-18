@@ -1,7 +1,8 @@
 ﻿# The Option
 
-The Option type is intended as a general replacement for null.  It's data structure is the same as Nullable<T>, but it 
-can be used with either references or structs. So:
+The Option type is intended as a general replacement for null.  It's data 
+structure is the same as Nullable<T>, but it can be used with either references 
+or structs. So:
 ```csharp
 {
     bool HasValue;
@@ -18,8 +19,10 @@ public Option<User> FindUser(int userId)
         : Option.None(); 
 }
 ```
-The database you are using may deal in nulls, but your code can prevent that from proliferating through your code.  The 
-function signature above gives us a clear understanding what will be returned.  It also gives us a few other things as well.
+The database you are using may deal in nulls, but your code can prevent that 
+from proliferating through your code.  The function signature above gives us a 
+clear understanding what will be returned.  It also gives us a few other things 
+as well.
 
 ## Deconstruction
 You can inspect the Option for what value it has, if any:
@@ -41,9 +44,10 @@ Or, in this case, simply:
 var user = FindUser(1)
     .Then(GreetUser);    
 ```
-All of these arrangements provide the same functionality.  Just expressed differently.  It just depends on your taste as to how 
-you prefer to express your logic.  This library is geared towards the last version.  It's hard to get more readable than:
-"Find user then greet user".
+All of these arrangements provide the same functionality.  Just expressed 
+differently.  It just depends on your taste as to how you prefer to express your 
+logic.  This library is geared towards the last version.  It's hard to get more 
+readable than: `Find user then greet user`.
 
 ## Substitution
 You can also, make substitutions for when values are not present:
@@ -77,10 +81,12 @@ var highScore = FindHighScore(userId: 1)
     .Else("No scores on record yet")
     .Then(Console.WriteLine); 
 ```
-Each of the previous methods has it's time and place.  It's just a matter of what seems most appropriate at any given moment.
+Each of the previous methods has it's time and place.  It's just a matter of 
+what seems most appropriate at any given moment.
 
 ## Logical Composition
-In addition to the basics above.  You can also logically chain Options together with Ands and Ors.
+In addition to the basics above.  You can also logically chain Options together 
+with Ands and Ors.
 ```csharp
 var user = FindUser(userId: 1);           
 var highScore = FindHighScore(userId: 1); 
@@ -106,6 +112,6 @@ var message = user.And(highScore,
     
 Console.WriteLine(message);        
 ```
-The underlying goal of adopting these kinds of workflows is to ensure that all logical
-paths are managed and the code isn't written with casual developer optimism.  Where negative
-paths aren't managed by anything but exceptions.
+The underlying goal of adopting these kinds of workflows is to ensure that all 
+logical paths are managed and the code isn't written with casual developer 
+optimism.  Where negative paths aren't managed by anything but exceptions.

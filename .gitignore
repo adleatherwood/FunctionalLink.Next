@@ -32,3 +32,6 @@ msbuild.wrn
 public/
 .ionide/symbolCache.db
 FunctionalLink.Next.Tests/coverage.json
+
+# Test results
+[Tt]est[Rr]esults/

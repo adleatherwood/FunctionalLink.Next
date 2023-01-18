@@ -1,434 +1,776 @@
-﻿using Xunit;
+using Xunit;
 using static FunctionalLink.Next.GlobalLink;
+
 namespace FunctionalLink.Next.Tests;
 
 public class ResultTests
 {
-    class User
-    {
-        public string Username;
-        public string Email;
-        public string Phone;
-    }
-    
     [Fact]
-    public void ExampleA()
+    public async Task LeftConstructorMatchesProperly()
     {
-        Result<User> ValidateUsername(User user)
-        {
-            if (user.Username == null)
-                return Failure("Username cannot be null");
-            
-            if (string.IsNullOrWhiteSpace(user.Username))
-                return Failure("Username cannot be empty");
-            
-            return Success(user);
-        }
-
-        Result<User> ValidateEmail(User user)
-        {
-            if (!user.Email.Contains("@"))
-                return Failure("Invalid email");
-
-            return Success(user);
-        }
-
-        Result<User> ValidatePhone(User user) =>
-            string.IsNullOrWhiteSpace(user.Phone)
-                ? Failure("Invalid phone number")
-                : Success(user);
-        
-        Result<User> ValidateUser(User user) =>
-            ValidateUsername(user)
-                .Then(ValidateEmail)
-                .Then(ValidatePhone);
-        
-        var user = new User() {Username = "adleatherwood", Email = "adleatherwood@gmail.com", Phone = "123-456-7890"};
-        var actual = ValidateUser(user)
+        var actual = await AsyncResult<int>.Success(1)
             .Match(
-                _ => true,
-                _ => false);
+                value => value,
+                other => -1);
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task RightConstructorMatchesProperly()
+    {
+        var actual = await AsyncResult<int>.Failure("")
+            .Match(
+                value => -1,
+                other => 1);
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public void ImplicitConversionFromExceptionMatchesProperly()
+    {
+        var value = new Exception();
+        var actual = ((Result<int>) value)
+            .Match(
+                value => -1,
+                other => 1);
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public void ImplicitConversionFromErrorMatchesProperly()
+    {
+        var value = new Error("");
+        var actual = ((Result<int>) value)
+            .Match(
+                value => -1,
+                other => 1);
+        Assert.Equal(1, actual);
+    }
+
+    //========================================================================== Inspect
+
+    [Fact]
+    public async Task HasValueIsTrueOnValue()
+    {        
+        var actual = await AsyncResult<int>.Success(1)
+            .HasSuccess();
 
         Assert.True(actual);
     }
-    
+
     [Fact]
-    public void SuccessConstructorWithValueWorksProperly()
-    {
-        var actual = Result<int>.Success(1)
-            .ValueOr(0);
-        
+    public async Task HasValueIsFalseOnOther()
+    {        
+        var actual = await AsyncResult<int>.Failure("")
+            .HasSuccess();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
+    public async Task HasOtherIsTrueOnOther()
+    {        
+        var actual = await AsyncResult<int>.Failure("")
+            .HasFailure();
+
+        Assert.True(actual);
+    }
+
+    [Fact]
+    public async Task HasValueIsFalseOnValue()
+    {        
+        var actual = await AsyncResult<int>.Success(1)
+            .HasFailure();
+
+        Assert.False(actual);
+    }
+
+    //========================================================================== Decompose 
+
+    //-------------------------------------------------------------------------- Has
+
+    [Fact]
+    public void HasValueOutReturnsOnValue()
+    {        
+        Result<int>.Success(1)
+            .HasSuccess(out var actual)
+            .Ignore();
+
         Assert.Equal(1, actual);
     }
 
     [Fact]
-    public void FailureConstructorWorksProperly()
-    {
-        var result = Result<int>.Failure("test");
-        
-        var found = result.HasFailure(out var actual);
-        
-        Assert.True(found);
-        Assert.Equal("test", actual);
-    }
+    public void HasOtherOutReturnsOnOther()
+    {        
+        Result<int>.Failure("test")
+            .HasFailure(out var actual)
+            .Ignore();
 
-    [Fact]
-    public void ImplicitConversionFromSuccessWorksForResult1()
-    {
-        var success = new Success<int>(1);
-        var result = (Result<int>) success;
-        var actual = result.ValueOr(0);
-
-        Assert.Equal(1, actual);
-    }
-    
-    [Fact]
-    public void ImplicitConversionFromSuccessWorksForResult2()
-    {
-        var success = new Success<int>(1);
-        var result = (Result<int,Exception>) success;
-        var actual = result.ValueOr(0);
-
-        Assert.Equal(1, actual);
-    }
-    
-    [Fact]
-    public void ImplicitConversionFromFailureWorksForResult1()
-    {
-        var success = new Failure<string>("test");
-        var result = (Result<int>) success;
-        var found = result.HasFailure(out var actual);
-
-        Assert.True(found);
-        Assert.Equal("test", actual);
-    }
-    
-    [Fact]
-    public void ImplicitConversionFromFailureWorksForResult2()
-    {
-        var success = new Failure<Exception>(new Exception("test"));
-        var result = (Result<int,Exception>) success;
-        var found = result.HasFailure(out var actual);
-
-        Assert.True(found);
         Assert.Equal("test", actual.Message);
     }
 
-    [Fact]
-    public void ImplicitConversionFromResult2ToResult1Works()
-    {
-        var result2 = Result<int, Exception>.Success(1);
-        var result1 = (Result<int>) result2;
-        var actual = result1.ValueOr(0);
-        
-        Assert.Equal(1, actual);
-    }
+    //-------------------------------------------------------------------------- Match
 
     [Fact]
-    public void MatchWithActionExecutesSuccessPath()
-    {
-        var actual = "";
-        Result<int>.Success(1)
-            .Match(
-                success => { actual = success.ToString(); },
-                _ => { });
-        
-        Assert.Equal("1", actual);
-    }
-    
-    [Fact]
-    public void MatchWithActionExecutesFailurePath()
-    {
-        var actual = "";
-        Result<int>.Failure("pass")
-            .Match(
-                _ => { actual = "fail"; },
-                failure => { actual = failure; });
-        
-        Assert.Equal("pass", actual);
-    }
-    
-    [Fact]
-    public void MatchWithFuncExecutesSuccessPath()
-    {
-        var actual = Result<int>.Success(1)
-            .Match(
-                success => success.ToString(),
-                _ => "nope");
-        
-        Assert.Equal("1", actual);
-    }
-    
-    [Fact]
-    public void MatchWithFuncExecutesFailurePath()
-    {
-        var actual = Result<int>.Failure("pass")
-            .Match(
-                _ => "nope",
-                failure => failure);
-        
-        Assert.Equal("pass", actual);
-    }
-
-    [Fact]
-    public void ThenBindExecutesOnSuccess()
-    {
-        var actual = Result<int>.Success(1)
-            .Then(i => Result<int>.Success(i + 1))
-            .ValueOr(0);
-        
-        Assert.Equal(2, actual);
-    }
-    
-    [Fact]
-    public void ThenBindDoesNotExecuteOnFailure()
-    {
-        var actual = Result<int>.Failure("fail")
-            .Then(i => Result<int>.Success(i + 1))
-            .ValueOr(0);
-        
-        Assert.Equal(0, actual);
-    }
-    
-    [Fact]
-    public void ThenBindWorksWithResult1()
-    {
-        /* NOTE: this override is what prevents a Result<Result<int>,string> type from being returned instead
-         *       of Result<int, string>.
-         */
-        Result<int> Add(int a, int b) => Result.Success(a + b); 
-        var actual = Result<int>.Success(1)
-            .Then(i => Add(i, 1))
-            .ValueOr(0);
-        
-        Assert.Equal(2, actual);
-    }
-    
-    [Fact]
-    public void ThenBindWorksWithResult1Failure()
-    {
-        Result<int> Add(int a, int b) => Result<int>.Failure("fail"); 
-        var actual = Result<int>.Success(1)
-            .Then(i => Add(i, 1))
-            .ValueOr(0);
-        
-        Assert.Equal(0, actual);
-    }
-    
-    [Fact]
-    public void ThenMapExecutesOnSuccess()
-    {
-        var actual = Result<int>.Success(1)
-            .Then(i => i + 1)
-            .ValueOr(0);
-        
-        Assert.Equal(2, actual);
-    }
-    
-    [Fact]
-    public void ThenMapDoesNotExecuteOnFailure()
-    {
-        var actual = Result<int>.Failure("fail")
-            .Then(i => i + 1)
-            .ValueOr(0);
-        
-        Assert.Equal(0, actual);
-    }
-    
-    [Fact]
-    public void ThenActionExecutesOnSuccess()
-    {
+    public async Task MatchActionEvaluatesOnValue()
+    {        
         var actual = 0;
-        Result<int>.Success(1)
-            .Then(i => { actual = i + 1; })
-            .ValueOr(0);
-        
+        await AsyncResult<int>.Success(1)
+            .Match(
+                value => { actual = value; },
+                other => { actual = -1; });
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task MatchActionEvaluatesOnOther()
+    {        
+        var actual = 0;
+        await AsyncResult<int>.Failure("")
+            .Match(
+                value => { actual = -1; },
+                other => { actual = 1; });
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task MatchActionAsyncEvaluatesOnValue()
+    {        
+        var actual = 0;
+        await AsyncResult<int>.Success(1)
+            .Match(
+                value => { actual = value; ; return Task.CompletedTask; },
+                other => { actual = -1; ; return Task.CompletedTask; });
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task MatchActionAsyncEvaluatesOnOther()
+    {        
+        var actual = 0;
+        await AsyncResult<int>.Failure("")
+            .Match(
+                value => { actual = -1; return Task.CompletedTask; },
+                other => { actual = 1; ; return Task.CompletedTask; });
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task MatchFuncEvaluatesOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(1)
+            .Match(
+                value => value,
+                other => -1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task MatchFuncEvaluatesOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .Match(
+                value => -1,
+                other => 1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task MatchFuncEvaluationsCanBeAsync()
+    {                
+        var actual = await AsyncResult<int>.Success(1)
+            .Match(
+                value => value,
+                other => -1);
+                // value => Task.FromResult(value),
+                // other => Task.FromResult(-1));
+
+        Assert.Equal(1, actual);
+    }
+
+    //-------------------------------------------------------------------------- ValueOr
+
+    [Fact]
+    public async Task ValueOrIsValueOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(1)
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ValueOrIsOtherOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .ValueOr(1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ValueOrFuncIsValueOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(1)
+            .ValueOr(() => -1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ValueOrFuncIsOtherOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .ValueOr(() => 1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ValueOrFuncAsyncIsValueOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(1)
+            .ValueOr(() => Task.FromResult(-1));
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ValueOrFuncAsyncIsOtherOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .ValueOr(() => Task.FromResult(1));
+
+        Assert.Equal(1, actual);
+    }
+
+    //========================================================================== Compose Left
+
+    //-------------------------------------------------------------------------- Then/Map
+
+    [Fact]
+    public async Task ThenMapEvaluatesOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(0)
+            .Then(value => value + 1)
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ThenMapDoesNotEvaluateOnOther()
+    {                    
+        var fired = false;
+        var actual = await AsyncResult<int>.Failure("")
+            .Then(value => { fired = true; return value + 1; })            
+            .ValueOr(1);
+
+        Assert.False(fired);
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ThenMapAsyncEvaluatesOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(0)
+            .Then(value => Task.FromResult(value + 1))
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ThenMapAsyncDoesNotEvaluateOnOther()
+    {                    
+        var fired = false;
+        var actual = await AsyncResult<int>.Failure("")
+            .Then(value => { fired = true; return Task.FromResult(value + 1); })  
+            .ValueOr(1);
+
+        Assert.False(fired);
+        Assert.Equal(1, actual);
+    }
+
+    //-------------------------------------------------------------------------- Then/Bind
+
+    [Fact]
+    public async Task ThenBindEvaluatesOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(0)
+            .Then(value => Result<int>.Success(value + 1))
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ThenBindDoesNotEvaluateOnOther()
+    {                    
+        var fired = false;
+        var actual = await AsyncResult<int>.Failure("")
+            .Then(value => { fired = true; return Result<int>.Success(value + 1); })            
+            .ValueOr(1);
+
+        Assert.False(fired);
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ThenBindAsyncEvaluatesOnValue()
+    {                
+        var actual = await AsyncResult<int>.Success(0)
+            .Then(value => AsyncResult<int>.Success(value + 1))
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ThenBindAsyncDoesNotEvaluateOnOther()
+    {                    
+        var fired = false;
+        var actual = await AsyncResult<int>.Failure("")
+            .Then(value => { fired = true; return AsyncResult<int>.Success(value + 1); })  
+            .ValueOr(1);
+
+        Assert.False(fired);
+        Assert.Equal(1, actual);
+    }
+
+    //-------------------------------------------------------------------------- Then/Void
+
+    [Fact]
+    public async Task ThenVoidEvaluatesOnValue()
+    {                
+        var fired = false;
+        await AsyncResult<int>.Success(0)
+            .Then(value => { fired = true; })
+            .Ignore();
+
+        Assert.True(fired);
+    }
+
+    [Fact]
+    public async Task ThenVoidDoesNotEvaluateOnOther()
+    {                    
+        var fired = false;
+        await AsyncResult<int>.Failure("")
+            .Then(value => { fired = true; })
+            .Ignore();
+
+        Assert.False(fired);        
+    }
+
+    [Fact]
+    public async Task ThenVoidAsyncEvaluatesOnValue()
+    {   
+        var fired = false;             
+        await AsyncResult<int>.Success(0)
+            .Then(value => { fired = true; return Task.CompletedTask; })
+            .Ignore();
+
+        Assert.True(fired);
+    }
+
+    [Fact]
+    public async Task ThenVoidAsyncDoesNotEvaluateOnOther()
+    {                    
+        var fired = false;
+        await AsyncResult<int>.Failure("")
+            .Then(value => { fired = true; return Task.CompletedTask; })
+            .Ignore();
+
+        Assert.False(fired);        
+    }
+
+    //========================================================================== Compose Right
+
+    //-------------------------------------------------------------------------- Else/Map
+
+    [Fact]
+    public async Task ElseMapEvaluatesOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .Else(value => 1)
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ElseMapDoesNotEvaluateOnValue()
+    {                    
+        var fired = false;
+        await AsyncResult<int>.Success(-1)
+            .Else(value => { fired = true; return 1; })            
+            .Ignore();
+
+        Assert.False(fired);        
+    }
+
+    [Fact]
+    public async Task ElseMapAsyncEvaluatesOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .Else(value => Task.FromResult(1))
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ElseMapAsyncDoesNotEvaluateOnValue()
+    {                    
+        var fired = false;
+        var actual = await AsyncResult<int>.Success(1)
+            .Else(value => { fired = true; return Task.FromResult(-1); })  
+            .ValueOr(-1);
+
+        Assert.False(fired);
+        Assert.Equal(1, actual);
+    }    
+
+    //-------------------------------------------------------------------------- Else/Bind
+
+    [Fact]
+    public async Task ElseBindEvaluatesOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .Else(value => Result<int>.Success(1))
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ElseBindDoesNotEvaluateOnValue()
+    {                    
+        var fired = false;
+        await AsyncResult<int>.Success(-1)
+            .Else(value => { fired = true; return Result<int>.Success(1); })            
+            .Ignore();
+
+        Assert.False(fired);        
+    }
+
+    [Fact]
+    public async Task ElseBindAsyncEvaluatesOnOther()
+    {                
+        var actual = await AsyncResult<int>.Failure("")
+            .Else(value => AsyncResult<int>.Success(1))
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task ElseBindAsyncDoesNotEvaluateOnValue()
+    {                    
+        var fired = false;
+        var actual = await AsyncResult<int>.Success(1)
+            .Else(value => { fired = true; return AsyncResult<int>.Success(-1); })  
+            .ValueOr(-1);
+
+        Assert.False(fired);
+        Assert.Equal(1, actual);
+    }    
+
+    //-------------------------------------------------------------------------- Else/Void
+
+    [Fact]
+    public async Task ElseVoidEvaluatesOnOther()
+    {                
+        var fired = false;
+        await AsyncResult<int>.Failure("")
+            .Else(value => { fired = true; });
+
+        Assert.True(fired);
+    }
+
+    [Fact]
+    public async Task ElseVoidDoesNotEvaluateOnValue()
+    {                    
+        var fired = false;
+        await AsyncResult<int>.Success(-1)
+            .Else(value => { fired = true; });
+
+        Assert.False(fired);        
+    }
+
+    [Fact]
+    public async Task ElseVoidAsyncEvaluatesOnOther()
+    {   
+        var fired = false;             
+        await AsyncResult<int>.Failure("")
+            .Else(value => { fired = true; return Task.CompletedTask; });
+
+        Assert.True(fired);
+    }
+
+    [Fact]
+    public async Task ElseVoidAsyncDoesNotEvaluateOnValue()
+    {                    
+        var fired = false;
+        await AsyncResult<int>.Success(-1)
+            .Else(value => { fired = true; return Task.CompletedTask; });
+
+        Assert.False(fired);        
+    }
+
+    //========================================================================== Adapter Left
+
+    //-------------------------------------------------------------------------- Filter
+
+    [Fact]
+    public async Task FilterReturnsStaticOtherOnFalse()
+    {
+        var actual = await AsyncResult<int>.Success(3)
+            .Filter(value => value % 2 == 0, "not even")
+            .Match(Self, _ => 1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task FilterReturnsFuncOtherOnFalse()
+    {
+        var actual = await AsyncResult<int>.Success(3)
+            .Filter(value => value % 2 == 0, value => $"{value} is not even")
+            .Match(Self, _ => 1);
+
+        Assert.Equal(1, actual);
+    }
+
+    //========================================================================== Combinator Left
+
+    //-------------------------------------------------------------------------- Or
+
+    [Fact]
+    public async Task OrStaticReturnsOriginalOnValue()
+    {
+        var original = AsyncResult<int>.Success(1);
+        var alternate = Result<int>.Success(2);
+
+        var actual = await original.Or(alternate)
+            .ValueOr(-1);
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public async Task OrStaticReturnsAlternateOnOther()
+    {
+        var original = AsyncResult<int>.Failure("");
+        var alternate = Result<int>.Success(2);
+
+        var actual = await original.Or(alternate)
+            .ValueOr(-1);
+
         Assert.Equal(2, actual);
     }
 
     [Fact]
-    public void ElseStaticExecutesOnFailure()
+    public async Task OrFuncReturnsOriginalOnValue()
     {
-        var actual = Result<int>.Failure("fail")
-            .Or(1)
-            .ValueOr(0);
-        
-        Assert.Equal(1, actual);
-    }
-    
-    [Fact]
-    public void ElseDynamicExecutesOnFailure()
-    {
-        var actual = Result<int>.Failure("fail")
-            .Or(() => 1)
-            .ValueOr(0);
-        
-        Assert.Equal(1, actual);
-    }
-    
-    [Fact]
-    public void OrStaticReturnsAOverBForSuccessStateOfA()
-    {
-        var a = Result<int>.Success(1);
-        var b = Result<int>.Failure("fail");
+        var original = AsyncResult<int>.Success(1);
+        var alternate = Result<int>.Success(2);
 
-        var actual = a.Or(b)
-            .ValueOr(0);
-        
-        Assert.Equal(1, actual);
-    }
-    
-    [Fact]
-    public void OrStaticReturnsBOverAForFailureStateOfA()
-    {
-        var a = Result<int>.Failure("fail");
-        var b = Result<int>.Success(1);
+        var actual = await original.Or(() => alternate)
+            .ValueOr(-1);
 
-        var actual = a.Or(b)
-            .ValueOr(0);
-        
         Assert.Equal(1, actual);
     }
-    
-    [Fact]
-    public void OrDynamicReturnsAOverBForSuccessStateOfA()
-    {
-        var a = Result<int>.Success(1);
-        var b = Result<int>.Failure("fail");
 
-        var actual = a.Or(() => b)
-            .ValueOr(0);
-        
-        Assert.Equal(1, actual);
-    }
-    
     [Fact]
-    public void OrDynamicReturnsBOverAForFailureStateOfA()
+    public async Task OrFuncReturnsAlternateOnOther()
     {
-        var a = Result<int>.Failure("fail");
-        var b = Result<int>.Success(1);
+        var original = AsyncResult<int>.Failure("");
+        var alternate = Result<int>.Success(2);
 
-        var actual = a.Or(() => b)
-            .ValueOr(0);
-        
+        var actual = await original.Or(() => alternate)
+            .ValueOr(-1);
+
+        Assert.Equal(2, actual);
+    }
+
+    [Fact]
+    public async Task OrFuncTaskReturnsOriginalOnValue()
+    {
+        var original = AsyncResult<int>.Success(1);
+        var alternate = Result<int>.Success(2);
+
+        var actual = await original.Or(() => Task.FromResult(alternate))
+            .ValueOr(-1);
+
         Assert.Equal(1, actual);
     }
-    
+
     [Fact]
-    public void AndMapStaticValueForSuccessOfAAndB()
+    public async Task OrFuncTaskReturnsAlternateOnOther()
     {
-        var a = Result<int>.Success(1);
-        var actual = a.And(2, (a,b) => a + b)
-            .ValueOr(0);
+        var original = AsyncResult<int>.Failure("");
+        var alternate = Result<int>.Success(2);
+
+        var actual = await original.Or(() => Task.FromResult(alternate))
+            .ValueOr(-1);
+
+        Assert.Equal(2, actual);
+    }
+
+    //-------------------------------------------------------------------------- And
+
+    [Fact]
+    public async Task AndStaticReturnsSelectedOnSuccess()
+    {
+        var a = AsyncResult<int>.Success(1);
+        var b = Result<int>.Success(2);
+
+        var actual = await a.And(b, (a,b) => a + b)
+            .ValueOr(-1);
 
         Assert.Equal(3, actual);
     }
-    
-    [Fact]
-    public void AndMapStaticValueForFailureOfA()
-    {
-        var a = Result<int>.Failure("fail");
-        var actual = a.And(2, (a,b) => a + b)
-            .ValueOr(0);
 
-        Assert.Equal(0, actual);
+    [Fact]
+    public async Task AndStaticReturnsOtherOnAOther()
+    {
+        var a = AsyncResult<int>.Failure("");
+        var b = Result<int>.Success(2);
+
+        var actual = await a.And(b, (a,b) => a + b)
+            .Match(Self, _ => 1);
+
+        Assert.Equal(1, actual);
     }
 
     [Fact]
-    public void AndMapLazyValueForSuccessOfAAndB()
+    public async Task AndStaticReturnsOtherOnBOther()
     {
-        var a = Result<int>.Success(1);
-        var actual = a.And(() => 2, (a,b) => a + b)
-            .ValueOr(0);
+        var a = AsyncResult<int>.Success(1);
+        var b = Result<int>.Failure("");
+
+        var actual = await a.And(b, (a,b) => a + b)
+            .Match(Self, _ => 2);
+
+        Assert.Equal(2, actual);
+    }
+
+    [Fact]
+    public async Task AndFuncReturnsSelectedOnSuccess()
+    {
+        var a = AsyncResult<int>.Success(1);
+        var b = Result<int>.Success(2);
+
+        var actual = await a.And(() => b, (a,b) => a + b)
+            .ValueOr(-1);
 
         Assert.Equal(3, actual);
     }
-    
-    [Fact]
-    public void AndMapLazyValueForFailureOfA()
-    {
-        var a = Result<int>.Failure("fail");
-        var actual = a.And(() => 2, (a,b) => a + b)
-            .ValueOr(0);
 
-        Assert.Equal(0, actual);
+    [Fact]
+    public async Task AndFuncStaticReturnsOtherOnAOther()
+    {
+        var a = AsyncResult<int>.Failure("");
+        var b = Result<int>.Success(2);
+
+        var actual = await a.And(() => b, (a,b) => a + b)
+            .Match(Self, _ => 1);
+
+        Assert.Equal(1, actual);
     }
-    
 
     [Fact]
-    public void AndBindStaticReturnsValueForSuccessOfAAndB()
+    public async Task AndFuncStaticReturnsOtherOnBOther()
     {
-        var a = Result<int>.Success(1);
-        var b = Result<string>.Success("test");
+        var a = AsyncResult<int>.Success(1);
+        var b = Result<int>.Failure("");
 
-        var actual = a.And(b, (aa, bb) => $"{aa}-{bb}")
-            .ValueOr("fail");
-        
-        Assert.Equal("1-test", actual);
+        var actual = await a.And(() => b, (a,b) => a + b)
+            .Match(Self, _ => 2);
+
+        Assert.Equal(2, actual);
     }
-    
-    [Fact]
-    public void AndBindStaticReturnsFailureForFailureOfA()
-    {
-        var a = Result<int>.Failure("fail");
-        var b = Result<string>.Success("test");
 
-        var result = a.And(b, (aa, bb) => $"{aa}-{bb}");
-        var found = result.HasFailure(out var actual);
-        
-        Assert.True(found);
-        Assert.Equal("fail", actual);
+    [Fact]
+    public async Task AndFuncAsyncReturnsSelectedOnSuccess()
+    {
+        var a = AsyncResult<int>.Success(1);
+        var b = AsyncResult<int>.Success(2);
+
+        var actual = await a.And(() => b, (a,b) => a + b)
+            .ValueOr(-1);
+
+        Assert.Equal(3, actual);
     }
-    
+
     [Fact]
-    public void AndBindStaticReturnsFailureForFailureOfB()
+    public async Task AndFuncAsyncStaticReturnsOtherOnAOther()
     {
-        var a = Result<int>.Success(1);
-        var b = Result<string>.Failure("fail");
+        var a = AsyncResult<int>.Failure("");
+        var b = AsyncResult<int>.Success(2);
 
-        var result = a.And(b, (aa, bb) => $"{aa}-{bb}");
-        var found = result.HasFailure(out var actual);
+        var actual = await a.And(() => b, (a,b) => a + b)
+            .Match(Self, _ => 1);
 
-        Assert.True(found);
-        Assert.Equal("fail", actual);
+        Assert.Equal(1, actual);
     }
-    
-    [Fact]
-    public void AndBindLazyReturnsValueForSuccessOfAAndB()
-    {
-        var a = Result<int>.Success(1);
-        var b = Result<string>.Success("test");
 
-        var actual = a.And(() => b, (aa, bb) => $"{aa}-{bb}")
-            .ValueOr("fail");
-        
-        Assert.Equal("1-test", actual);
+    [Fact]
+    public async Task AndFuncAsyncStaticReturnsOtherOnBOther()
+    {
+        var a = AsyncResult<int>.Success(1);
+        var b = AsyncResult<int>.Failure("");
+
+        var actual = await a.And(() => b, (a,b) => a + b)
+            .Match(Self, _ => 2);
+
+        Assert.Equal(2, actual);
     }
-    
+
+    //========================================================================== Factory
+
     [Fact]
-    public void AndBindLazyReturnsFailureFormFailureOfA()
+    public void LeftFactoryInitializesLeft()
     {
-        var a = Result<int>.Failure("fail");
-        var b = Result<string>.Success("test");
+        var actual = Result.Success(1)
+            .HasSuccess();
 
-        var result = a.And(() => b, (aa, bb) => $"{aa}-{bb}");
-        var found = result.HasFailure(out var actual);
-
-        
-        Assert.True(found);
-        Assert.Equal("fail", actual);
+        Assert.True(actual);
     }
-    
+
     [Fact]
-    public void AndBindLazyReturnsFailureFormFailureOfB()
+    public void RightFactoryInitializesRight()
     {
-        var a = Result<int>.Success(1);
-        var b = Result<string>.Failure("fail");
+        var actual = ((Result<int>) Result.Failure(""))
+            .HasSuccess();
 
-        var result = a.And(() => b, (aa, bb) => $"{aa}-{bb}");
-        var found = result.HasFailure(out var actual);
+        Assert.False(actual);
+    }
 
-        Assert.True(found);
-        Assert.Equal("fail", actual);
+    [Fact]
+    public void RightExceptionFactoryInitializesRight()
+    {
+        var actual = ((Result<int>) Result.Failure(new Exception("")))
+            .HasSuccess();
+
+        Assert.False(actual);
+    }
+
+    //========================================================================== Test Fixture
+
+    private class AsyncResult<A>
+    {
+        public static Task<Result<A>> Success(A value) =>
+            Task.FromResult(Result<A>.Success(value));
+
+        public static Task<Result<A>> Failure(string value) =>
+            Task.FromResult(Result<A>.Failure(value));
     }
 }
