@@ -215,39 +215,12 @@ public class ResultTests
     }
 
     [Fact]
-    public async Task ValueOrFuncIsValueOnValue()
+    public async Task ValueOrAcceptsNullWithoutAmbiguity()
     {                
-        var actual = await AsyncResult<int>.Success(1)
-            .ValueOr(() => -1);
+        var actual = await AsyncResult<string>.Failure("")
+            .ValueOr(null);
 
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncIsOtherOnOther()
-    {                
-        var actual = await AsyncResult<int>.Failure("")
-            .ValueOr(() => 1);
-
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncAsyncIsValueOnValue()
-    {                
-        var actual = await AsyncResult<int>.Success(1)
-            .ValueOr(() => Task.FromResult(-1));
-
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncAsyncIsOtherOnOther()
-    {                
-        var actual = await AsyncResult<int>.Failure("")
-            .ValueOr(() => Task.FromResult(1));
-
-        Assert.Equal(1, actual);
+        Assert.Null(actual);
     }
 
     //========================================================================== Compose Left

@@ -32,12 +32,6 @@ public static class OptionExtensions
     public static async Task<T> ValueOr<T>(this Task<Option<T>> option, T alternate) =>
         (await option).ValueOr(alternate);
 
-    public static async Task<T> ValueOr<T>(this Task<Option<T>> option, Func<T> alternate) =>
-        (await option).ValueOr(alternate);
-
-    public static async Task<T> ValueOr<T>(this Task<Option<T>> option, Func<Task<T>> alternate) =>
-        await (await option).ValueOr(alternate);
-
     //========================================================================== Compose Left
 
     //-------------------------------------------------------------------------- Then/Map

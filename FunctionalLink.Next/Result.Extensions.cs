@@ -30,12 +30,6 @@ public static class ResultExtensions
     public static async Task<T> ValueOr<T>(this Task<Result<T>> result, T alternate) =>
         (await result).ValueOr(alternate);
 
-    public static async Task<T> ValueOr<T>(this Task<Result<T>> result, Func<T> alternate) =>
-        (await result).ValueOr(alternate);
-
-    public static async Task<T> ValueOr<T>(this Task<Result<T>> result, Func<Task<T>> alternate) =>
-        await (await result).ValueOr(alternate);
-
     //========================================================================== Compose Left
 
     //-------------------------------------------------------------------------- Then/Map

@@ -87,16 +87,6 @@ public class Either<V,O>
             value => value,
             _ => alternate);
 
-    public V ValueOr(Func<V> alternate) =>
-        Match(
-            value => value,
-            _ => alternate());
-
-    public Task<V> ValueOr(Func<Task<V>> alternate) =>
-        Match(
-            value => Task.FromResult(value),
-            _ => alternate());
-
     //========================================================================== Compose Left
 
     //-------------------------------------------------------------------------- Then/Map

@@ -215,39 +215,12 @@ public class EitherTests
     }
 
     [Fact]
-    public async Task ValueOrFuncIsValueOnValue()
+    public async Task ValueOrAcceptsNullWithoutAmbiguity()
     {                
-        var actual = await AsyncEither<int,int>.Value(1)
-            .ValueOr(() => -1);
+        var actual = await AsyncEither<string,int>.Other(1)
+            .ValueOr(null);
 
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncIsOtherOnOther()
-    {                
-        var actual = await AsyncEither<int,int>.Other(-1)
-            .ValueOr(() => 1);
-
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncAsyncIsValueOnValue()
-    {                
-        var actual = await AsyncEither<int,int>.Value(1)
-            .ValueOr(() => Task.FromResult(-1));
-
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncAsyncIsOtherOnOther()
-    {                
-        var actual = await AsyncEither<int,int>.Other(-1)
-            .ValueOr(() => Task.FromResult(1));
-
-        Assert.Equal(1, actual);
+        Assert.Null(actual);
     }
 
     //========================================================================== Compose Left

@@ -205,39 +205,12 @@ public class OptionTests
     }
 
     [Fact]
-    public async Task ValueOrFuncIsValueOnValue()
+    public async Task ValueOrAcceptsNullWithoutAmbiguity()
     {                
-        var actual = await AsyncOption<int>.Some(1)
-            .ValueOr(() => -1);
+        var actual = await AsyncOption<string>.None()
+            .ValueOr(null);
 
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncIsOtherOnOther()
-    {                
-        var actual = await AsyncOption<int>.None()
-            .ValueOr(() => 1);
-
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncAsyncIsValueOnValue()
-    {                
-        var actual = await AsyncOption<int>.Some(1)
-            .ValueOr(() => Task.FromResult(-1));
-
-        Assert.Equal(1, actual);
-    }
-
-    [Fact]
-    public async Task ValueOrFuncAsyncIsOtherOnOther()
-    {                
-        var actual = await AsyncOption<int>.None()
-            .ValueOr(() => Task.FromResult(1));
-
-        Assert.Equal(1, actual);
+        Assert.Null(actual);
     }
 
     //========================================================================== Compose Left

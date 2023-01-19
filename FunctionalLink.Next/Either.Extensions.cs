@@ -30,12 +30,6 @@ public static class EitherExtensions
     public static async Task<S> ValueOr<S,F>(this Task<Either<S,F>> result, S alternate) =>
         (await result).ValueOr(alternate);
 
-    public static async Task<S> ValueOr<S,F>(this Task<Either<S,F>> result, Func<S> alternate) =>
-        (await result).ValueOr(alternate);
-
-    public static async Task<S> ValueOr<S,F>(this Task<Either<S,F>> result, Func<Task<S>> alternate) =>
-        await (await result).ValueOr(alternate);
-
     //========================================================================== Compose Value
 
     //-------------------------------------------------------------------------- Then/Map

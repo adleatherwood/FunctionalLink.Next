@@ -80,16 +80,6 @@ public class Option<T>
             some => some,
             () => alternate);
 
-    public T ValueOr(Func<T> alternate) =>
-        Match(
-            some => some,
-            () => alternate());
-
-    public Task<T> ValueOr(Func<Task<T>> alternate) =>
-        Match(
-            some => Task.FromResult(some),
-            () => alternate());
-
     //========================================================================== Compose Left
 
     //-------------------------------------------------------------------------- Then/Map

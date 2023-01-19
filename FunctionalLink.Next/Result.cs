@@ -93,16 +93,6 @@ public class Result<T>
             value => value,
             _ => alternate);
 
-    public T ValueOr(Func<T> alternate) =>
-        Match(
-            value => value,
-            _ => alternate());
-
-    public Task<T> ValueOr(Func<Task<T>> alternate) =>
-        Match(
-            value => Task.FromResult(value),
-            _ => alternate());
-
     //========================================================================== Compose Left
 
     //-------------------------------------------------------------------------- Then/Map

@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## 3.0
+
+Removed the `Func` overloads for the `ValueOr` function.  Calling `ValueOr(null)`
+would be a very likely request for a developer to make and the compiler cannot
+figure out which overload to call.
+
+The solution is to relegate `ValueOr` to a primitives/object-only situation and
+to use `Match` when functions or lazy evaluation is needed.  This reduces the 
+number of overloads that exist without removing the ability to handle the 
+scenario.
+
 ## v2.0
 
 In general the library should look and feel very similar to what it's first 
