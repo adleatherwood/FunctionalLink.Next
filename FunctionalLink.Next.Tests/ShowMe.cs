@@ -1,11 +1,13 @@
 ﻿using FunctionalLink.Next;
 
+#pragma warning disable 0028
+
 namespace MyApp_Surprise
 {
     public class User
     {
-        public string Id;
-        public string Username;
+        public string Id = "";
+        public string Username = "";
     }
 
     public interface IUserRepository
@@ -30,7 +32,7 @@ namespace MyApp_Surprise
         // exceptions are not declared. you have to know or suspect they will be thrown!
         // exceptions jump to the catch and eliminate the possibility for alternate workflows!
         // all calls to these functions must make the same assumptions/precautions.
-        public static async void TheOptimisticCoder(IUserRepository users, ITerminal terminal)
+        public static async void Main(IUserRepository users, ITerminal terminal)
         {        
             try
             {        
@@ -55,8 +57,8 @@ namespace MyApp_Winded
 {
     public class User
     {
-        public string Id;
-        public string Username;
+        public string Id = "";
+        public string Username = "";
     }
 
     public interface IUserRepository
@@ -80,7 +82,7 @@ namespace MyApp_Winded
     {                
         // this is the imperative logic that is conditioned for all possibilities.
         // this is crazy.  don't do this.  do the version after this.
-        public static async void TheDiligentImperativeCoder(IUserRepository users, ITerminal terminal)
+        public static async void Main(IUserRepository users, ITerminal terminal)
         {
             var userId = terminal.PromptForUserId();
 
@@ -129,8 +131,8 @@ namespace MyApp_Boss
 {
     public class User
     {
-        public string Id;
-        public string Username;
+        public string Id = "";
+        public string Username = "";
     }
 
     public interface IUserRepository
@@ -152,7 +154,7 @@ namespace MyApp_Boss
         // this version does everything the "winded" version does.
         // but in less space than the optimistic version.
         // do this version.
-        public static async void TheDiligentDeclarativeCoder(IUserRepository users, ITerminal terminal)
+        public static async void Main(IUserRepository users, ITerminal terminal)
         {
             var result = await terminal.PromptForUserId()                    
                 .Then(userId => users.LoadUser(userId))

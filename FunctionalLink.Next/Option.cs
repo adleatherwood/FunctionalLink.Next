@@ -2,6 +2,7 @@ namespace FunctionalLink.Next;
 
 #pragma warning disable 1591
 #pragma warning disable 1998
+#pragma warning disable 8604
 
 public class Option<T>
 {
@@ -17,6 +18,9 @@ public class Option<T>
     public static Option<T> None() =>
         new(2, default);
 
+    public static Option<T> Maybe(T? value) =>
+        value != null ? Some(value) : None();
+        
     public static implicit operator Option<T>(T some) =>
         Some(some);
 

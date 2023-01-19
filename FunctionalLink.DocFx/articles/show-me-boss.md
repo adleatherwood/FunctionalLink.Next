@@ -30,7 +30,7 @@ namespace MyApp_Boss
         // this version does everything the "winded" version does.
         // but in less space than the optimistic version.
         // do this version.
-        public static async void TheDiligentDeclarativeCoder(IUserRepository users, ITerminal terminal)
+        public static async void Main(IUserRepository users, ITerminal terminal)
         {
             var result = await terminal.PromptForUserId()                    
                 .Then(userId => users.LoadUser(userId))

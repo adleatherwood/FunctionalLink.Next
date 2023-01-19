@@ -2,6 +2,8 @@ namespace FunctionalLink.Next;
 
 #pragma warning disable 1591
 #pragma warning disable 1998
+#pragma warning disable 8604
+#pragma warning disable 8625
 
 public class Result<T>
 {

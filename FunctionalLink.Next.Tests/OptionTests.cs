@@ -3,6 +3,9 @@ using static FunctionalLink.Next.GlobalLink;
 
 namespace FunctionalLink.Next.Tests;
 
+#pragma warning disable 8620
+#pragma warning disable 8625
+
 public class OptionTests
 {
     [Fact]
@@ -206,7 +209,7 @@ public class OptionTests
 
     [Fact]
     public async Task ValueOrAcceptsNullWithoutAmbiguity()
-    {                
+    {   
         var actual = await AsyncOption<string>.None()
             .ValueOr(null);
 
@@ -718,7 +721,7 @@ public class OptionTests
 
     [Fact]
     public void MaybeFactoryInitializesRightValueOnNull()
-    {
+    {        
         var actual = Option.Maybe<object>(null)
             .HasSome();
 

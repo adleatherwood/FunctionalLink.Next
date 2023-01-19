@@ -24,8 +24,8 @@ public class EnumerableTests
             .Iterate(i => actual++)
             .Evaluate();
         
-        sut.Min().Ignore();
-        sut.Max().Ignore();
+        sut.Min()!.Ignore();
+        sut.Max()!.Ignore();
         sut.Last().Ignore(); 
         
         Assert.Equal(1, actual);

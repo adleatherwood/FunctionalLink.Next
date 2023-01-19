@@ -35,7 +35,7 @@ namespace MyApp_Surprise
         // exceptions are not declared. you have to know or suspect they will be thrown!
         // exceptions jump to the catch and eliminate the possibility for alternate workflows!
         // all calls to these functions must make the same assumptions/precautions.
-        public static async void TheOptimisticCoder(IUserRepository users, ITerminal terminal)
+        public static async void Main(IUserRepository users, ITerminal terminal)
         {        
             try
             {        

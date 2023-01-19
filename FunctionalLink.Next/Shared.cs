@@ -1,6 +1,7 @@
 namespace FunctionalLink.Next;
 
 #pragma warning disable 1591
+#pragma warning disable 8618
 
 public class Value<T> 
 {

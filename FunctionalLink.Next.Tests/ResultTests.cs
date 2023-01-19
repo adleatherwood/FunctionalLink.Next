@@ -3,6 +3,8 @@ using static FunctionalLink.Next.GlobalLink;
 
 namespace FunctionalLink.Next.Tests;
 
+#pragma warning disable 8620
+
 public class ResultTests
 {
     [Fact]

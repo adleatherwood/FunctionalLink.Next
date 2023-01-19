@@ -13,9 +13,9 @@ public static class GlobalLink
     public static None None() =>
         Next.None.Value;
     
-    public static Option<T> Maybe<T>(T value) 
+    public static Option<T> Maybe<T>(T? value) 
         where T : class =>
-        Option.Maybe(value);
+        Option<T>.Maybe(value);
     
     public static Result<T> Success<T>(T value) =>
         Result<T>.Success(value);

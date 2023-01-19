@@ -2,6 +2,7 @@ namespace FunctionalLink.Next;
 
 #pragma warning disable 1591
 #pragma warning disable 1998
+#pragma warning disable 8604
 
 public class Either<V,O>
 {
@@ -11,7 +12,7 @@ public class Either<V,O>
 
     protected Either(int flag, V value, O other) =>
         (this.flag, this.value, this.other) = (flag, value, other);
-
+    
     public static Either<V,O> Value(V value) =>
         new(1, value, default);
 

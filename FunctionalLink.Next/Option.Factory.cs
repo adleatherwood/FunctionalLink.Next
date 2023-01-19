@@ -4,12 +4,10 @@ namespace FunctionalLink.Next;
 
 public static class Option
 {  
-    public static Option<T> Maybe<T>(T value) 
+    public static Option<T> Maybe<T>(T? value) 
         where T : class =>
-        value != null 
-            ? Some(value)
-            : None();
-
+        Option<T>.Maybe(value);
+        
     public static Option<T> Some<T>(T value) =>
         Option<T>.Some(value);
         
