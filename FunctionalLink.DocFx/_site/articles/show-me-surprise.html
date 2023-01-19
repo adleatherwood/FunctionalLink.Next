@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>FunctionalLink.Next </title>
+    <title>Just Show Me (Surprise Edition) </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="FunctionalLink.Next ">
+    <meta name="title" content="Just Show Me (Surprise Edition) ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -79,8 +79,8 @@
                 <div class="toc" id="toc">
                   
                   <ul class="nav level1">
-                    <li class="active">
-                      <a href="intro.html" title="Introduction" class="active">Introduction</a>
+                    <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
                     </li>
                     <li class="">
                       <a href="the-option.html" title="The Option" class="">The Option</a>
@@ -88,8 +88,8 @@
                     <li class="">
                       <a href="the-result.html" title="The Result" class="">The Result</a>
                     </li>
-                    <li class="">
-                      <a href="show-me-surprise.html" title="Just Show Me (Surprise)" class="">Just Show Me (Surprise)</a>
+                    <li class="active">
+                      <a href="show-me-surprise.html" title="Just Show Me (Surprise)" class="active">Just Show Me (Surprise)</a>
                     </li>
                     <li class="">
                       <a href="show-me-winded.html" title="Just Show Me (Winded)" class="">Just Show Me (Winded)</a>
@@ -105,85 +105,62 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="functionallinknext">FunctionalLink.Next</h1>
+<h1 id="just-show-me-surprise-edition">Just Show Me (Surprise Edition)</h1>
 
-<h2 id="coming-from-functionallink">Coming from FunctionalLink</h2>
-<p>This library is a reincarnation of a previous library <a href="https://gitlab.com/adleatherwood/FunctionalLink">FunctionalLink</a>.  I have written a significant amount of code with that library
-but felt that some of the choices I had made were limiting.  There were several
-issues I had with the library:</p>
-<ul>
-<li>There was some overreaching functionality that was never really used.</li>
-<li>Some naming that was hard for people to understand (e.g. Bind).</li>
-<li>Some fancy asynchronous work (that was nice) but misplaced.</li>
-<li>A dozen ad-hoc extension methods that were not focused enough to fit the library.</li>
-</ul>
-<p>The library's purpose was to bring a few functional programming concepts to C#
-in an idiomatic way.  At the time, I thought the choices I had made were idiomatic.<br>
-But after using it for awhile, I've found that things can be simplified.  That's
-what this library is.  A reduction of the first.  Down to it's most important parts.</p>
-<h2 id="language-used">Language Used</h2>
-<p>While the language of the original library is more concise and accurate, the new
-library aims to use language that is more familiar and intuitive.  Originally,
-there were three main compositional functions: Bind, Map, &amp; Void.  Used
-hypothetically like so:</p>
-<pre><code class="lang-cs">Result.Success(value)
-    .Bind(Validate) // i.e. SelectMany or FlatMap in other languages
-    .Map(ToString)  // i.e. Select in Linq
-    .Void(Console.WriteLine)
+<p>Words.  What do they even mean?  Here's code instead.</p>
+<pre><code class="lang-csharp">using FunctionalLink.Next;
+
+namespace MyApp_Surprise
+{
+    public class User
+    {
+        public string Id;
+        public string Username;
+    }
+
+    public interface IUserRepository
+    {
+        // we know these can't possibly always return a result.
+        // they may return a null or throw an exception. we just have to assume.
+        Task&lt;User&gt; LoadUser(string userId);
+        Task&lt;int&gt; LoadHighScore(string userId);
+    }
+
+    public interface ITerminal
+    {
+        string PromptForUserId();
+        void GreetUser(User user);
+        void DisplayHighScore(int highScore);
+        void Alert(string message);
+    }
+
+    public static class App
+    {            
+        // at a high level, this looks pretty reasonable.
+        // exceptions are not declared. you have to know or suspect they will be thrown!
+        // exceptions jump to the catch and eliminate the possibility for alternate workflows!
+        // all calls to these functions must make the same assumptions/precautions.
+        public static async void TheOptimisticCoder(IUserRepository users, ITerminal terminal)
+        {        
+            try
+            {        
+                var userId = terminal.PromptForUserId();        
+                var user = await users.LoadUser(userId);
+
+                terminal.GreetUser(user);
+
+                var highScore = await users.LoadHighScore(user.Id);
+                
+                terminal.DisplayHighScore(highScore);
+            }        
+            catch (System.Exception e)
+            {            
+                terminal.Alert(e.Message);            
+            }
+        }
+    }
+}
 </code></pre>
-<p>While the distinctions between those functions are interesting to note, they
-only served to be distracting to read for most people.  All anyone really wants
-to know is what's happening, and what's next.  While functional languages don't
-generally have function overloads, C# does.  So I've adopted the languages of
-Promises and bundled those functions under <code>Then</code>.</p>
-<pre><code class="lang-cs">Result.Success(value)
-    .Then(Validate)
-    .Then(ToString)
-    .Then(Console.WriteLine)
-</code></pre>
-<h2 id="bare-minimum">Bare Minimum</h2>
-<p>There are actually only three main types in this library:</p>
-<ul>
-<li>Either&lt;T, TOther&gt;</li>
-<li>Option&lt;T&gt;</li>
-<li>Result&lt;T&gt;</li>
-</ul>
-<p>Anything else that exists is purely to support those two types and make the use
-of them more intuitive and seamless.  In general, you should not be aware that
-any other types are being used.</p>
-<h2 id="declaration--workflow-over-inference--exceptions">Declaration &amp; Workflow over Inference &amp; Exceptions</h2>
-<p>Developer optimism is a very common problem.  Take this function signature below:</p>
-<pre><code class="lang-cs">User FindUser(string userId) { ... }
-</code></pre>
-<p>At face value, it would appear that this function will always return a User.<br>
-Except, as experienced developers, we know that can't be true.  So we <strong>infer</strong>
-that FindUser must return null when it can't find the requested entity.  Maybe
-we'll even dig through it's implementation to find out if we are correct.  A
-more declarative (and informative) way to write this signature could be like so:</p>
-<pre><code class="lang-cs">Option&lt;User&gt; FindUser(string userId) { ... }
-</code></pre>
-<p>Now we're being told quite explicitly that a result may not be found.  And we
-are given a return type that allows us to write &quot;Happy Path&quot; code when consuming
-that type:</p>
-<pre><code class="lang-cs">FindUser(&quot;123&quot;)
-    .Then(user =&gt; $&quot;{user.FirstName} {user.LastName}&quot;)
-    .Then(name =&gt; Console.WriteLine(name))
-</code></pre>
-<p>But this call also <strong>implies</strong> I/O.  Which is typically an behavior that throws
-exceptions.  So far, we know we might not get a user back from our call.  But
-the signature doesn't express anything about something going wrong.  And since
-it has the potential for an exception, we now have to decide if we should
-try/catch this call or let the exception fly.  Let's avoid all of that ambiguity
-and adjust the signature to tell the consumer something can go wrong without an
-exception being thrown.</p>
-<pre><code class="lang-cs">Result&lt;User, Exception&gt; FindUser(string userId) { ... }
-</code></pre>
-<p>Now the caller can choose what to do with the Exception rather than just
-throwing it up the chain and hoping it's caught and handled in some way.  This
-is really the goal of this library.  To encourage developers to be explicit and
-code for all possibilities in any given context.  The benefits of functional
-composition run deeper than this, but this kind of thinking is the entry point
-for what's possible.</p>
 </article>
           </div>
           

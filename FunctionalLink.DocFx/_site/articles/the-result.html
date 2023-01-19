@@ -89,7 +89,13 @@
                       <a href="the-result.html" title="The Result" class="active">The Result</a>
                     </li>
                     <li class="">
-                      <a href="show-me.html" title="Just Show Me" class="">Just Show Me</a>
+                      <a href="show-me-surprise.html" title="Just Show Me (Surprise)" class="">Just Show Me (Surprise)</a>
+                    </li>
+                    <li class="">
+                      <a href="show-me-winded.html" title="Just Show Me (Winded)" class="">Just Show Me (Winded)</a>
+                    </li>
+                    <li class="">
+                      <a href="show-me-boss.html" title="Just Show Me (Boss)" class="">Just Show Me (Boss)</a>
                     </li>
                   </ul>        </div>
               </div>
@@ -101,12 +107,13 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="the-result">The Result</h1>
 
-<p>The Result type is structured very similarly to the Option type.  It's recommend that
-you read through the Option type first because all of the functions are the same.</p>
-<p>The main different of the Result type is that instead of getting nothing (or None) when
-there is no result, you get a Failure.  So the Option's narrative is, &quot;there may or may not
-be a value&quot;.  And the Result's narrative is, &quot;This may or may not work&quot;.</p>
-<p>Here's one of the Option examples refactored as a Result to show their similarities:</p>
+<p>The Result type is structured very similarly to the Option type.  It's recommend
+that you read through the Option type first because all of the functions are the
+same.</p>
+<p>The main different of the Result type is that instead of getting nothing (or None)
+when there is no result, you get a Failure.  So the Option's narrative is, <code>there  may or may not be a value</code>.  And the Result's narrative is, <code>This may or may not  work</code>.</p>
+<p>Here's one of the Option examples refactored as a Result to show their
+similarities:</p>
 <pre><code class="lang-csharp">public Result&lt;User&gt; FindUser(int userId)
 {
    var found = ReadDb(userId);
@@ -127,7 +134,8 @@ be a value&quot;.  And the Result's narrative is, &quot;This may or may not work
     return Success(user);
 }
 </code></pre>
-<p>With a handful of validation functions like above, you can validate an entire entity like so:</p>
+<p>With a handful of validation functions like above, you can validate an entire
+entity like so:</p>
 <pre><code class="lang-csharp">public Result&lt;User&gt; ValidateUser(User user)
 {
     return ValidateUsername(user)
@@ -153,15 +161,8 @@ be a value&quot;.  And the Result's narrative is, &quot;This may or may not work
         ? Success(File.ReadAllText(filename))
         : Failure(&quot;File does not exist&quot;);        
 </code></pre>
-<p>The goal is to encourage writing workflows for negative paths rather than throwing exceptions.</p>
-<p>For convenience, there are two Result Types:</p>
-<ul>
-<li>Result&lt;T&gt;</li>
-<li>Result&lt;T, TFailure&gt;</li>
-</ul>
-<p><code>Result&lt;T&gt;</code> inherits from <code>Result&lt;T,string&gt;</code>.  Because the failure state of a Result is often
-a <code>string</code>, this reduces the number of generic parameters you have to deal with for most
-use cases.</p>
+<p>The goal is to encourage writing workflows for negative paths rather than
+throwing exceptions.</p>
 </article>
           </div>
           

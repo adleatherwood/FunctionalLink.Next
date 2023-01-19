@@ -89,7 +89,13 @@
                       <a href="the-result.html" title="The Result" class="">The Result</a>
                     </li>
                     <li class="">
-                      <a href="show-me.html" title="Just Show Me" class="">Just Show Me</a>
+                      <a href="show-me-surprise.html" title="Just Show Me (Surprise)" class="">Just Show Me (Surprise)</a>
+                    </li>
+                    <li class="">
+                      <a href="show-me-winded.html" title="Just Show Me (Winded)" class="">Just Show Me (Winded)</a>
+                    </li>
+                    <li class="">
+                      <a href="show-me-boss.html" title="Just Show Me (Boss)" class="">Just Show Me (Boss)</a>
                     </li>
                   </ul>        </div>
               </div>
@@ -101,8 +107,9 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="the-option">The Option</h1>
 
-<p>The Option type is intended as a general replacement for null.  It's data structure is the same as Nullable<t>, but it
-can be used with either references or structs. So:<p>
+<p>The Option type is intended as a general replacement for null.  It's data
+structure is the same as Nullable<t>, but it can be used with either references
+or structs. So:<p>
 <pre><code class="lang-csharp">{
     bool HasValue;
     T Value;
@@ -117,8 +124,10 @@ can be used with either references or structs. So:<p>
         : Option.None(); 
 }
 </code></pre>
-<p>The database you are using may deal in nulls, but your code can prevent that from proliferating through your code.  The
-function signature above gives us a clear understanding what will be returned.  It also gives us a few other things as well.</p>
+<p>The database you are using may deal in nulls, but your code can prevent that
+from proliferating through your code.  The function signature above gives us a
+clear understanding what will be returned.  It also gives us a few other things
+as well.</p>
 <h2 id="deconstruction">Deconstruction</h2>
 <p>You can inspect the Option for what value it has, if any:</p>
 <pre><code class="lang-csharp">var user = FindUser(1); // returns Option&lt;User&gt;
@@ -136,9 +145,10 @@ if (user.HasValue(out var found))
 <pre><code class="lang-csharp">var user = FindUser(1)
     .Then(GreetUser);    
 </code></pre>
-<p>All of these arrangements provide the same functionality.  Just expressed differently.  It just depends on your taste as to how
-you prefer to express your logic.  This library is geared towards the last version.  It's hard to get more readable than:
-&quot;Find user then greet user&quot;.</p>
+<p>All of these arrangements provide the same functionality.  Just expressed
+differently.  It just depends on your taste as to how you prefer to express your
+logic.  This library is geared towards the last version.  It's hard to get more
+readable than: <code>Find user then greet user</code>.</p>
 <h2 id="substitution">Substitution</h2>
 <p>You can also, make substitutions for when values are not present:</p>
 <pre><code class="lang-csharp">var highScore = FindHighScore(userId: 1) // returns Option&lt;int&gt;
@@ -167,9 +177,11 @@ Console.WriteLine(highScore);
     .Else(&quot;No scores on record yet&quot;)
     .Then(Console.WriteLine); 
 </code></pre>
-<p>Each of the previous methods has it's time and place.  It's just a matter of what seems most appropriate at any given moment.</p>
+<p>Each of the previous methods has it's time and place.  It's just a matter of
+what seems most appropriate at any given moment.</p>
 <h2 id="logical-composition">Logical Composition</h2>
-<p>In addition to the basics above.  You can also logically chain Options together with Ands and Ors.</p>
+<p>In addition to the basics above.  You can also logically chain Options together
+with Ands and Ors.</p>
 <pre><code class="lang-csharp">var user = FindUser(userId: 1);           
 var highScore = FindHighScore(userId: 1); 
 
@@ -193,9 +205,9 @@ var message = user.And(highScore,
     
 Console.WriteLine(message);        
 </code></pre>
-<p>The underlying goal of adopting these kinds of workflows is to ensure that all logical
-paths are managed and the code isn't written with casual developer optimism.  Where negative
-paths aren't managed by anything but exceptions.</p>
+<p>The underlying goal of adopting these kinds of workflows is to ensure that all
+logical paths are managed and the code isn't written with casual developer
+optimism.  Where negative paths aren't managed by anything but exceptions.</p>
 </t></article>
           </div>
           

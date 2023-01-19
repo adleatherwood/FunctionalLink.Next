@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Option&lt;T&gt;
+    <title>Class Either&lt;V, O&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Option&lt;T&gt;
+    <meta name="title" content="Class Either&lt;V, O&gt;
    ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -89,8 +89,8 @@
                           <li class="">
                             <a href="FunctionalLink.Next.Either.html" title="Either" class="">Either</a>
                           </li>
-                          <li class="">
-                            <a href="FunctionalLink.Next.Either-2.html" title="Either&lt;V, O&gt;" class="">Either&lt;V, O&gt;</a>
+                          <li class="active">
+                            <a href="FunctionalLink.Next.Either-2.html" title="Either&lt;V, O&gt;" class="active">Either&lt;V, O&gt;</a>
                           </li>
                           <li class="">
                             <a href="FunctionalLink.Next.EitherExtensions.html" title="EitherExtensions" class="">EitherExtensions</a>
@@ -113,8 +113,8 @@
                           <li class="">
                             <a href="FunctionalLink.Next.Option.html" title="Option" class="">Option</a>
                           </li>
-                          <li class="active">
-                            <a href="FunctionalLink.Next.Option-1.html" title="Option&lt;T&gt;" class="active">Option&lt;T&gt;</a>
+                          <li class="">
+                            <a href="FunctionalLink.Next.Option-1.html" title="Option&lt;T&gt;" class="">Option&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="FunctionalLink.Next.OptionExtensions.html" title="OptionExtensions" class="">OptionExtensions</a>
@@ -142,23 +142,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="FunctionalLink.Next.Option`1">
+            <article class="content wrap" id="_content" data-uid="FunctionalLink.Next.Either`2">
   
   
-  <h1 id="FunctionalLink_Next_Option_1" data-uid="FunctionalLink.Next.Option`1" class="text-break">Class Option&lt;T&gt;
+  <h1 id="FunctionalLink_Next_Either_2" data-uid="FunctionalLink.Next.Either`2" class="text-break">Class Either&lt;V, O&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Option&lt;T&gt;</span></div>
+    <div class="level1"><span class="xref">Either&lt;V, O&gt;</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="FunctionalLink.Next.html">FunctionalLink.Next</a></h6>
   <h6><strong>Assembly</strong>: FunctionalLink.Next.dll</h6>
-  <h5 id="FunctionalLink_Next_Option_1_syntax">Syntax</h5>
+  <h5 id="FunctionalLink_Next_Either_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Option&lt;T&gt; : Object</code></pre>
+    <pre><code class="lang-csharp hljs">public class Either&lt;V, O&gt; : Object</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +170,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">V</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">O</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -179,13 +183,13 @@
   </h3>
   
   
-  <a id="FunctionalLink_Next_Option_1__ctor_" data-uid="FunctionalLink.Next.Option`1.#ctor*"></a>
-  <h4 id="FunctionalLink_Next_Option_1__ctor_System_Int32__0_" data-uid="FunctionalLink.Next.Option`1.#ctor(System.Int32,`0)">Option(Int32, T)</h4>
+  <a id="FunctionalLink_Next_Either_2__ctor_" data-uid="FunctionalLink.Next.Either`2.#ctor*"></a>
+  <h4 id="FunctionalLink_Next_Either_2__ctor_System_Int32__0__1_" data-uid="FunctionalLink.Next.Either`2.#ctor(System.Int32,`0,`1)">Either(Int32, V, O)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Option(int flag, T some)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Either(int flag, V value, O other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,8 +207,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">some</span></td>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">O</span></td>
+        <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -213,13 +222,13 @@
   </h3>
   
   
-  <a id="FunctionalLink_Next_Option_1_And_" data-uid="FunctionalLink.Next.Option`1.And*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_And__2_FunctionalLink_Next_Option___0__System_Func__0___0___1__" data-uid="FunctionalLink.Next.Option`1.And``2(FunctionalLink.Next.Option{``0},System.Func{`0,``0,``1})">And&lt;TOther, U&gt;(Option&lt;TOther&gt;, Func&lt;T, TOther, U&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_And_" data-uid="FunctionalLink.Next.Either`2.And*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_And__2_FunctionalLink_Next_Either___0__1__System_Func__0___0___1__" data-uid="FunctionalLink.Next.Either`2.And``2(FunctionalLink.Next.Either{``0,`1},System.Func{`0,``0,``1})">And&lt;TOther, U&gt;(Either&lt;TOther, O&gt;, Func&lt;V, TOther, U&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;U&gt; And&lt;TOther, U&gt;(Option&lt;TOther&gt; other, Func&lt;T, TOther, U&gt; selector)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;U, O&gt; And&lt;TOther, U&gt;(Either&lt;TOther, O&gt; other, Func&lt;V, TOther, U&gt; selector)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,12 +241,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;TOther&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;TOther, O&gt;</td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, TOther, U&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, TOther, U&gt;</td>
         <td><span class="parametername">selector</span></td>
         <td></td>
       </tr>
@@ -253,7 +262,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -279,13 +288,13 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_And_" data-uid="FunctionalLink.Next.Option`1.And*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_And__2_System_Func_FunctionalLink_Next_Option___0___System_Func__0___0___1__" data-uid="FunctionalLink.Next.Option`1.And``2(System.Func{FunctionalLink.Next.Option{``0}},System.Func{`0,``0,``1})">And&lt;TOther, U&gt;(Func&lt;Option&lt;TOther&gt;&gt;, Func&lt;T, TOther, U&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_And_" data-uid="FunctionalLink.Next.Either`2.And*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_And__2_System_Func_FunctionalLink_Next_Either___0__1___System_Func__0___0___1__" data-uid="FunctionalLink.Next.Either`2.And``2(System.Func{FunctionalLink.Next.Either{``0,`1}},System.Func{`0,``0,``1})">And&lt;TOther, U&gt;(Func&lt;Either&lt;TOther, O&gt;&gt;, Func&lt;V, TOther, U&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;U&gt; And&lt;TOther, U&gt;(Func&lt;Option&lt;TOther&gt;&gt; other, Func&lt;T, TOther, U&gt; selector)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;U, O&gt; And&lt;TOther, U&gt;(Func&lt;Either&lt;TOther, O&gt;&gt; other, Func&lt;V, TOther, U&gt; selector)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,12 +307,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;TOther&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;TOther, O&gt;&gt;</td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, TOther, U&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, TOther, U&gt;</td>
         <td><span class="parametername">selector</span></td>
         <td></td>
       </tr>
@@ -319,7 +328,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -345,13 +354,13 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_And_" data-uid="FunctionalLink.Next.Option`1.And*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_And__2_System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Option___0____System_Func__0___0___1__" data-uid="FunctionalLink.Next.Option`1.And``2(System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Option{``0}}},System.Func{`0,``0,``1})">And&lt;TOther, U&gt;(Func&lt;Task&lt;Option&lt;TOther&gt;&gt;&gt;, Func&lt;T, TOther, U&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_And_" data-uid="FunctionalLink.Next.Either`2.And*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_And__2_System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Either___0__1____System_Func__0___0___1__" data-uid="FunctionalLink.Next.Either`2.And``2(System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Either{``0,`1}}},System.Func{`0,``0,``1})">And&lt;TOther, U&gt;(Func&lt;Task&lt;Either&lt;TOther, O&gt;&gt;&gt;, Func&lt;V, TOther, U&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Option&lt;U&gt;&gt; And&lt;TOther, U&gt;(Func&lt;Task&lt;Option&lt;TOther&gt;&gt;&gt; other, Func&lt;T, TOther, U&gt; selector)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;U, O&gt;&gt; And&lt;TOther, U&gt;(Func&lt;Task&lt;Either&lt;TOther, O&gt;&gt;&gt; other, Func&lt;V, TOther, U&gt; selector)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -364,12 +373,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;TOther&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;TOther, O&gt;&gt;&gt;</td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, TOther, U&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, TOther, U&gt;</td>
         <td><span class="parametername">selector</span></td>
         <td></td>
       </tr>
@@ -385,7 +394,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -411,14 +420,14 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Else_" data-uid="FunctionalLink.Next.Option`1.Else*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Else_System_Action_" data-uid="FunctionalLink.Next.Option`1.Else(System.Action)">Else(Action)</h4>
+  <a id="FunctionalLink_Next_Either_2_Else_" data-uid="FunctionalLink.Next.Either`2.Else*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Else_System_Action__1__" data-uid="FunctionalLink.Next.Either`2.Else(System.Action{`1})">Else(Action&lt;O&gt;)</h4>
   <div class="markdown level1 summary"><p>Void/Right -&gt; Void</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Else(Action f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Else(Action&lt;O&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -431,22 +440,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span></td>
+        <td><span class="xref">System.Action</span>&lt;O&gt;</td>
         <td><span class="parametername">f</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Else_" data-uid="FunctionalLink.Next.Option`1.Else*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Else_System_Func__0__" data-uid="FunctionalLink.Next.Option`1.Else(System.Func{`0})">Else(Func&lt;T&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Else_" data-uid="FunctionalLink.Next.Either`2.Else*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Else_System_Func__1__0__" data-uid="FunctionalLink.Next.Either`2.Else(System.Func{`1,`0})">Else(Func&lt;O, V&gt;)</h4>
   <div class="markdown level1 summary"><p>Map/Right -&gt; T</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;T&gt; Else(Func&lt;T&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Else(Func&lt;O, V&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -459,7 +483,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;O, V&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -475,21 +499,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Else_" data-uid="FunctionalLink.Next.Option`1.Else*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Else_System_Func_FunctionalLink_Next_Option__0___" data-uid="FunctionalLink.Next.Option`1.Else(System.Func{FunctionalLink.Next.Option{`0}})">Else(Func&lt;Option&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Bind/Right -&gt; Option</p>
+  <a id="FunctionalLink_Next_Either_2_Else_" data-uid="FunctionalLink.Next.Either`2.Else*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Else_System_Func__1_FunctionalLink_Next_Either__0__1___" data-uid="FunctionalLink.Next.Either`2.Else(System.Func{`1,FunctionalLink.Next.Either{`0,`1}})">Else(Func&lt;O, Either&lt;V, O&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Bind/Right -&gt; Result</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;T&gt; Else(Func&lt;Option&lt;T&gt;&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Else(Func&lt;O, Either&lt;V, O&gt;&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,7 +526,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;O, <a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -518,21 +542,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Else_" data-uid="FunctionalLink.Next.Option`1.Else*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Else_System_Func_System_Threading_Tasks_Task__0___" data-uid="FunctionalLink.Next.Option`1.Else(System.Func{System.Threading.Tasks.Task{`0}})">Else(Func&lt;Task&lt;T&gt;&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Else_" data-uid="FunctionalLink.Next.Either`2.Else*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Else_System_Func__1_System_Threading_Tasks_Task__0___" data-uid="FunctionalLink.Next.Either`2.Else(System.Func{`1,System.Threading.Tasks.Task{`0}})">Else(Func&lt;O, Task&lt;V&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Map/Right -&gt; T Async</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Option&lt;T&gt;&gt; Else(Func&lt;Task&lt;T&gt;&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;V, O&gt;&gt; Else(Func&lt;O, Task&lt;V&gt;&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -545,7 +569,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;O, <span class="xref">System.Threading.Tasks.Task</span>&lt;V&gt;&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -561,21 +585,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Else_" data-uid="FunctionalLink.Next.Option`1.Else*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Else_System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Option__0____" data-uid="FunctionalLink.Next.Option`1.Else(System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Option{`0}}})">Else(Func&lt;Task&lt;Option&lt;T&gt;&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Bind/Right -&gt; Option Async</p>
+  <a id="FunctionalLink_Next_Either_2_Else_" data-uid="FunctionalLink.Next.Either`2.Else*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Else_System_Func__1_System_Threading_Tasks_Task_FunctionalLink_Next_Either__0__1____" data-uid="FunctionalLink.Next.Either`2.Else(System.Func{`1,System.Threading.Tasks.Task{FunctionalLink.Next.Either{`0,`1}}})">Else(Func&lt;O, Task&lt;Either&lt;V, O&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Bind/Right -&gt; Result Async</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Option&lt;T&gt;&gt; Else(Func&lt;Task&lt;Option&lt;T&gt;&gt;&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;V, O&gt;&gt; Else(Func&lt;O, Task&lt;Either&lt;V, O&gt;&gt;&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -588,7 +612,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;O, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -604,21 +628,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Else_" data-uid="FunctionalLink.Next.Option`1.Else*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Else_System_Func_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.Option`1.Else(System.Func{System.Threading.Tasks.Task})">Else(Func&lt;Task&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Else_" data-uid="FunctionalLink.Next.Either`2.Else*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Else_System_Func__1_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.Either`2.Else(System.Func{`1,System.Threading.Tasks.Task})">Else(Func&lt;O, Task&gt;)</h4>
   <div class="markdown level1 summary"><p>Void/Right -&gt; Task</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task Else(Func&lt;Task&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;V, O&gt;&gt; Else(Func&lt;O, Task&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -631,7 +655,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;O, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -647,20 +671,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Filter_" data-uid="FunctionalLink.Next.Option`1.Filter*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Filter_System_Func__0_System_Boolean__" data-uid="FunctionalLink.Next.Option`1.Filter(System.Func{`0,System.Boolean})">Filter(Func&lt;T, Boolean&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Filter_" data-uid="FunctionalLink.Next.Either`2.Filter*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Filter_System_Func__0_System_Boolean___1_" data-uid="FunctionalLink.Next.Either`2.Filter(System.Func{`0,System.Boolean},`1)">Filter(Func&lt;V, Boolean&gt;, O)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;T&gt; Filter(Func&lt;T, bool&gt; predicate)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Filter(Func&lt;V, bool&gt; predicate, O other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -673,10 +697,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">predicate</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">O</span></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -689,70 +718,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_HasNone_" data-uid="FunctionalLink.Next.Option`1.HasNone*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_HasNone" data-uid="FunctionalLink.Next.Option`1.HasNone">HasNone()</h4>
+  <a id="FunctionalLink_Next_Either_2_Filter_" data-uid="FunctionalLink.Next.Either`2.Filter*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Filter_System_Func__0_System_Boolean__System_Func__0__1__" data-uid="FunctionalLink.Next.Either`2.Filter(System.Func{`0,System.Boolean},System.Func{`0,`1})">Filter(Func&lt;V, Boolean&gt;, Func&lt;V, O&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasNone()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="FunctionalLink_Next_Option_1_HasSome_" data-uid="FunctionalLink.Next.Option`1.HasSome*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_HasSome" data-uid="FunctionalLink.Next.Option`1.HasSome">HasSome()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasSome()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="FunctionalLink_Next_Option_1_HasSome_" data-uid="FunctionalLink.Next.Option`1.HasSome*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_HasSome__0__" data-uid="FunctionalLink.Next.Option`1.HasSome(`0@)">HasSome(out T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasSome(out T some)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Filter(Func&lt;V, bool&gt; predicate, Func&lt;V, O&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -765,8 +744,80 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">some</span></td>
+        <td><span class="xref">System.Func</span>&lt;V, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;V, O&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_Either_2_HasOther_" data-uid="FunctionalLink.Next.Either`2.HasOther*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_HasOther" data-uid="FunctionalLink.Next.Either`2.HasOther">HasOther()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasOther()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_Either_2_HasOther_" data-uid="FunctionalLink.Next.Either`2.HasOther*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_HasOther__1__" data-uid="FunctionalLink.Next.Either`2.HasOther(`1@)">HasOther(out O)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasOther(out O other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">O</span></td>
+        <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -788,14 +839,81 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Match_" data-uid="FunctionalLink.Next.Option`1.Match*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Match_System_Action__0__System_Action_" data-uid="FunctionalLink.Next.Option`1.Match(System.Action{`0},System.Action)">Match(Action&lt;T&gt;, Action)</h4>
+  <a id="FunctionalLink_Next_Either_2_HasValue_" data-uid="FunctionalLink.Next.Either`2.HasValue*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_HasValue" data-uid="FunctionalLink.Next.Either`2.HasValue">HasValue()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasValue()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_Either_2_HasValue_" data-uid="FunctionalLink.Next.Either`2.HasValue*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_HasValue__0__" data-uid="FunctionalLink.Next.Either`2.HasValue(`0@)">HasValue(out V)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasValue(out V value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_Either_2_Match_" data-uid="FunctionalLink.Next.Either`2.Match*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Match_System_Action__0__System_Action__1__" data-uid="FunctionalLink.Next.Either`2.Match(System.Action{`0},System.Action{`1})">Match(Action&lt;V&gt;, Action&lt;O&gt;)</h4>
   <div class="markdown level1 summary"><p>Match -&gt; Void</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Match(Action&lt;T&gt; onSome, Action onNone)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Match(Action&lt;V&gt; onValue, Action&lt;O&gt; onOther)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -808,27 +926,27 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
-        <td><span class="parametername">onSome</span></td>
+        <td><span class="xref">System.Action</span>&lt;V&gt;</td>
+        <td><span class="parametername">onValue</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span></td>
-        <td><span class="parametername">onNone</span></td>
+        <td><span class="xref">System.Action</span>&lt;O&gt;</td>
+        <td><span class="parametername">onOther</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Match_" data-uid="FunctionalLink.Next.Option`1.Match*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Match_System_Func__0_System_Threading_Tasks_Task__System_Func_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.Option`1.Match(System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})">Match(Func&lt;T, Task&gt;, Func&lt;Task&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Match_" data-uid="FunctionalLink.Next.Either`2.Match*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Match_System_Func__0_System_Threading_Tasks_Task__System_Func__1_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.Either`2.Match(System.Func{`0,System.Threading.Tasks.Task},System.Func{`1,System.Threading.Tasks.Task})">Match(Func&lt;V, Task&gt;, Func&lt;O, Task&gt;)</h4>
   <div class="markdown level1 summary"><p>Match -&gt; Task</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task Match(Func&lt;T, Task&gt; onSome, Func&lt;Task&gt; onNone)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task Match(Func&lt;V, Task&gt; onValue, Func&lt;O, Task&gt; onOther)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -841,13 +959,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
-        <td><span class="parametername">onSome</span></td>
+        <td><span class="xref">System.Func</span>&lt;V, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="parametername">onValue</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
-        <td><span class="parametername">onNone</span></td>
+        <td><span class="xref">System.Func</span>&lt;O, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="parametername">onOther</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -869,14 +987,14 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Match_" data-uid="FunctionalLink.Next.Option`1.Match*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Match__1_System_Func__0___0__System_Func___0__" data-uid="FunctionalLink.Next.Option`1.Match``1(System.Func{`0,``0},System.Func{``0})">Match&lt;U&gt;(Func&lt;T, U&gt;, Func&lt;U&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Match_" data-uid="FunctionalLink.Next.Either`2.Match*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Match__1_System_Func__0___0__System_Func__1___0__" data-uid="FunctionalLink.Next.Either`2.Match``1(System.Func{`0,``0},System.Func{`1,``0})">Match&lt;U&gt;(Func&lt;V, U&gt;, Func&lt;O, U&gt;)</h4>
   <div class="markdown level1 summary"><p>Match -&gt; U</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public U Match&lt;U&gt;(Func&lt;T, U&gt; onSome, Func&lt;U&gt; onNone)</code></pre>
+    <pre><code class="lang-csharp hljs">public U Match&lt;U&gt;(Func&lt;V, U&gt; onValue, Func&lt;O, U&gt; onOther)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -889,13 +1007,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, U&gt;</td>
-        <td><span class="parametername">onSome</span></td>
+        <td><span class="xref">System.Func</span>&lt;V, U&gt;</td>
+        <td><span class="parametername">onValue</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;U&gt;</td>
-        <td><span class="parametername">onNone</span></td>
+        <td><span class="xref">System.Func</span>&lt;O, U&gt;</td>
+        <td><span class="parametername">onOther</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -932,38 +1050,13 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_None_" data-uid="FunctionalLink.Next.Option`1.None*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_None" data-uid="FunctionalLink.Next.Option`1.None">None()</h4>
+  <a id="FunctionalLink_Next_Either_2_Or_" data-uid="FunctionalLink.Next.Either`2.Or*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Or_FunctionalLink_Next_Either__0__1__" data-uid="FunctionalLink.Next.Either`2.Or(FunctionalLink.Next.Either{`0,`1})">Or(Either&lt;V, O&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Option&lt;T&gt; None()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="FunctionalLink_Next_Option_1_Or_" data-uid="FunctionalLink.Next.Option`1.Or*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Or_FunctionalLink_Next_Option__0__" data-uid="FunctionalLink.Next.Option`1.Or(FunctionalLink.Next.Option{`0})">Or(Option&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;T&gt; Or(Option&lt;T&gt; other)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Or(Either&lt;V, O&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -976,7 +1069,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
@@ -992,20 +1085,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Or_" data-uid="FunctionalLink.Next.Option`1.Or*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Or_System_Func_FunctionalLink_Next_Option__0___" data-uid="FunctionalLink.Next.Option`1.Or(System.Func{FunctionalLink.Next.Option{`0}})">Or(Func&lt;Option&lt;T&gt;&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Or_" data-uid="FunctionalLink.Next.Either`2.Or*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Or_System_Func_FunctionalLink_Next_Either__0__1___" data-uid="FunctionalLink.Next.Either`2.Or(System.Func{FunctionalLink.Next.Either{`0,`1}})">Or(Func&lt;Either&lt;V, O&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;T&gt; Or(Func&lt;Option&lt;T&gt;&gt; other)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Or(Func&lt;Either&lt;V, O&gt;&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1018,7 +1111,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;</td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
@@ -1034,20 +1127,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Or_" data-uid="FunctionalLink.Next.Option`1.Or*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Or_System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Option__0____" data-uid="FunctionalLink.Next.Option`1.Or(System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Option{`0}}})">Or(Func&lt;Task&lt;Option&lt;T&gt;&gt;&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Or_" data-uid="FunctionalLink.Next.Either`2.Or*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Or_System_Func_System_Threading_Tasks_Task_FunctionalLink_Next_Either__0__1____" data-uid="FunctionalLink.Next.Either`2.Or(System.Func{System.Threading.Tasks.Task{FunctionalLink.Next.Either{`0,`1}}})">Or(Func&lt;Task&lt;Either&lt;V, O&gt;&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Option&lt;T&gt;&gt; Or(Func&lt;Task&lt;Option&lt;T&gt;&gt;&gt; other)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;V, O&gt;&gt; Or(Func&lt;Task&lt;Either&lt;V, O&gt;&gt;&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1060,7 +1153,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;&gt;</td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
@@ -1076,20 +1169,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Some_" data-uid="FunctionalLink.Next.Option`1.Some*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Some__0_" data-uid="FunctionalLink.Next.Option`1.Some(`0)">Some(T)</h4>
+  <a id="FunctionalLink_Next_Either_2_Other_" data-uid="FunctionalLink.Next.Either`2.Other*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Other__1_" data-uid="FunctionalLink.Next.Either`2.Other(`1)">Other(O)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Option&lt;T&gt; Some(T some)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Either&lt;V, O&gt; Other(O failure)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1102,8 +1195,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">some</span></td>
+        <td><span class="xref">O</span></td>
+        <td><span class="parametername">failure</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1118,21 +1211,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Then_" data-uid="FunctionalLink.Next.Option`1.Then*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Then_System_Action__0__" data-uid="FunctionalLink.Next.Option`1.Then(System.Action{`0})">Then(Action&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Void/Left -&gt; Option</p>
+  <a id="FunctionalLink_Next_Either_2_Then_" data-uid="FunctionalLink.Next.Either`2.Then*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Then_System_Action__0__" data-uid="FunctionalLink.Next.Either`2.Then(System.Action{`0})">Then(Action&lt;V&gt;)</h4>
+  <div class="markdown level1 summary"><p>Void/Left -&gt; Result</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;T&gt; Then(Action&lt;T&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;V, O&gt; Then(Action&lt;V&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1145,7 +1238,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;V&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -1161,21 +1254,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Then_" data-uid="FunctionalLink.Next.Option`1.Then*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Then_System_Func__0_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.Option`1.Then(System.Func{`0,System.Threading.Tasks.Task})">Then(Func&lt;T, Task&gt;)</h4>
-  <div class="markdown level1 summary"><p>Void/Left -&gt; Option Async</p>
+  <a id="FunctionalLink_Next_Either_2_Then_" data-uid="FunctionalLink.Next.Either`2.Then*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Then_System_Func__0_System_Threading_Tasks_Task__" data-uid="FunctionalLink.Next.Either`2.Then(System.Func{`0,System.Threading.Tasks.Task})">Then(Func&lt;V, Task&gt;)</h4>
+  <div class="markdown level1 summary"><p>Void/Left -&gt; Result Async</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Option&lt;T&gt;&gt; Then(Func&lt;T, Task&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;V, O&gt;&gt; Then(Func&lt;V, Task&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1188,7 +1281,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -1204,21 +1297,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Then_" data-uid="FunctionalLink.Next.Option`1.Then*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Then__1_System_Func__0___0__" data-uid="FunctionalLink.Next.Option`1.Then``1(System.Func{`0,``0})">Then&lt;U&gt;(Func&lt;T, U&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Then_" data-uid="FunctionalLink.Next.Either`2.Then*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Then__1_System_Func__0___0__" data-uid="FunctionalLink.Next.Either`2.Then``1(System.Func{`0,``0})">Then&lt;U&gt;(Func&lt;V, U&gt;)</h4>
   <div class="markdown level1 summary"><p>Map/Left -&gt; T</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;U&gt; Then&lt;U&gt;(Func&lt;T, U&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;U, O&gt; Then&lt;U&gt;(Func&lt;V, U&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1231,7 +1324,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, U&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, U&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -1247,7 +1340,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1269,14 +1362,14 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Then_" data-uid="FunctionalLink.Next.Option`1.Then*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Then__1_System_Func__0_FunctionalLink_Next_Option___0___" data-uid="FunctionalLink.Next.Option`1.Then``1(System.Func{`0,FunctionalLink.Next.Option{``0}})">Then&lt;U&gt;(Func&lt;T, Option&lt;U&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Bind/Left -&gt; Option</p>
+  <a id="FunctionalLink_Next_Either_2_Then_" data-uid="FunctionalLink.Next.Either`2.Then*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Then__1_System_Func__0_FunctionalLink_Next_Either___0__1___" data-uid="FunctionalLink.Next.Either`2.Then``1(System.Func{`0,FunctionalLink.Next.Either{``0,`1}})">Then&lt;U&gt;(Func&lt;V, Either&lt;U, O&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Bind/Left -&gt; Result</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Option&lt;U&gt; Then&lt;U&gt;(Func&lt;T, Option&lt;U&gt;&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Either&lt;U, O&gt; Then&lt;U&gt;(Func&lt;V, Either&lt;U, O&gt;&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1289,7 +1382,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, <a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -1305,7 +1398,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1327,14 +1420,14 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Then_" data-uid="FunctionalLink.Next.Option`1.Then*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Then__1_System_Func__0_System_Threading_Tasks_Task___0___" data-uid="FunctionalLink.Next.Option`1.Then``1(System.Func{`0,System.Threading.Tasks.Task{``0}})">Then&lt;U&gt;(Func&lt;T, Task&lt;U&gt;&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_Then_" data-uid="FunctionalLink.Next.Either`2.Then*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Then__1_System_Func__0_System_Threading_Tasks_Task___0___" data-uid="FunctionalLink.Next.Either`2.Then``1(System.Func{`0,System.Threading.Tasks.Task{``0}})">Then&lt;U&gt;(Func&lt;V, Task&lt;U&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Map/Left -&gt; T Async;</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Option&lt;U&gt;&gt; Then&lt;U&gt;(Func&lt;T, Task&lt;U&gt;&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;U, O&gt;&gt; Then&lt;U&gt;(Func&lt;V, Task&lt;U&gt;&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1347,7 +1440,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;U&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, <span class="xref">System.Threading.Tasks.Task</span>&lt;U&gt;&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -1363,7 +1456,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1385,14 +1478,14 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_Then_" data-uid="FunctionalLink.Next.Option`1.Then*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_Then__1_System_Func__0_System_Threading_Tasks_Task_FunctionalLink_Next_Option___0____" data-uid="FunctionalLink.Next.Option`1.Then``1(System.Func{`0,System.Threading.Tasks.Task{FunctionalLink.Next.Option{``0}}})">Then&lt;U&gt;(Func&lt;T, Task&lt;Option&lt;U&gt;&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Bind/Left -&gt; Option Async</p>
+  <a id="FunctionalLink_Next_Either_2_Then_" data-uid="FunctionalLink.Next.Either`2.Then*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Then__1_System_Func__0_System_Threading_Tasks_Task_FunctionalLink_Next_Either___0__1____" data-uid="FunctionalLink.Next.Either`2.Then``1(System.Func{`0,System.Threading.Tasks.Task{FunctionalLink.Next.Either{``0,`1}}})">Then&lt;U&gt;(Func&lt;V, Task&lt;Either&lt;U, O&gt;&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Bind/Left -&gt; Result Async</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Option&lt;U&gt;&gt; Then&lt;U&gt;(Func&lt;T, Task&lt;Option&lt;U&gt;&gt;&gt; f)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Either&lt;U, O&gt;&gt; Then&lt;U&gt;(Func&lt;V, Task&lt;Either&lt;U, O&gt;&gt;&gt; f)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1405,7 +1498,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V, <span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;&gt;&gt;</td>
         <td><span class="parametername">f</span></td>
         <td></td>
       </tr>
@@ -1421,7 +1514,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;U&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;U, O&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1443,13 +1536,13 @@
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_ValueOr_" data-uid="FunctionalLink.Next.Option`1.ValueOr*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_ValueOr__0_" data-uid="FunctionalLink.Next.Option`1.ValueOr(`0)">ValueOr(T)</h4>
+  <a id="FunctionalLink_Next_Either_2_Value_" data-uid="FunctionalLink.Next.Either`2.Value*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_Value__0_" data-uid="FunctionalLink.Next.Either`2.Value(`0)">Value(V)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T ValueOr(T alternate)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Either&lt;V, O&gt; Value(V value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1462,7 +1555,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">V</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FunctionalLink_Next_Either_2_ValueOr_" data-uid="FunctionalLink.Next.Either`2.ValueOr*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_ValueOr__0_" data-uid="FunctionalLink.Next.Either`2.ValueOr(`0)">ValueOr(V)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public V ValueOr(V alternate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">V</span></td>
         <td><span class="parametername">alternate</span></td>
         <td></td>
       </tr>
@@ -1478,20 +1613,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">V</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_ValueOr_" data-uid="FunctionalLink.Next.Option`1.ValueOr*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_ValueOr_System_Func__0__" data-uid="FunctionalLink.Next.Option`1.ValueOr(System.Func{`0})">ValueOr(Func&lt;T&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_ValueOr_" data-uid="FunctionalLink.Next.Either`2.ValueOr*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_ValueOr_System_Func__0__" data-uid="FunctionalLink.Next.Either`2.ValueOr(System.Func{`0})">ValueOr(Func&lt;V&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T ValueOr(Func&lt;T&gt; alternate)</code></pre>
+    <pre><code class="lang-csharp hljs">public V ValueOr(Func&lt;V&gt; alternate)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1504,7 +1639,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;V&gt;</td>
         <td><span class="parametername">alternate</span></td>
         <td></td>
       </tr>
@@ -1520,20 +1655,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">V</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_ValueOr_" data-uid="FunctionalLink.Next.Option`1.ValueOr*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_ValueOr_System_Func_System_Threading_Tasks_Task__0___" data-uid="FunctionalLink.Next.Option`1.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})">ValueOr(Func&lt;Task&lt;T&gt;&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_ValueOr_" data-uid="FunctionalLink.Next.Either`2.ValueOr*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_ValueOr_System_Func_System_Threading_Tasks_Task__0___" data-uid="FunctionalLink.Next.Either`2.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})">ValueOr(Func&lt;Task&lt;V&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;T&gt; ValueOr(Func&lt;Task&lt;T&gt;&gt; alternate)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;V&gt; ValueOr(Func&lt;Task&lt;V&gt;&gt; alternate)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1546,7 +1681,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&lt;V&gt;&gt;</td>
         <td><span class="parametername">alternate</span></td>
         <td></td>
       </tr>
@@ -1562,7 +1697,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;V&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1571,13 +1706,13 @@
   </h3>
   
   
-  <a id="FunctionalLink_Next_Option_1_op_Implicit_" data-uid="FunctionalLink.Next.Option`1.op_Implicit*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_op_Implicit__0__FunctionalLink_Next_Option__0_" data-uid="FunctionalLink.Next.Option`1.op_Implicit(`0)~FunctionalLink.Next.Option{`0}">Implicit(T to Option&lt;T&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_op_Implicit_" data-uid="FunctionalLink.Next.Either`2.op_Implicit*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_op_Implicit_FunctionalLink_Next_Other__1___FunctionalLink_Next_Either__0__1_" data-uid="FunctionalLink.Next.Either`2.op_Implicit(FunctionalLink.Next.Other{`1})~FunctionalLink.Next.Either{`0,`1}">Implicit(Other&lt;O&gt; to Either&lt;V, O&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Option&lt;T&gt;(T some)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;V, O&gt;(Other&lt;O&gt; other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1590,8 +1725,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">some</span></td>
+        <td><a class="xref" href="FunctionalLink.Next.Other-1.html">Other</a>&lt;O&gt;</td>
+        <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1606,20 +1741,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="FunctionalLink_Next_Option_1_op_Implicit_" data-uid="FunctionalLink.Next.Option`1.op_Implicit*"></a>
-  <h4 id="FunctionalLink_Next_Option_1_op_Implicit_FunctionalLink_Next_None__FunctionalLink_Next_Option__0_" data-uid="FunctionalLink.Next.Option`1.op_Implicit(FunctionalLink.Next.None)~FunctionalLink.Next.Option{`0}">Implicit(None to Option&lt;T&gt;)</h4>
+  <a id="FunctionalLink_Next_Either_2_op_Implicit_" data-uid="FunctionalLink.Next.Either`2.op_Implicit*"></a>
+  <h4 id="FunctionalLink_Next_Either_2_op_Implicit_FunctionalLink_Next_Value__0___FunctionalLink_Next_Either__0__1_" data-uid="FunctionalLink.Next.Either`2.op_Implicit(FunctionalLink.Next.Value{`0})~FunctionalLink.Next.Either{`0,`1}">Implicit(Value&lt;V&gt; to Either&lt;V, O&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Option&lt;T&gt;(None none)</code></pre>
+    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;V, O&gt;(Value&lt;V&gt; value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1632,8 +1767,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.None.html">None</a></td>
-        <td><span class="parametername">none</span></td>
+        <td><a class="xref" href="FunctionalLink.Next.Value-1.html">Value</a>&lt;V&gt;</td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1648,7 +1783,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FunctionalLink.Next.Option-1.html">Option</a>&lt;T&gt;</td>
+        <td><a class="xref" href="FunctionalLink.Next.Either-2.html">Either</a>&lt;V, O&gt;</td>
         <td></td>
       </tr>
     </tbody>
