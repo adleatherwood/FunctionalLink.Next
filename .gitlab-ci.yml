@@ -8,6 +8,7 @@ test:
   stage: test
   except:
     - tags
+  coverage: '/Total\s*\|\s*(\d+(?:\.\d+)?)/'
   script:
     - dotnet test -v minimal -c Release /p:CollectCoverage=true
 
@@ -15,6 +16,7 @@ publish:
   stage: publish
   only:
     - tags
+  coverage: '/Total\s*\|\s*(\d+(?:\.\d+)?)/'
   script:
     - |
       echo ---------------------------------------------- VERSIONING
