@@ -1,13 +1,16 @@
 # FunctionalLink.Next
 
-Welcome to the homepage for the FunctionalLink.Next library for C#.  A simple set of types from the functional programming
-paradigm that contribute to a more declarative and robust code base.
+Welcome to the homepage for the FunctionalLink.Next library for C#.  A simple 
+set of types from the functional programming paradigm that contribute to a more 
+declarative and robust code base.
 
 [![Maintained](https://img.shields.io/badge/maintained%3F-yes-green.svg)]()
 [![pipeline status](https://gitlab.com/adleatherwood/FunctionalLink.Next/badges/master/pipeline.svg)](https://gitlab.com/adleatherwood/FunctionalLink.Next/-/commits/master)
 [![coverage report](https://gitlab.com/adleatherwood/FunctionalLink.Next/badges/master/coverage.svg)](https://gitlab.com/adleatherwood/FunctionalLink.Next/-/commits/master)
 [![NuGet](https://img.shields.io/nuget/v/FunctionalLink.Next.svg?style=flat)](https://www.nuget.org/packages/FunctionalLink.Next/)
 [![Icon](https://badgen.net/badge/icon/froyoshark/purple?icon=)](https://iconarchive.com/show/enkel-icons-by-froyoshark/Telegram-icon.html)
+
+This project is maintained here [![Alt GitLab](https://docs.gitlab.com/assets/images/gitlab-logo.svg)](https://gitlab.com/adleatherwood/FunctionalLink.Next)
 
 ## Getting Started
 
