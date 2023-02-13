@@ -440,24 +440,6 @@ references:
   fullName.vb: FunctionalLink.Next.Either(Of V, O).ValueOr(V)
   nameWithType: Either<V, O>.ValueOr(V)
   nameWithType.vb: Either(Of V, O).ValueOr(V)
-- uid: FunctionalLink.Next.Either`2.ValueOr(System.Func{`0})
-  name: ValueOr(Func<V>)
-  href: api/FunctionalLink.Next.Either-2.html#FunctionalLink_Next_Either_2_ValueOr_System_Func__0__
-  commentId: M:FunctionalLink.Next.Either`2.ValueOr(System.Func{`0})
-  name.vb: ValueOr(Func(Of V))
-  fullName: FunctionalLink.Next.Either<V, O>.ValueOr(System.Func<V>)
-  fullName.vb: FunctionalLink.Next.Either(Of V, O).ValueOr(System.Func(Of V))
-  nameWithType: Either<V, O>.ValueOr(Func<V>)
-  nameWithType.vb: Either(Of V, O).ValueOr(Func(Of V))
-- uid: FunctionalLink.Next.Either`2.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})
-  name: ValueOr(Func<Task<V>>)
-  href: api/FunctionalLink.Next.Either-2.html#FunctionalLink_Next_Either_2_ValueOr_System_Func_System_Threading_Tasks_Task__0___
-  commentId: M:FunctionalLink.Next.Either`2.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})
-  name.vb: ValueOr(Func(Of Task(Of V)))
-  fullName: FunctionalLink.Next.Either<V, O>.ValueOr(System.Func<System.Threading.Tasks.Task<V>>)
-  fullName.vb: FunctionalLink.Next.Either(Of V, O).ValueOr(System.Func(Of System.Threading.Tasks.Task(Of V)))
-  nameWithType: Either<V, O>.ValueOr(Func<Task<V>>)
-  nameWithType.vb: Either(Of V, O).ValueOr(Func(Of Task(Of V)))
 - uid: FunctionalLink.Next.Either`2.ValueOr*
   name: ValueOr
   href: api/FunctionalLink.Next.Either-2.html#FunctionalLink_Next_Either_2_ValueOr_
@@ -760,24 +742,6 @@ references:
   fullName.vb: FunctionalLink.Next.EitherExtensions.ValueOr(Of S, F)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Either(Of S, F)), S)
   nameWithType: EitherExtensions.ValueOr<S, F>(Task<Either<S, F>>, S)
   nameWithType.vb: EitherExtensions.ValueOr(Of S, F)(Task(Of Either(Of S, F)), S)
-- uid: FunctionalLink.Next.EitherExtensions.ValueOr``2(System.Threading.Tasks.Task{FunctionalLink.Next.Either{``0,``1}},System.Func{``0})
-  name: ValueOr<S, F>(Task<Either<S, F>>, Func<S>)
-  href: api/FunctionalLink.Next.EitherExtensions.html#FunctionalLink_Next_EitherExtensions_ValueOr__2_System_Threading_Tasks_Task_FunctionalLink_Next_Either___0___1___System_Func___0__
-  commentId: M:FunctionalLink.Next.EitherExtensions.ValueOr``2(System.Threading.Tasks.Task{FunctionalLink.Next.Either{``0,``1}},System.Func{``0})
-  name.vb: ValueOr(Of S, F)(Task(Of Either(Of S, F)), Func(Of S))
-  fullName: FunctionalLink.Next.EitherExtensions.ValueOr<S, F>(System.Threading.Tasks.Task<FunctionalLink.Next.Either<S, F>>, System.Func<S>)
-  fullName.vb: FunctionalLink.Next.EitherExtensions.ValueOr(Of S, F)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Either(Of S, F)), System.Func(Of S))
-  nameWithType: EitherExtensions.ValueOr<S, F>(Task<Either<S, F>>, Func<S>)
-  nameWithType.vb: EitherExtensions.ValueOr(Of S, F)(Task(Of Either(Of S, F)), Func(Of S))
-- uid: FunctionalLink.Next.EitherExtensions.ValueOr``2(System.Threading.Tasks.Task{FunctionalLink.Next.Either{``0,``1}},System.Func{System.Threading.Tasks.Task{``0}})
-  name: ValueOr<S, F>(Task<Either<S, F>>, Func<Task<S>>)
-  href: api/FunctionalLink.Next.EitherExtensions.html#FunctionalLink_Next_EitherExtensions_ValueOr__2_System_Threading_Tasks_Task_FunctionalLink_Next_Either___0___1___System_Func_System_Threading_Tasks_Task___0___
-  commentId: M:FunctionalLink.Next.EitherExtensions.ValueOr``2(System.Threading.Tasks.Task{FunctionalLink.Next.Either{``0,``1}},System.Func{System.Threading.Tasks.Task{``0}})
-  name.vb: ValueOr(Of S, F)(Task(Of Either(Of S, F)), Func(Of Task(Of S)))
-  fullName: FunctionalLink.Next.EitherExtensions.ValueOr<S, F>(System.Threading.Tasks.Task<FunctionalLink.Next.Either<S, F>>, System.Func<System.Threading.Tasks.Task<S>>)
-  fullName.vb: FunctionalLink.Next.EitherExtensions.ValueOr(Of S, F)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Either(Of S, F)), System.Func(Of System.Threading.Tasks.Task(Of S)))
-  nameWithType: EitherExtensions.ValueOr<S, F>(Task<Either<S, F>>, Func<Task<S>>)
-  nameWithType.vb: EitherExtensions.ValueOr(Of S, F)(Task(Of Either(Of S, F)), Func(Of Task(Of S)))
 - uid: FunctionalLink.Next.EnumerableExtensions
   name: EnumerableExtensions
   href: api/FunctionalLink.Next.EnumerableExtensions.html
@@ -847,6 +811,12 @@ references:
   commentId: M:FunctionalLink.Next.Error.#ctor(System.String)
   fullName: FunctionalLink.Next.Error.Error(System.String)
   nameWithType: Error.Error(String)
+- uid: FunctionalLink.Next.Error.#ctor(System.String,System.Exception)
+  name: Error(String, Exception)
+  href: api/FunctionalLink.Next.Error.html#FunctionalLink_Next_Error__ctor_System_String_System_Exception_
+  commentId: M:FunctionalLink.Next.Error.#ctor(System.String,System.Exception)
+  fullName: FunctionalLink.Next.Error.Error(System.String, System.Exception)
+  nameWithType: Error.Error(String, Exception)
 - uid: FunctionalLink.Next.Error.#ctor*
   name: Error
   href: api/FunctionalLink.Next.Error.html#FunctionalLink_Next_Error__ctor_
@@ -1337,6 +1307,22 @@ references:
   fullName.vb: FunctionalLink.Next.Option(Of T).Match(Of U)(System.Func(Of T, U), System.Func(Of U))
   nameWithType: Option<T>.Match<U>(Func<T, U>, Func<U>)
   nameWithType.vb: Option(Of T).Match(Of U)(Func(Of T, U), Func(Of U))
+- uid: FunctionalLink.Next.Option`1.Maybe(`0)
+  name: Maybe(T)
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Maybe__0_
+  commentId: M:FunctionalLink.Next.Option`1.Maybe(`0)
+  fullName: FunctionalLink.Next.Option<T>.Maybe(T)
+  fullName.vb: FunctionalLink.Next.Option(Of T).Maybe(T)
+  nameWithType: Option<T>.Maybe(T)
+  nameWithType.vb: Option(Of T).Maybe(T)
+- uid: FunctionalLink.Next.Option`1.Maybe*
+  name: Maybe
+  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_Maybe_
+  commentId: Overload:FunctionalLink.Next.Option`1.Maybe
+  fullName: FunctionalLink.Next.Option<T>.Maybe
+  fullName.vb: FunctionalLink.Next.Option(Of T).Maybe
+  nameWithType: Option<T>.Maybe
+  nameWithType.vb: Option(Of T).Maybe
 - uid: FunctionalLink.Next.Option`1.None
   name: None()
   href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_None
@@ -1501,24 +1487,6 @@ references:
   fullName.vb: FunctionalLink.Next.Option(Of T).ValueOr(T)
   nameWithType: Option<T>.ValueOr(T)
   nameWithType.vb: Option(Of T).ValueOr(T)
-- uid: FunctionalLink.Next.Option`1.ValueOr(System.Func{`0})
-  name: ValueOr(Func<T>)
-  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_ValueOr_System_Func__0__
-  commentId: M:FunctionalLink.Next.Option`1.ValueOr(System.Func{`0})
-  name.vb: ValueOr(Func(Of T))
-  fullName: FunctionalLink.Next.Option<T>.ValueOr(System.Func<T>)
-  fullName.vb: FunctionalLink.Next.Option(Of T).ValueOr(System.Func(Of T))
-  nameWithType: Option<T>.ValueOr(Func<T>)
-  nameWithType.vb: Option(Of T).ValueOr(Func(Of T))
-- uid: FunctionalLink.Next.Option`1.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})
-  name: ValueOr(Func<Task<T>>)
-  href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_ValueOr_System_Func_System_Threading_Tasks_Task__0___
-  commentId: M:FunctionalLink.Next.Option`1.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})
-  name.vb: ValueOr(Func(Of Task(Of T)))
-  fullName: FunctionalLink.Next.Option<T>.ValueOr(System.Func<System.Threading.Tasks.Task<T>>)
-  fullName.vb: FunctionalLink.Next.Option(Of T).ValueOr(System.Func(Of System.Threading.Tasks.Task(Of T)))
-  nameWithType: Option<T>.ValueOr(Func<Task<T>>)
-  nameWithType.vb: Option(Of T).ValueOr(Func(Of Task(Of T)))
 - uid: FunctionalLink.Next.Option`1.ValueOr*
   name: ValueOr
   href: api/FunctionalLink.Next.Option-1.html#FunctionalLink_Next_Option_1_ValueOr_
@@ -1812,24 +1780,6 @@ references:
   fullName.vb: FunctionalLink.Next.OptionExtensions.ValueOr(Of T)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Option(Of T)), T)
   nameWithType: OptionExtensions.ValueOr<T>(Task<Option<T>>, T)
   nameWithType.vb: OptionExtensions.ValueOr(Of T)(Task(Of Option(Of T)), T)
-- uid: FunctionalLink.Next.OptionExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Option{``0}},System.Func{``0})
-  name: ValueOr<T>(Task<Option<T>>, Func<T>)
-  href: api/FunctionalLink.Next.OptionExtensions.html#FunctionalLink_Next_OptionExtensions_ValueOr__1_System_Threading_Tasks_Task_FunctionalLink_Next_Option___0___System_Func___0__
-  commentId: M:FunctionalLink.Next.OptionExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Option{``0}},System.Func{``0})
-  name.vb: ValueOr(Of T)(Task(Of Option(Of T)), Func(Of T))
-  fullName: FunctionalLink.Next.OptionExtensions.ValueOr<T>(System.Threading.Tasks.Task<FunctionalLink.Next.Option<T>>, System.Func<T>)
-  fullName.vb: FunctionalLink.Next.OptionExtensions.ValueOr(Of T)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Option(Of T)), System.Func(Of T))
-  nameWithType: OptionExtensions.ValueOr<T>(Task<Option<T>>, Func<T>)
-  nameWithType.vb: OptionExtensions.ValueOr(Of T)(Task(Of Option(Of T)), Func(Of T))
-- uid: FunctionalLink.Next.OptionExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Option{``0}},System.Func{System.Threading.Tasks.Task{``0}})
-  name: ValueOr<T>(Task<Option<T>>, Func<Task<T>>)
-  href: api/FunctionalLink.Next.OptionExtensions.html#FunctionalLink_Next_OptionExtensions_ValueOr__1_System_Threading_Tasks_Task_FunctionalLink_Next_Option___0___System_Func_System_Threading_Tasks_Task___0___
-  commentId: M:FunctionalLink.Next.OptionExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Option{``0}},System.Func{System.Threading.Tasks.Task{``0}})
-  name.vb: ValueOr(Of T)(Task(Of Option(Of T)), Func(Of Task(Of T)))
-  fullName: FunctionalLink.Next.OptionExtensions.ValueOr<T>(System.Threading.Tasks.Task<FunctionalLink.Next.Option<T>>, System.Func<System.Threading.Tasks.Task<T>>)
-  fullName.vb: FunctionalLink.Next.OptionExtensions.ValueOr(Of T)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Option(Of T)), System.Func(Of System.Threading.Tasks.Task(Of T)))
-  nameWithType: OptionExtensions.ValueOr<T>(Task<Option<T>>, Func<Task<T>>)
-  nameWithType.vb: OptionExtensions.ValueOr(Of T)(Task(Of Option(Of T)), Func(Of Task(Of T)))
 - uid: FunctionalLink.Next.Other`1
   name: Other<T>
   href: api/FunctionalLink.Next.Other-1.html
@@ -1881,6 +1831,12 @@ references:
   commentId: M:FunctionalLink.Next.Result.Failure(System.String)
   fullName: FunctionalLink.Next.Result.Failure(System.String)
   nameWithType: Result.Failure(String)
+- uid: FunctionalLink.Next.Result.Failure(System.String,System.Exception)
+  name: Failure(String, Exception)
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Failure_System_String_System_Exception_
+  commentId: M:FunctionalLink.Next.Result.Failure(System.String,System.Exception)
+  fullName: FunctionalLink.Next.Result.Failure(System.String, System.Exception)
+  nameWithType: Result.Failure(String, Exception)
 - uid: FunctionalLink.Next.Result.Failure*
   name: Failure
   href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Failure_
@@ -2315,24 +2271,6 @@ references:
   fullName.vb: FunctionalLink.Next.Result(Of T).ValueOr(T)
   nameWithType: Result<T>.ValueOr(T)
   nameWithType.vb: Result(Of T).ValueOr(T)
-- uid: FunctionalLink.Next.Result`1.ValueOr(System.Func{`0})
-  name: ValueOr(Func<T>)
-  href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_ValueOr_System_Func__0__
-  commentId: M:FunctionalLink.Next.Result`1.ValueOr(System.Func{`0})
-  name.vb: ValueOr(Func(Of T))
-  fullName: FunctionalLink.Next.Result<T>.ValueOr(System.Func<T>)
-  fullName.vb: FunctionalLink.Next.Result(Of T).ValueOr(System.Func(Of T))
-  nameWithType: Result<T>.ValueOr(Func<T>)
-  nameWithType.vb: Result(Of T).ValueOr(Func(Of T))
-- uid: FunctionalLink.Next.Result`1.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})
-  name: ValueOr(Func<Task<T>>)
-  href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_ValueOr_System_Func_System_Threading_Tasks_Task__0___
-  commentId: M:FunctionalLink.Next.Result`1.ValueOr(System.Func{System.Threading.Tasks.Task{`0}})
-  name.vb: ValueOr(Func(Of Task(Of T)))
-  fullName: FunctionalLink.Next.Result<T>.ValueOr(System.Func<System.Threading.Tasks.Task<T>>)
-  fullName.vb: FunctionalLink.Next.Result(Of T).ValueOr(System.Func(Of System.Threading.Tasks.Task(Of T)))
-  nameWithType: Result<T>.ValueOr(Func<Task<T>>)
-  nameWithType.vb: Result(Of T).ValueOr(Func(Of Task(Of T)))
 - uid: FunctionalLink.Next.Result`1.ValueOr*
   name: ValueOr
   href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_ValueOr_
@@ -2635,24 +2573,6 @@ references:
   fullName.vb: FunctionalLink.Next.ResultExtensions.ValueOr(Of T)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T)), T)
   nameWithType: ResultExtensions.ValueOr<T>(Task<Result<T>>, T)
   nameWithType.vb: ResultExtensions.ValueOr(Of T)(Task(Of Result(Of T)), T)
-- uid: FunctionalLink.Next.ResultExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0}},System.Func{``0})
-  name: ValueOr<T>(Task<Result<T>>, Func<T>)
-  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_ValueOr__1_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___System_Func___0__
-  commentId: M:FunctionalLink.Next.ResultExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0}},System.Func{``0})
-  name.vb: ValueOr(Of T)(Task(Of Result(Of T)), Func(Of T))
-  fullName: FunctionalLink.Next.ResultExtensions.ValueOr<T>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T>>, System.Func<T>)
-  fullName.vb: FunctionalLink.Next.ResultExtensions.ValueOr(Of T)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T)), System.Func(Of T))
-  nameWithType: ResultExtensions.ValueOr<T>(Task<Result<T>>, Func<T>)
-  nameWithType.vb: ResultExtensions.ValueOr(Of T)(Task(Of Result(Of T)), Func(Of T))
-- uid: FunctionalLink.Next.ResultExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0}},System.Func{System.Threading.Tasks.Task{``0}})
-  name: ValueOr<T>(Task<Result<T>>, Func<Task<T>>)
-  href: api/FunctionalLink.Next.ResultExtensions.html#FunctionalLink_Next_ResultExtensions_ValueOr__1_System_Threading_Tasks_Task_FunctionalLink_Next_Result___0___System_Func_System_Threading_Tasks_Task___0___
-  commentId: M:FunctionalLink.Next.ResultExtensions.ValueOr``1(System.Threading.Tasks.Task{FunctionalLink.Next.Result{``0}},System.Func{System.Threading.Tasks.Task{``0}})
-  name.vb: ValueOr(Of T)(Task(Of Result(Of T)), Func(Of Task(Of T)))
-  fullName: FunctionalLink.Next.ResultExtensions.ValueOr<T>(System.Threading.Tasks.Task<FunctionalLink.Next.Result<T>>, System.Func<System.Threading.Tasks.Task<T>>)
-  fullName.vb: FunctionalLink.Next.ResultExtensions.ValueOr(Of T)(System.Threading.Tasks.Task(Of FunctionalLink.Next.Result(Of T)), System.Func(Of System.Threading.Tasks.Task(Of T)))
-  nameWithType: ResultExtensions.ValueOr<T>(Task<Result<T>>, Func<Task<T>>)
-  nameWithType.vb: ResultExtensions.ValueOr(Of T)(Task(Of Result(Of T)), Func(Of Task(Of T)))
 - uid: FunctionalLink.Next.Value`1
   name: Value<T>
   href: api/FunctionalLink.Next.Value-1.html
