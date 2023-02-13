@@ -35,6 +35,9 @@ public class Error
     public Error(Exception exception) =>
         this.exception = exception;
 
+    public Error(string message, Exception exception) =>
+        (this.message, this.exception) = (message, exception);
+
     public string Message => 
         message ?? exception.Message;
 

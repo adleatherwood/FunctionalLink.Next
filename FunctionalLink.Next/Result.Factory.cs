@@ -12,4 +12,7 @@ public static class Result
 
     public static Error Failure(Exception error) =>
         new Error(error);
+    
+    public static Error Failure(string message, Exception error) =>
+        new Error(message, error);
 }

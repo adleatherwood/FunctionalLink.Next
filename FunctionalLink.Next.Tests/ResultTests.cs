@@ -738,6 +738,15 @@ public class ResultTests
         Assert.False(actual);
     }
 
+    [Fact]
+    public void RightMessageAndExceptionFactoryInitializesRight()
+    {
+        var actual = ((Result<int>) Result.Failure("abc", new Exception("def")))
+            .HasSuccess();
+
+        Assert.False(actual);
+    }
+
     //========================================================================== Test Fixture
 
     private class AsyncResult<A>

@@ -39,6 +39,19 @@ public class SharedTests
     }
 
     [Fact]
+    public void ErrorInitializesInternalMessageAndException()
+    {
+        var exn = new Exception("def");
+        var error = new Error("abc", exn);
+        var hasExn = error.HasException(out var found);
+
+        Assert.Equal("abc", error.Message);
+        Assert.True(error.HasException());
+        Assert.True(hasExn);
+        Assert.Equal(exn, found);
+    }
+
+    [Fact]
     public void ErrorImplicitlyConvertsFromString()
     {
         var actual = (Error) "test";
