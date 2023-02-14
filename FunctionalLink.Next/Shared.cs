@@ -25,30 +25,27 @@ public class None
 }
 
 public class Error
-{    
-    private readonly string message;
-    private readonly Exception exception;
-
+{        
     public Error(string message) =>
-        this.message = message;
+        (this.Message, this.Exception) = (message, null);
 
     public Error(Exception exception) =>
-        this.exception = exception;
+        (this.Message, this.Exception) = (exception.Message, exception);
+        //this.exception = exception;
 
     public Error(string message, Exception exception) =>
-        (this.message, this.exception) = (message, exception);
+        (this.Message, this.Exception) = (message, exception);
 
-    public string Message => 
-        message ?? exception.Message;
+    public string Message { get; private set; }
 
-    public bool HasException() 
-    {
-        return exception != null;
-    }
+    public Exception? Exception { get; private set; }
+
+    public bool HasException() =>
+        Exception != null;
 
     public bool HasException(out Exception exception) 
     {
-        exception = this.exception;
+        exception = this.Exception!;
         return exception != null;
     }
 
