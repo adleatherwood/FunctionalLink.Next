@@ -111,6 +111,26 @@ public class ResultTests
         Assert.Equal("test", actual.Message);
     }
 
+    [Fact]
+    public void HasValue2OutReturnsOnValue()
+    {        
+        Result<int>.Success(1)
+            .HasSuccess(out var actual, out var _)
+            .Ignore();
+
+        Assert.Equal(1, actual);
+    }
+
+    [Fact]
+    public void HasValue2OutReturnsOnError()
+    {        
+        Result<int>.Failure("test")
+            .HasSuccess(out var _, out var error)
+            .Ignore();
+
+        Assert.Equal("test", error.Message);
+    }
+
     //-------------------------------------------------------------------------- Match
 
     [Fact]

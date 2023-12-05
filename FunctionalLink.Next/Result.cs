@@ -50,6 +50,13 @@ public class Result<T>
         return flag == 1;
     }
 
+    public bool HasSuccess(out T value, out Error error) 
+    {
+        value = this.success;
+        error = this.failure;
+        return flag == 1;
+    }
+
     public bool HasFailure(out Error other) 
     {
         other = this.failure;
