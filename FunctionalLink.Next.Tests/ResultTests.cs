@@ -767,6 +767,45 @@ public class ResultTests
         Assert.False(actual);
     }
 
+    //===
+
+    [Fact]
+    public void LeftFactoryInitializesLeft1()
+    {
+        var actual = Result.Success()
+            .HasSuccess();
+
+        Assert.True(actual);
+    }
+
+    [Fact]
+    public void RightFactoryInitializesRight1()
+    {
+        var actual = ((Result) Result.Failure(""))
+            .HasSuccess();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
+    public void RightExceptionFactoryInitializesRight1()
+    {
+        var actual = ((Result) Result.Failure(new Exception("")))
+            .HasSuccess();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
+    public void RightMessageAndExceptionFactoryInitializesRight1()
+    {
+        var actual = ((Result) Result.Failure("abc", new Exception("def")))
+            .HasSuccess();
+
+        Assert.False(actual);
+    }
+
+
     //========================================================================== Test Fixture
 
     private class AsyncResult<A>

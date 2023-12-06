@@ -1,5 +1,13 @@
 # CHANGE LOG
 
+## 3.1
+
+Added new `HasSuccess(out var value, out var error)` signature for the Result<T>.
+This allows for cleaner decomposition when using imperative conditional logic.
+
+Added new `Result` type with no generic value to specify no return type.  Underneath,
+it is a `Result<None>` type.  This will make signature declarations cleaner.
+
 ## 3.0
 
 Removed the `Func` overloads for the `ValueOr` function.  Calling `ValueOr(null)`

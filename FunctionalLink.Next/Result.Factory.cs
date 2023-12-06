@@ -2,15 +2,29 @@ namespace FunctionalLink.Next;
 
 #pragma warning disable 1591
 
-public static class Result
-{    
+public class Result
+    : Result<None>
+{
+    protected Result(int flag, Error failure) : base(flag, None.Value, failure)
+    {
+    }
+
+    public static implicit operator Result(Exception failure) =>
+        new Result(2, new Error(failure));
+
+    public static implicit operator Result(Error failure) =>
+        new Result(2, failure);
+
+    public static Result Success() =>
+        new Result(1, default!);
+
     public static Result<T> Success<T>(T value) =>
         Result<T>.Success(value);
 
-    public static Error Failure(string error) =>
+    public new static Error Failure(string error) =>
         new Error(error);
 
-    public static Error Failure(Exception error) =>
+    public new static Error Failure(Exception error) =>
         new Error(error);
     
     public static Error Failure(string message, Exception error) =>
