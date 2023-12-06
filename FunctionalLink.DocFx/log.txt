@@ -1,0 +1,1 @@
+{"message":"Fail to find MSBuild >= 15.0 on machine. Please install Visual Studio 2017 or above with MSBuild >= 15.0: https://visualstudio.microsoft.com/vs/","source":"MetadataCommand.ExtractMetadata","date_time":"2023-12-06T00:25:27.7931554Z","message_severity":"warning","correlation_id":"0F87CA16-E21D-4EA6-8E92-77D7455DF6A7.1.1.1"}

@@ -823,6 +823,18 @@ references:
   commentId: Overload:FunctionalLink.Next.Error.#ctor
   fullName: FunctionalLink.Next.Error.Error
   nameWithType: Error.Error
+- uid: FunctionalLink.Next.Error.Exception
+  name: Exception
+  href: api/FunctionalLink.Next.Error.html#FunctionalLink_Next_Error_Exception
+  commentId: P:FunctionalLink.Next.Error.Exception
+  fullName: FunctionalLink.Next.Error.Exception
+  nameWithType: Error.Exception
+- uid: FunctionalLink.Next.Error.Exception*
+  name: Exception
+  href: api/FunctionalLink.Next.Error.html#FunctionalLink_Next_Error_Exception_
+  commentId: Overload:FunctionalLink.Next.Error.Exception
+  fullName: FunctionalLink.Next.Error.Exception
+  nameWithType: Error.Exception
 - uid: FunctionalLink.Next.Error.HasException
   name: HasException()
   href: api/FunctionalLink.Next.Error.html#FunctionalLink_Next_Error_HasException
@@ -1819,6 +1831,18 @@ references:
   commentId: T:FunctionalLink.Next.Result
   fullName: FunctionalLink.Next.Result
   nameWithType: Result
+- uid: FunctionalLink.Next.Result.#ctor(System.Int32,FunctionalLink.Next.Error)
+  name: Result(Int32, Error)
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result__ctor_System_Int32_FunctionalLink_Next_Error_
+  commentId: M:FunctionalLink.Next.Result.#ctor(System.Int32,FunctionalLink.Next.Error)
+  fullName: FunctionalLink.Next.Result.Result(System.Int32, FunctionalLink.Next.Error)
+  nameWithType: Result.Result(Int32, Error)
+- uid: FunctionalLink.Next.Result.#ctor*
+  name: Result
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result__ctor_
+  commentId: Overload:FunctionalLink.Next.Result.#ctor
+  fullName: FunctionalLink.Next.Result.Result
+  nameWithType: Result.Result
 - uid: FunctionalLink.Next.Result.Failure(System.Exception)
   name: Failure(Exception)
   href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Failure_System_Exception_
@@ -1843,6 +1867,39 @@ references:
   commentId: Overload:FunctionalLink.Next.Result.Failure
   fullName: FunctionalLink.Next.Result.Failure
   nameWithType: Result.Failure
+- uid: FunctionalLink.Next.Result.op_Implicit(FunctionalLink.Next.Error)~FunctionalLink.Next.Result
+  name: Implicit(Error to Result)
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_op_Implicit_FunctionalLink_Next_Error__FunctionalLink_Next_Result
+  commentId: M:FunctionalLink.Next.Result.op_Implicit(FunctionalLink.Next.Error)~FunctionalLink.Next.Result
+  name.vb: Widening(Error to Result)
+  fullName: FunctionalLink.Next.Result.Implicit(FunctionalLink.Next.Error to FunctionalLink.Next.Result)
+  fullName.vb: FunctionalLink.Next.Result.Widening(FunctionalLink.Next.Error to FunctionalLink.Next.Result)
+  nameWithType: Result.Implicit(Error to Result)
+  nameWithType.vb: Result.Widening(Error to Result)
+- uid: FunctionalLink.Next.Result.op_Implicit(System.Exception)~FunctionalLink.Next.Result
+  name: Implicit(Exception to Result)
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_op_Implicit_System_Exception__FunctionalLink_Next_Result
+  commentId: M:FunctionalLink.Next.Result.op_Implicit(System.Exception)~FunctionalLink.Next.Result
+  name.vb: Widening(Exception to Result)
+  fullName: FunctionalLink.Next.Result.Implicit(System.Exception to FunctionalLink.Next.Result)
+  fullName.vb: FunctionalLink.Next.Result.Widening(System.Exception to FunctionalLink.Next.Result)
+  nameWithType: Result.Implicit(Exception to Result)
+  nameWithType.vb: Result.Widening(Exception to Result)
+- uid: FunctionalLink.Next.Result.op_Implicit*
+  name: Implicit
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_op_Implicit_
+  commentId: Overload:FunctionalLink.Next.Result.op_Implicit
+  name.vb: Widening
+  fullName: FunctionalLink.Next.Result.Implicit
+  fullName.vb: FunctionalLink.Next.Result.Widening
+  nameWithType: Result.Implicit
+  nameWithType.vb: Result.Widening
+- uid: FunctionalLink.Next.Result.Success
+  name: Success()
+  href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Success
+  commentId: M:FunctionalLink.Next.Result.Success
+  fullName: FunctionalLink.Next.Result.Success()
+  nameWithType: Result.Success()
 - uid: FunctionalLink.Next.Result.Success*
   name: Success
   href: api/FunctionalLink.Next.Result.html#FunctionalLink_Next_Result_Success_
@@ -2080,6 +2137,15 @@ references:
   fullName.vb: FunctionalLink.Next.Result(Of T).HasSuccess(ByRef T)
   nameWithType: Result<T>.HasSuccess(out T)
   nameWithType.vb: Result(Of T).HasSuccess(ByRef T)
+- uid: FunctionalLink.Next.Result`1.HasSuccess(`0@,FunctionalLink.Next.Error@)
+  name: HasSuccess(out T, out Error)
+  href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_HasSuccess__0__FunctionalLink_Next_Error__
+  commentId: M:FunctionalLink.Next.Result`1.HasSuccess(`0@,FunctionalLink.Next.Error@)
+  name.vb: HasSuccess(ByRef T, ByRef Error)
+  fullName: FunctionalLink.Next.Result<T>.HasSuccess(out T, out FunctionalLink.Next.Error)
+  fullName.vb: FunctionalLink.Next.Result(Of T).HasSuccess(ByRef T, ByRef FunctionalLink.Next.Error)
+  nameWithType: Result<T>.HasSuccess(out T, out Error)
+  nameWithType.vb: Result(Of T).HasSuccess(ByRef T, ByRef Error)
 - uid: FunctionalLink.Next.Result`1.HasSuccess*
   name: HasSuccess
   href: api/FunctionalLink.Next.Result-1.html#FunctionalLink_Next_Result_1_HasSuccess_
